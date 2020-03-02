@@ -76,251 +76,1293 @@
 \begin_body
 
 \begin_layout Title
-Criptografía basada en un sistema híbrido cuántico-GAN
+\noindent
+
+\lang spanish
+Criptografía basada en un sistema híbrido Cuántico-GAN
 \end_layout
 
 \begin_layout Author
+\noindent
+
+\lang spanish
 Jorge Calleja García
 \end_layout
 
 \begin_layout Section
+\noindent
+
+\lang spanish
 Introducción.
 \end_layout
 
 \begin_layout Standard
-saas
+\noindent
+
+\lang spanish
+La computación clásica tiene límites.
+ Tiene unos límites físicos que no puede sobrepasar.
+ La ley de Moore nos dice que cada 2 años se aumenta por dos la potencia
+ de los procesadores.
+ [1]
 \end_layout
 
 \begin_layout Standard
+\noindent
+
+\lang spanish
+Para cumplir con la ley de Moore, el diseñador del transistor debe reducir
+ la distancia entre la fuente y el drenaje por un factor de 2 en cada generación
+ de tecnología.
+ Esto reduce el área en un factor de 2, duplicando así el número de transistores
+ por chip.
+ [2]
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+Como es sabido hay un límite que es el límite entre la física clásica y
+ la física cuántica.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
 asa
 \end_layout
 
 \begin_layout Standard
+\noindent
+
+\lang spanish
 s
 \end_layout
 
 \begin_layout Standard
-as
-\end_layout
+\noindent
 
-\begin_layout Section
-Estado del arte.
-\end_layout
-
-\begin_layout Standard
-sasaaskdakdkd
-\end_layout
-
-\begin_layout Section
-Fundamentos.
+\lang spanish
+asds
 \end_layout
 
 \begin_layout Standard
-ssdfsdfsdfdsf
-\end_layout
+\noindent
 
-\begin_layout Standard
-sasdssdd
-\end_layout
-
-\begin_layout Standard
-adsdsddds
-\end_layout
-
-\begin_layout Standard
-ddsdsd
-\end_layout
-
-\begin_layout Standard
-a
-\end_layout
-
-\begin_layout Standard
-da
-\end_layout
-
-\begin_layout Section
-Planificación.
-\end_layout
-
-\begin_layout Standard
-asassa
-\end_layout
-
-\begin_layout Standard
-sa
-\end_layout
-
-\begin_layout Standard
-sa
-\end_layout
-
-\begin_layout Standard
-s
-\end_layout
-
-\begin_layout Standard
-s
-\end_layout
-
-\begin_layout Section
-Análisis teórico.
-\end_layout
-
-\begin_layout Standard
-aadad
-\end_layout
-
-\begin_layout Standard
-daad
-\end_layout
-
-\begin_layout Standard
-da
-\end_layout
-
-\begin_layout Standard
-dad
-\end_layout
-
-\begin_layout Standard
-adddad
-\end_layout
-
-\begin_layout Standard
-d
-\end_layout
-
-\begin_layout Standard
-ad
-\end_layout
-
-\begin_layout Section
-Herramientas.
-\end_layout
-
-\begin_layout Standard
-aadadd
-\end_layout
-
-\begin_layout Standard
-da
-\end_layout
-
-\begin_layout Standard
-d
-\end_layout
-
-\begin_layout Standard
-da
-\end_layout
-
-\begin_layout Section
-Implementación.
-\end_layout
-
-\begin_layout Standard
-saddsassd
-\end_layout
-
-\begin_layout Standard
-asdsa
-\end_layout
-
-\begin_layout Standard
-asd
-\end_layout
-
-\begin_layout Standard
-d
-\end_layout
-
-\begin_layout Standard
-asa
-\end_layout
-
-\begin_layout Standard
-ss
-\end_layout
-
-\begin_layout Standard
-asad
-\end_layout
-
-\begin_layout Section
-Evaluación.
-\end_layout
-
-\begin_layout Standard
-dsdafa
-\end_layout
-
-\begin_layout Standard
-saf
-\end_layout
-
-\begin_layout Standard
-s
-\end_layout
-
-\begin_layout Standard
-af
-\end_layout
-
-\begin_layout Standard
-adf
-\end_layout
-
-\begin_layout Standard
-fd
-\end_layout
-
-\begin_layout Standard
-afd
-\end_layout
-
-\begin_layout Standard
-af
-\end_layout
-
-\begin_layout Standard
-afsaf
-\end_layout
-
-\begin_layout Standard
-s
-\end_layout
-
-\begin_layout Section
-Conclusiones.
-\end_layout
-
-\begin_layout Standard
-adsdsaa
-\end_layout
-
-\begin_layout Standard
-sa
-\end_layout
-
-\begin_layout Standard
-sd
-\end_layout
-
-\begin_layout Standard
+\lang spanish
 ds
 \end_layout
 
 \begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ssd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\lang spanish
+Estado del arte.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sasaaskdakdkd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\lang spanish
+Fundamentos.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ssdfsdfsdfdsf
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sasdssdd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+adsdsddds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ddsdsd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+a
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+da
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\lang spanish
+Planificación.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+asassa
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
 sa
 \end_layout
 
 \begin_layout Standard
+\noindent
+
+\lang spanish
+sa
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\lang spanish
+Análisis teórico.
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\lang spanish
+Herramientas.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+aadadd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+da
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+da
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\lang spanish
+Implementación.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+Hay dos sistemas en nuestra implemantación.
+ Vamos a crear un sistema de Redes Generativas Antagónicas (GAN) híbrido,
+ con un generador cuántico en el interior de una de las redes.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+Hay 3 redes neuronales Alice, Bob y Eve.
+ Las tres van a tener la misma configuración, por simplicidad y por [Documento
+ de Google].
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+[Comienzo a definir la red neuronal].
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+El sistema generador cuántico funciona de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+dd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+dd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ddd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\lang spanish
+Evaluación.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+dsdafa
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+saf
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+af
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+adf
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+fd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+afd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+af
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+afsaf
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sdds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\lang spanish
+Conclusiones.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+adsdsaa
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sa
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sa
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
 as
 \end_layout
 
 \begin_layout Standard
+\noindent
+
+\lang spanish
 d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+sd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+dd
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+s
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+d
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang spanish
+ds
 \end_layout
 
 \end_body

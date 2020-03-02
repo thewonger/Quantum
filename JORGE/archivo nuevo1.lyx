@@ -129,10 +129,21 @@ Como es sabido hay un límite que es el límite entre la física clásica y
 \end_layout
 
 \begin_layout Standard
-\noindent
 
 \lang spanish
-asa
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Al igual que nuestras computadoras digitales estándar, las computadoras
+ cuánticas se basan en esta misma idea básica.
+ La principal diferencia es que usan qubits , una variante del bit que puede
+ manipularse de manera cuántica.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -144,9 +155,23 @@ s
 
 \begin_layout Standard
 \noindent
+Hay que destacar que, a pesar de los siglos, los sistemas de cifra clásicos
+ y los modernos o actuales se diferencian muy poco entre sí.
+ En el fondo, hacen las mismas operaciones, si bien los primeros estaban
+ orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
+ Pero los principios en los que se basan para conseguir su objetivo de enmascara
+r la información siguen siendo los mismos, la difusión y la confusión
+\end_layout
 
-\lang spanish
-asds
+\begin_layout Standard
+La invención de la criptografía asimétrica, también conocida como criptografía
+ de clave pública, ha sido el logro más importante de la criptografía moderna.
+ En este sistema, cada usuario genera un par de claves, una clave pública,
+ distribuida libremente a todos, y una clave privada, mantenida en el máximo
+ secreto.
+ Alice puede cifrar un mensaje usando la clave pública de Bob, pero solo
+ Bob puede descifrarlo usando su clave privada.
+ 
 \end_layout
 
 \begin_layout Standard
