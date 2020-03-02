@@ -360,7 +360,14 @@ Numpy: NumPy es una biblioteca para el lenguaje de programación Python,
 \end_layout
 
 \begin_layout Itemize
-Qiskit
+Matplotlib: Matplotlib es una biblioteca de representación en 2D de Python
+ que produce figuras de calidad de publicación en una variedad de formatos
+ de copia impresa y entornos interactivos a través de plataformas.
+ 
+\end_layout
+
+\begin_layout Itemize
+Qiskit: 
 \end_layout
 
 \begin_layout Itemize

@@ -274,8 +274,36 @@ Un desarrollador cuántico.
 Un analista de computación cuántica.
 \end_layout
 
+\begin_layout Itemize
+Un analista de redes neuronales.
+\end_layout
+
+\begin_layout Itemize
+Un desarrollador de redes neuronales.
+\end_layout
+
+\begin_layout Itemize
+Un analista de seguridad informática.
+\end_layout
+
+\begin_layout Itemize
+Un jefe de proyectos.
+\end_layout
+
 \begin_layout Standard
 La planificación de GP.
+\end_layout
+
+\begin_layout Standard
+—————————>
+\end_layout
+
+\begin_layout Standard
+————————————————–>
+\end_layout
+
+\begin_layout Standard
+—————————————————————->
 \end_layout
 
 \begin_layout Section
@@ -317,18 +345,39 @@ edText, Markdown, Python) .
 \end_layout
 
 \begin_layout Itemize
-Keras: Keras es una API de redes neuronales de alto nivel, escrita en Python
- y capaz de funcionar sobre TensorFlow, CNTK o Theano.
+Keras: Es una API de redes neuronales de alto nivel, escrita en Python y
+ capaz de funcionar sobre TensorFlow, CNTK o Theano.
  Fue desarrollado con el objetivo de permitir una rápida experimentación.
  El objetivo es conseguir desarrollar redes neuronales con rápidez.
 \end_layout
 
 \begin_layout Itemize
-Numpy: NumPy es una biblioteca para el lenguaje de programación Python,
- que añade soporte para matrices y conjuntos multidimensionales, junto con
- una gran colección de funciones matemáticas de alto nivel para operar en
- estos conjuntos.
+Numpy: Es una biblioteca para el lenguaje de programación Python, que añade
+ soporte para matrices y conjuntos multidimensionales, junto con una gran
+ colección de funciones matemáticas de alto nivel para operar en estos conjuntos.
  
+\end_layout
+
+\begin_layout Itemize
+Matplotlib: Es una biblioteca de representación en 2D de Python que produce
+ figuras de calidad de publicación en una variedad de formatos de copia
+ impresa y entornos interactivos a través de plataformas.
+ 
+\end_layout
+
+\begin_layout Itemize
+Pandas: Es una biblioteca de software escrita para el lenguaje de programación
+ Python para la manipulación y análisis de datos.
+ En particular, ofrece estructuras de datos y operaciones para manipular
+ tablas numéricas y series temporales.
+\end_layout
+
+\begin_layout Itemize
+Qiskit: 
+\end_layout
+
+\begin_layout Itemize
+Simulador cuántico: 
 \end_layout
 
 \begin_layout Section
@@ -359,6 +408,23 @@ Hay 3 redes neuronales Alice, Bob y Eve.
 \begin_layout Standard
 \noindent
 El sistema generador cuántico funciona de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+Puerta de NOP:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+NOT=\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
