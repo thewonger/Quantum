@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -29,8 +29,9 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
-\papersize default
+\papersize a4paper
 \use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
@@ -44,6 +45,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -57,11 +59,11 @@
 \end_index
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip 0bp
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -77,29 +79,21 @@
 
 \begin_layout Title
 \noindent
-
-\lang spanish
 Criptografía basada en un sistema híbrido Cuántico-GAN
 \end_layout
 
 \begin_layout Author
 \noindent
-
-\lang spanish
 Jorge Calleja García
 \end_layout
 
 \begin_layout Section
 \noindent
-
-\lang spanish
 Introducción.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
 La computación clásica tiene límites.
  Tiene unos límites físicos que no puede sobrepasar.
  La ley de Moore nos dice que cada 2 años se aumenta por dos la potencia
@@ -109,8 +103,6 @@ La computación clásica tiene límites.
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
 Para cumplir con la ley de Moore, el diseñador del transistor debe reducir
  la distancia entre la fuente y el drenaje por un factor de 2 en cada generación
  de tecnología.
@@ -121,8 +113,6 @@ Para cumplir con la ley de Moore, el diseñador del transistor debe reducir
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
 Como es sabido hay un límite que es el límite entre la física clásica y
  la física cuántica.
  
@@ -130,652 +120,260 @@ Como es sabido hay un límite que es el límite entre la física clásica y
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-asa
+Al igual que nuestras computadoras digitales estándar, las computadoras
+ cuánticas se basan en esta misma idea básica.
+ La principal diferencia es que usan qubits , una variante del bit que puede
+ manipularse de manera cuántica.
+ 
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-s
+Hay que destacar que, a pesar de los siglos, los sistemas de cifra clásicos
+ y los modernos o actuales se diferencian muy poco entre sí.
+ En el fondo, hacen las mismas operaciones, si bien los primeros estaban
+ orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
+ Pero los principios en los que se basan para conseguir su objetivo de enmascara
+r la información siguen siendo los mismos, la difusión y la confusión
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-asds
+La invención de la criptografía asimétrica, también conocida como criptografía
+ de clave pública, ha sido el logro más importante de la criptografía moderna.
+ En este sistema, cada usuario genera un par de claves, una clave pública,
+ distribuida libremente a todos, y una clave privada, mantenida en el máximo
+ secreto.
+ Alice puede cifrar un mensaje usando la clave pública de Bob, pero solo
+ Bob puede descifrarlo usando su clave privada.
+ 
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-ds
+Sin embargo, para implementar esta característica, tenemos que usar funciones
+ matemáticas que generalmente son difíciles de resolver pero, una vez que
+ se conoce una solución, no es tan difícil verificarla.
+ Las implementaciones contemporáneas de algoritmos matemáticos hacen uso
+ de factorización de enteros, logaritmo discreto y relaciones de curva elíptica.
+ No es el alcance de este cuaderno entrar en los detalles de este proceso,
+ que es ampliamente discutido en la literatura.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-d
+Digamos que ofrece un buen compromiso entre seguridad y practicidad, superando
+ el problema de la generación de claves de una sola vez y, lo más importante,
+ el intercambio de claves.
+ De hecho, en casos de uso real, casi todas las principales implementaciones
+ de criptografía se realizan de forma asimétrica (aunque a veces en combinación
+ con claves simétricas), como TLS, S / MIME, PGP, OMEMO, OTR, etc.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-ds
+El advenimiento de las computadoras cuánticas ha planteado un problema inesperad
+o para la criptografía de clave pública.
+ Se ha demostrado que una computadora cuántica puede resolver todos los
+ algoritmos matemáticos actualmente en uso de una manera mucho más eficiente.
+ Gracias a las propiedades de la Transformada Cuántica de Fourier (QFT)
+ y su implementación en el algoritmo de Shor, el tiempo necesario para encontrar
+ una solución general para el problema se reduce de ser exponencial a ser
+ solo polinomial, abriendo así una ventana para posibles ataques de fuerza
+ bruta .
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-ds
+En la actualidad, las computadoras cuánticas no son lo suficientemente potentes
+ para realizar estas operaciones en grandes cantidades, pero en un futuro
+ no muy lejano podrían serlo, tanto que los expertos en criptografía han
+ comenzado a discutir estrategias para fortalecer los protocolos criptográficos
+ en caso de computadoras cuánticas ampliamente disponibles; Este campo se
+ llama criptografía post-cuántica.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ssd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
+Las computadoras cuánticas también presentan otra ventaja extraordinaria,
+ que puede conducir a un secreto perfecto.
+ Almacenar información en forma de qubits es el primer paso en la implementación
+ de la criptografía cuántica, la ciencia de intercambiar información de
+ manera segura utilizando la física cuántica.
+ Esto se logra mediante el establecimiento de un canal cuántico, un aparato
+ especial capaz de entregar información cuántica en forma de qubits.
+ La confidencialidad está garantizada por las leyes de la mecánica cuántica,
+ una forma notable de llamar a la física en ayuda de las matemáticas.
+ 
 \end_layout
 
 \begin_layout Section
 \noindent
-
-\lang spanish
 Estado del arte.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-sasaaskdakdkd
+DEFGAN.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-d
+Cryptography GAN Google.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-d
+Deepfakes.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
+Quantum protocols for communication.
 \end_layout
 
 \begin_layout Section
 \noindent
-
-\lang spanish
 Fundamentos.
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-ssdfsdfsdfdsf
+Pues aquí hablaré de seguridad informática, de criptografía.
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-sasdssdd
+De computación cuántica.
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-adsdsddds
+De teoría de número aleatorios.
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-ddsdsd
+De redes neuronales.
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-a
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-da
+De GAN.
 \end_layout
 
 \begin_layout Section
 \noindent
-
-\lang spanish
 Planificación.
 \end_layout
 
 \begin_layout Standard
-\noindent
+En nuestro proyecto vamos a contar con los siguientes perfiles:
+\end_layout
 
-\lang spanish
-asassa
+\begin_layout Itemize
+Un desarrollador cuántico.
+\end_layout
+
+\begin_layout Itemize
+Un analista de computación cuántica.
+\end_layout
+
+\begin_layout Itemize
+Un analista de redes neuronales.
+\end_layout
+
+\begin_layout Itemize
+Un desarrollador de redes neuronales.
+\end_layout
+
+\begin_layout Itemize
+Un analista de seguridad informática.
+\end_layout
+
+\begin_layout Itemize
+Un jefe de proyectos.
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-sa
+La planificación de GP.
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-sa
+—————————>
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-s
+————————————————–>
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-sds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
+—————————————————————->
 \end_layout
 
 \begin_layout Section
 \noindent
-
-\lang spanish
 Análisis teórico.
 \end_layout
 
 \begin_layout Section
 \noindent
-
-\lang spanish
 Herramientas.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-aadadd
+Para realizar nuestros experimentos vamos a hacer uso de las siguientes
+ herramientas:
 \end_layout
 
-\begin_layout Standard
-\noindent
-
-\lang spanish
-da
+\begin_layout Itemize
+Anaconda: Anaconda es una distribución gratuita y de código abierto de los
+ lenguajes de programación Python y R para la informática científica (ciencia
+ de los datos, aplicaciones de aprendizaje automático, procesamiento de
+ datos a gran escala, análisis predictivo, etc.), que tiene como objetivo
+ simplificar la gestión y el despliegue de los paquetes.
+ Las versiones de los paquetes son administradas por el sistema de gestión
+ de paquetes conda.
 \end_layout
 
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
+\begin_layout Itemize
+Jupyter Notebook: El Cuaderno Jupyter es un entorno informático interactivo
+ basado en la web para crear documentos ipynb.
+ Un documento Jupyter Notebook es un documento JSON, siguiendo un esquema
+ versionado, y que contiene una lista ordenada de celdas de entrada/salida
+ que pueden contener código, texto (usando Markdown), matemáticas, gráficos
+ y medios enriquecidos.
+ Un Cuaderno Jupyter puede convertirse a una serie de formatos de salida
+ de estándar abierto (HTML, diapositivas de presentación, LaTeX, PDF, ReStructur
+edText, Markdown, Python) .
 \end_layout
 
-\begin_layout Standard
-\noindent
+\begin_layout Itemize
+Keras: Keras es una API de redes neuronales de alto nivel, escrita en Python
+ y capaz de funcionar sobre TensorFlow, CNTK o Theano.
+ Fue desarrollado con el objetivo de permitir una rápida experimentación.
+ El objetivo es conseguir desarrollar redes neuronales con rápidez.
+\end_layout
 
-\lang spanish
-da
+\begin_layout Itemize
+Numpy: NumPy es una biblioteca para el lenguaje de programación Python,
+ que añade soporte para matrices y conjuntos multidimensionales, junto con
+ una gran colección de funciones matemáticas de alto nivel para operar en
+ estos conjuntos.
+ 
+\end_layout
+
+\begin_layout Itemize
+Qiskit
+\end_layout
+
+\begin_layout Itemize
+Simulador cuántico.
 \end_layout
 
 \begin_layout Section
 \noindent
-
-\lang spanish
 Implementación.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
 Hay dos sistemas en nuestra implemantación.
  Vamos a crear un sistema de Redes Generativas Antagónicas (GAN) híbrido,
  con un generador cuántico en el interior de una de las redes.
@@ -784,8 +382,6 @@ Hay dos sistemas en nuestra implemantación.
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
 Hay 3 redes neuronales Alice, Bob y Eve.
  Las tres van a tener la misma configuración, por simplicidad y por [Documento
  de Google].
@@ -793,576 +389,76 @@ Hay 3 redes neuronales Alice, Bob y Eve.
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
 [Comienzo a definir la red neuronal].
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
 El sistema generador cuántico funciona de la siguiente manera:
 \end_layout
 
 \begin_layout Standard
-\noindent
-
-\lang spanish
-d
+Puerta de Hadamard:
 \end_layout
 
 \begin_layout Standard
-\noindent
+Esta puerta consiste en aplicar al estado 
+\begin_inset Formula 
+\[
+H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\
+1 & -1
+\end{pmatrix}
+\]
 
-\lang spanish
-d
-\end_layout
+\end_inset
 
-\begin_layout Standard
-\noindent
 
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-dd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-dd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ddd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
 \end_layout
 
 \begin_layout Section
 \noindent
-
-\lang spanish
 Evaluación.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-dsdafa
+Primero.
+ GAN de Google.
+ He implementado la GAN de Google con el objetivo de usar la misma GAN para
+ todas las pruebas, ya que si su red está mejor implementado igual los resultado
+s no son consistentes con mis observaciones.
+ 
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-saf
+Segundo.
+ Intentar mejorar la red.
+ 
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-s
+Tercero.
+ Prueba con números cuánticos y GAN.
+ 
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-af
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-adf
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-fd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-afd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-af
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-afsaf
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sdds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
+Cuarto.
+ Prueba con protocolo cuantico y GAN.
+ 
 \end_layout
 
 \begin_layout Section
 \noindent
-
-\lang spanish
 Conclusiones.
 \end_layout
 
 \begin_layout Standard
 \noindent
-
-\lang spanish
-adsdsaa
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sa
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sa
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-as
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-sd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-dd
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-s
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-d
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\lang spanish
-ds
+Realizar una red neuronal no híbrida, hacer una red neuronal puramente cuántica.
 \end_layout
 
 \end_body
