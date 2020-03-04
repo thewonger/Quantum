@@ -1,0 +1,20 @@
+% Encoding: UTF-8
+
+@Article{bergholm2018pennylane,
+  author  = {Bergholm, Ville and Izaac, Josh and Schuld, Maria and Gogolin, Christian and Blank, Carsten and McKiernan, Keri and Killoran, Nathan},
+  title   = {Pennylane: Automatic differentiation of hybrid quantum-classical computations},
+  journal = {arXiv preprint arXiv:1811.04968},
+  year    = {2018},
+}
+
+@Article{abadi2016learning,
+  author  = {Abadi, Mart{\'\i}n and Andersen, David G},
+  title   = {Learning to protect communications with adversarial neural cryptography},
+  journal = {arXiv preprint arXiv:1610.06918},
+  year    = {2016},
+}
+
+@Article{,
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
