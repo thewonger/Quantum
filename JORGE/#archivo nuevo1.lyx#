@@ -151,6 +151,15 @@ Es una escala móvil, no un salto discontinuo.
 \end_layout
 
 \begin_layout Standard
+Cuato más pequeños sean los transistores más cercanos estarán del comportamiento
+ cuántico y más lejanos estarámn del comportamiento clásico.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 Al igual que nuestras computadoras digitales estándar, las computadoras
  cuánticas se basan en esta misma idea básica.
@@ -491,6 +500,32 @@ Por defecto, QNodes usa la interfaz NumPy.
 \begin_layout Section
 \noindent
 Implementación.
+\end_layout
+
+\begin_layout Standard
+La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
+ en un vector de entrada 2N, usando -1 y 1 para representar los valores
+ de los bits.
+ Este vector se procesa a través de una capa FC de 2N×2N, luego enviado
+ a través de una sucesión de cuatro capas convolucionales de 1-D.
+ Las capas convolucionales se describen en términos de su tamaño de ventana,
+ profundidad de entrada y profundidad de salida.
+ Cada una tiene un "paso", la cantidad por que la ventana se desplaza a
+ cada paso.
+ Las capas de hormigón son [4, 1, 2], [2, 2, 4], [1, 4, 4], y con zancadas
+ de 1, 2, 1, 1.
+ Intuitivamente, la primera capa desliza una ventana de tamaño 4 a través
+ de la 2N elementos de salida de la capa FC, emitiendo dos números (profundidad
+ de salida 2), con el paso 1.
+ Nosotros usar una unidad no lineal sigmoide después de cada capa, excepto
+ la última.
+ Después de la capa final, donde el la salida se reduce a los elementos
+ N, usamos una unidad no lineal de tanh.
+ (Recordemos que el tanh tiene una salida entre [-1, 1], llevando los valores
+ de vuelta a un rango que puede mapear a valores binarios).
+ El La red de Bob es idéntica a la red de Alice La red de Eve sólo toma
+ el texto cifrado como entrada, y por lo tanto tiene una primera capa de
+ N × 2N FC.
 \end_layout
 
 \begin_layout Standard
