@@ -79,7 +79,7 @@
 
 \begin_layout Title
 \noindent
-Criptografía basada en un sistema híbrido Cuántico-GAN
+Hybrid Quantum Generative Adversarial Network to protect communications.
 \end_layout
 
 \begin_layout Author
@@ -127,7 +127,8 @@ Todo nos hace pensar que habrá un límite que es la relación entre la física
 \end_layout
 
 \begin_layout Standard
-(1) Es la ecuación que nos une el momento lineal con la longitud de onda.
+(1) Es la ecuación de De Broglie, que une el momento lineal con la longitud
+ de onda[3].
  Como regla general, la mecánica clásica se convierte en una mala descriptora
  de la naturaleza cuando la longitud de onda de ese objeto está en el mismo
  orden que su tamaño.
@@ -148,6 +149,11 @@ Para una pelota de tenis, esto es algo así como 10
 Es una escala móvil, no un salto discontinuo.
  Cuanto mayor es la masa / momento, más clásicamente se comporta la materia
  "similar a una partícula" y menos "cuántica".
+\end_layout
+
+\begin_layout Standard
+Cuando más pequeños sean los transistores más cercanos estarán del comportamient
+o cuántico y más lejanos estarámn del comportamiento clásico.
 \end_layout
 
 \begin_layout Standard
@@ -268,12 +274,23 @@ Estado del arte.
 
 \begin_layout Standard
 \noindent
-DEFGAN.
+Primero de todo, voy a hablar sobre el sistema de redes neuronales con el
+ objetivo de mejorar el cifrado de la información que comparten entre ellas
+ las computadoras, ya que es el sistema que ha hecho que este trabajo de
+ investigación nazca.
 \end_layout
 
 \begin_layout Standard
-\noindent
-Cryptography GAN Google.
+En 2016 Google Brain presentó el artículo 
+\begin_inset Quotes fld
+\end_inset
+
+Learning to protect communications with adversarial neural cryptography
+\begin_inset Quotes frd
+\end_inset
+
+, donde explicaban como desarrollaron un sistema GAN para cifrar las comunicacio
+nes.
 \end_layout
 
 \begin_layout Standard
@@ -491,6 +508,32 @@ Por defecto, QNodes usa la interfaz NumPy.
 \begin_layout Section
 \noindent
 Implementación.
+\end_layout
+
+\begin_layout Standard
+La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
+ en un vector de entrada 2N, usando -1 y 1 para representar los valores
+ de los bits.
+ Este vector se procesa a través de una capa FC de 2N×2N, luego enviado
+ a través de una sucesión de cuatro capas convolucionales de 1-D.
+ Las capas convolucionales se describen en términos de su tamaño de ventana,
+ profundidad de entrada y profundidad de salida.
+ Cada una tiene un "paso", la cantidad por que la ventana se desplaza a
+ cada paso.
+ Las capas de hormigón son [4, 1, 2], [2, 2, 4], [1, 4, 4], y con zancadas
+ de 1, 2, 1, 1.
+ Intuitivamente, la primera capa desliza una ventana de tamaño 4 a través
+ de la 2N elementos de salida de la capa FC, emitiendo dos números (profundidad
+ de salida 2), con el paso 1.
+ Nosotros usar una unidad no lineal sigmoide después de cada capa, excepto
+ la última.
+ Después de la capa final, donde el la salida se reduce a los elementos
+ N, usamos una unidad no lineal de tanh.
+ (Recordemos que el tanh tiene una salida entre [-1, 1], llevando los valores
+ de vuelta a un rango que puede mapear a valores binarios).
+ El La red de Bob es idéntica a la red de Alice La red de Eve sólo toma
+ el texto cifrado como entrada, y por lo tanto tiene una primera capa de
+ N × 2N FC.
 \end_layout
 
 \begin_layout Standard

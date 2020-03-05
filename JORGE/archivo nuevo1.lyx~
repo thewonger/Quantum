@@ -26,7 +26,7 @@
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command bibtex
 \index_command default
 \paperfontsize default
 \spacing single
@@ -103,7 +103,7 @@ La computación clásica tiene límites.
 
 \begin_layout Standard
 \noindent
-Para cumplir con la ley de Moore, el diseñador del transistor debe reducir
+Para cumplir con la ley de Moore, el diseño del transistor debe reducir
  la distancia entre la fuente y el drenaje por un factor de 2 en cada generación
  de tecnología.
  Esto reduce el área en un factor de 2, duplicando así el número de transistores
@@ -113,9 +113,50 @@ Para cumplir con la ley de Moore, el diseñador del transistor debe reducir
 
 \begin_layout Standard
 \noindent
-Como es sabido hay un límite que es el límite entre la física clásica y
- la física cuántica.
+Todo nos hace pensar que habrá un límite que es la relación entre la física
+ clásica y la física cuántica.
  
+\begin_inset Formula 
+\begin{align}
+λ= & h/p
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(1) Es la ecuación que nos une el momento lineal con la longitud de onda.
+ Como regla general, la mecánica clásica se convierte en una mala descriptora
+ de la naturaleza cuando la longitud de onda de ese objeto está en el mismo
+ orden que su tamaño.
+\end_layout
+
+\begin_layout Standard
+Para una pelota de tenis, esto es algo así como 10
+\begin_inset Formula $^{-34}$
+\end_inset
+
+ metros, que es mucho menor que la pelota de tenis.
+ Incluso para moléculas de tamaño mediano, usar la física newtoniana para
+ describir cómo rebotan es razonable.
+ 
+\end_layout
+
+\begin_layout Standard
+Es una escala móvil, no un salto discontinuo.
+ Cuanto mayor es la masa / momento, más clásicamente se comporta la materia
+ "similar a una partícula" y menos "cuántica".
+\end_layout
+
+\begin_layout Standard
+Cuato más pequeños sean los transistores más cercanos estarán del comportamiento
+ cuántico y más lejanos estarámn del comportamiento clásico.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
@@ -129,7 +170,7 @@ Al igual que nuestras computadoras digitales estándar, las computadoras
 
 \begin_layout Standard
 \noindent
-Hay que destacar que, a pesar de los siglos, los sistemas de cifra clásicos
+Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
  y los modernos o actuales se diferencian muy poco entre sí.
  En el fondo, hacen las mismas operaciones, si bien los primeros estaban
  orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
@@ -187,10 +228,11 @@ o para la criptografía de clave pública.
 \noindent
 En la actualidad, las computadoras cuánticas no son lo suficientemente potentes
  para realizar estas operaciones en grandes cantidades, pero en un futuro
- no muy lejano podrían serlo, tanto que los expertos en criptografía han
- comenzado a discutir estrategias para fortalecer los protocolos criptográficos
- en caso de computadoras cuánticas ampliamente disponibles; Este campo se
- llama criptografía post-cuántica.
+ no muy lejano podrían serlo, lo que se suele llamar NISQ era, Noisy Intermediat
+e-Scale Quantum, tanto que los expertos en criptografía han comenzado a
+ discutir estrategias para fortalecer los protocolos criptográficos en caso
+ de computadoras cuánticas ampliamente disponibles.
+ Este campo se llama criptografía post-cuántica.
 \end_layout
 
 \begin_layout Standard
@@ -204,6 +246,27 @@ Las computadoras cuánticas también presentan otra ventaja extraordinaria,
  especial capaz de entregar información cuántica en forma de qubits.
  La confidencialidad está garantizada por las leyes de la mecánica cuántica,
  una forma notable de llamar a la física en ayuda de las matemáticas.
+ 
+\end_layout
+
+\begin_layout Standard
+El campo de la inteligencia artificial (IA) ha experimentado un crecimiento
+ sobresaliente en las últimas dos décadas.
+ Ha demostrado ser eficaz en el manejo de áreas complejas como el reconocimiento
+ de voz, el reconocimiento de imágenes y muchas otras.
+ Una rama interesante y en evolución que se introdujo hace años, pero que
+ sólo ha experimentado un buen crecimiento en los últimos años, es la encriptaci
+ón de la IA.
+ Después de que Google anunciara que había tenido éxito en la enseñanza
+ de la encriptación de redes neuronales en presencia de espías, el interés
+ de varios investigadores de todo el mundo por desarrollar nuevas redes
+ neuronales capaces de realizar diversas tareas de criptografía se ha extendido
+ rápidamente en este campo particular.
+ En este documento se dan los primeros pasos para lograr una comunicación
+ segura entre más de dos partes utilizando la encriptación en las redes
+ neuronales.
+ Relacionamos la idea del esquema de cifrado simétrico de dos partes de
+ Google con un esquema de cifrado de varias partes.
  
 \end_layout
 
@@ -238,6 +301,23 @@ Fundamentos.
 \end_layout
 
 \begin_layout Standard
+En la computación cuántica se trata con el equivalente de bits llamados
+ qubits , que notoriamente pueden manejar información en un estado no binario
+ gracias a una propiedad de los sistemas cuánticos llamada superposición
+ (a veces se dice que pueden representar 0s y 1s en al mismo tiempo).
+ Un circuito cuántico es una serie de operaciones aplicadas a qubits que
+ cambian su estado, por ejemplo , cambiando su fase relativa.
+ Los Qubits se pueden representar geométricamente con una llamada esfera
+ de Bloch , por lo que una operación en un qubit corresponde a una rotación
+ del vector de estado cuántico en este espacio virtual.
+\end_layout
+
+\begin_layout Standard
+Partiendo de que una red neuronal cuántica es cualquier circuito cuántico
+ con parámetros continuos entrenables.
+\end_layout
+
+\begin_layout Standard
 Pues aquí hablaré de seguridad informática, de criptografía.
 \end_layout
 
@@ -255,6 +335,14 @@ De redes neuronales.
 
 \begin_layout Standard
 De GAN.
+\end_layout
+
+\begin_layout Standard
+Hay dos maneras de realizar un algoritmo de aprendizaje automático cuánticoEn
+ lugar de simular una computadora cuántica dentro del software de aprendizaje
+ automático convencional, tomaríamos todas las mejores características del
+ software de aprendizaje profundo y las haríamos verdaderamente nativas
+ de los dispositivos cuánticos.
 \end_layout
 
 \begin_layout Section
@@ -380,9 +468,64 @@ Qiskit:
 Simulador cuántico: 
 \end_layout
 
+\begin_layout Itemize
+PennyLane: En PennyLane, los cálculos cuánticos se representan como objetos
+ de nodo cuántico .
+ Se utiliza un nodo cuántico para declarar el circuito cuántico, y también
+ vincula el cálculo a un dispositivo específico que lo ejecuta.
+ Los nodos cuánticos se pueden crear fácilmente utilizando el decorador
+ qnode.
+ QNodes puede interactuar con cualquiera de las bibliotecas numéricas y
+ de aprendizaje automático compatibles (NumPy , PyTorch y TensorFlow), lo
+ que se indica al proporcionar un interface argumento opcional al crear
+ un QNode.
+ Cada interfaz permite que el circuito cuántico se integre perfectamente
+ con estructuras de datos específicas de la biblioteca (por ejemplo, matrices
+ NumPy o tensores Pytorch / TensorFlow) y optimizadores .
+\end_layout
+
+\begin_layout Itemize
+Desde el primer día, PennyLane ha proporcionado dos características clave
+ que creemos que serán cruciales para QML a corto plazo: i) diferenciación
+ automática de circuitos cuánticos; y ii) una abstracción QNode para construir
+ cálculos híbridos cuántico-clásicos y multidispositivos.
+\end_layout
+
+\begin_layout Itemize
+Por defecto, QNodes usa la interfaz NumPy.
+ Las otras interfaces de PennyLane se presentan con más detalle en la sección
+ de interfaces .
+\end_layout
+
 \begin_layout Section
 \noindent
 Implementación.
+\end_layout
+
+\begin_layout Standard
+La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
+ en un vector de entrada 2N, usando -1 y 1 para representar los valores
+ de los bits.
+ Este vector se procesa a través de una capa FC de 2N×2N, luego enviado
+ a través de una sucesión de cuatro capas convolucionales de 1-D.
+ Las capas convolucionales se describen en términos de su tamaño de ventana,
+ profundidad de entrada y profundidad de salida.
+ Cada una tiene un "paso", la cantidad por que la ventana se desplaza a
+ cada paso.
+ Las capas de hormigón son [4, 1, 2], [2, 2, 4], [1, 4, 4], y con zancadas
+ de 1, 2, 1, 1.
+ Intuitivamente, la primera capa desliza una ventana de tamaño 4 a través
+ de la 2N elementos de salida de la capa FC, emitiendo dos números (profundidad
+ de salida 2), con el paso 1.
+ Nosotros usar una unidad no lineal sigmoide después de cada capa, excepto
+ la última.
+ Después de la capa final, donde el la salida se reduce a los elementos
+ N, usamos una unidad no lineal de tanh.
+ (Recordemos que el tanh tiene una salida entre [-1, 1], llevando los valores
+ de vuelta a un rango que puede mapear a valores binarios).
+ El La red de Bob es idéntica a la red de Alice La red de Eve sólo toma
+ el texto cifrado como entrada, y por lo tanto tiene una primera capa de
+ N × 2N FC.
 \end_layout
 
 \begin_layout Standard
@@ -416,11 +559,11 @@ Puerta de NOP:
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 NOT=\begin{pmatrix}0 & 1\\
 1 & 0
 \end{pmatrix}
-\]
+\end{equation}
 
 \end_inset
 
@@ -434,11 +577,11 @@ Puerta de Hadamard:
 \begin_layout Standard
 Esta puerta consiste en aplicar al estado 
 \begin_inset Formula 
-\[
+\begin{equation}
 H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\
 1 & -1
 \end{pmatrix}
-\]
+\end{equation}
 
 \end_inset
 
