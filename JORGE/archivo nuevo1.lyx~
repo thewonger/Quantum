@@ -77,9 +77,25 @@
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bibliography{datos}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Title
 \noindent
-Criptografía basada en un sistema híbrido Cuántico-GAN
+Hybrid Quantum Generative Adversarial Network to protect communications.
 \end_layout
 
 \begin_layout Author
@@ -98,7 +114,20 @@ La computación clásica tiene límites.
  Tiene unos límites físicos que no puede sobrepasar.
  La ley de Moore nos dice que cada 2 años se aumenta por dos la potencia
  de los procesadores.
- [1]
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{bergholm2018pennylane}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -127,7 +156,8 @@ Todo nos hace pensar que habrá un límite que es la relación entre la física
 \end_layout
 
 \begin_layout Standard
-(1) Es la ecuación que nos une el momento lineal con la longitud de onda.
+(1) Es la ecuación de De Broglie, que une el momento lineal con la longitud
+ de onda[3].
  Como regla general, la mecánica clásica se convierte en una mala descriptora
  de la naturaleza cuando la longitud de onda de ese objeto está en el mismo
  orden que su tamaño.
@@ -147,15 +177,30 @@ Para una pelota de tenis, esto es algo así como 10
 \begin_layout Standard
 Es una escala móvil, no un salto discontinuo.
  Cuanto mayor es la masa / momento, más clásicamente se comporta la materia
- "similar a una partícula" y menos "cuántica".
+ "similar a una partícula" y menos “cuántica”.
 \end_layout
 
 \begin_layout Standard
-Cuato más pequeños sean los transistores más cercanos estarán del comportamiento
- cuántico y más lejanos estarámn del comportamiento clásico.
+Cuando más pequeños sean los transistores más cercanos estarán del comportamient
+o cuántico y más lejanos estarámn del comportamiento clásico.
+\end_layout
+
+\begin_layout Quotation
+“The idea behind digital computers may be explained by saying that these
+ machines are intended to carry out any operations which could be done by
+ a human computer.
+ The human computer is supposed to be following fixed rules; he has no authority
+ todeviate from them in any detail.
+ We may suppose that these rules are supplied in abook, which is altered
+ whenever he is put on to a new job.
+ He has also an unlimited supply of paper on which he does his calculations.”
+ Alan Turing
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
 
 \end_layout
 
@@ -277,12 +322,23 @@ Estado del arte.
 
 \begin_layout Standard
 \noindent
-DEFGAN.
+Primero de todo, voy a hablar sobre el sistema de redes neuronales con el
+ objetivo de mejorar el cifrado de la información que comparten entre ellas
+ las computadoras, ya que es el sistema que ha hecho que este trabajo de
+ investigación nazca.
 \end_layout
 
 \begin_layout Standard
-\noindent
-Cryptography GAN Google.
+En 2016 Google Brain presentó el artículo 
+\begin_inset Quotes fld
+\end_inset
+
+Learning to protect communications with adversarial neural cryptography
+\begin_inset Quotes frd
+\end_inset
+
+, donde explicaban como desarrollaron un sistema GAN para cifrar las comunicacio
+nes.
 \end_layout
 
 \begin_layout Standard
@@ -632,6 +688,35 @@ Conclusiones.
 \begin_layout Standard
 \noindent
 Realizar una red neuronal no híbrida, hacer una red neuronal puramente cuántica.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bibliographystyle{unsrt} 
+\backslash
+bibliography{sample} 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

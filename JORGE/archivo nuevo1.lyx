@@ -98,7 +98,20 @@ La computación clásica tiene límites.
  Tiene unos límites físicos que no puede sobrepasar.
  La ley de Moore nos dice que cada 2 años se aumenta por dos la potencia
  de los procesadores.
- [1]
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{bergholm2018pennylane}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -148,12 +161,31 @@ Para una pelota de tenis, esto es algo así como 10
 \begin_layout Standard
 Es una escala móvil, no un salto discontinuo.
  Cuanto mayor es la masa / momento, más clásicamente se comporta la materia
- "similar a una partícula" y menos "cuántica".
+ "similar a una partícula" y menos “cuántica”.
 \end_layout
 
 \begin_layout Standard
 Cuando más pequeños sean los transistores más cercanos estarán del comportamient
 o cuántico y más lejanos estarámn del comportamiento clásico.
+\end_layout
+
+\begin_layout Quotation
+“The idea behind digital computers may be explained by saying that these
+ machines are intended to carry out any operations which could be done by
+ a human computer.
+ The human computer is supposed to be following fixed rules; he has no authority
+ todeviate from them in any detail.
+ We may suppose that these rules are supplied in abook, which is altered
+ whenever he is put on to a new job.
+ He has also an unlimited supply of paper on which he does his calculations.”
+ Alan Turing
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -640,6 +672,35 @@ Conclusiones.
 \begin_layout Standard
 \noindent
 Realizar una red neuronal no híbrida, hacer una red neuronal puramente cuántica.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medskip
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bibliographystyle{unsrt} 
+\backslash
+bibliography{datos} 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
