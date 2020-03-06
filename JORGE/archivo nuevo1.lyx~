@@ -476,6 +476,25 @@ Sobre estos qubits se pueden realizar operaciones.
 \end_layout
 
 \begin_layout Standard
+Una función de onda ψ ( x ; t ) es una forma de representar el estado físico
+ de un sistema de partículas.
+ Usualmente es una función compleja, de cuadrado integrable y univaluada
+ de las coordenadas espaciales de cada una de las partículas.
+ Las propiedades mencionadas de la función de onda permiten interpretarla
+ como una función de cuadrado integrable.
+ 
+\end_layout
+
+\begin_layout Standard
+Con cada observable físico, hay asociado un operador que se usa con la función
+ de onda.
+ Supóngase que la función de onda asociada con un valor cuantizado definido
+ (valor propio) del observable se denota por Ψn, y el operador se representa
+ por Q.
+ La acción del operador está dado por
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \end{equation}
@@ -527,6 +546,18 @@ cite{EsferadeBloch}
 \begin_inset Graphics
 	filename QiskitCircuit.png
 	display false
+	width 8cm
+	height 8cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/Puerta cuántica.png
 	width 8cm
 	height 8cm
 	keepAspectRatio
