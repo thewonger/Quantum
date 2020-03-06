@@ -5,6 +5,9 @@
 \save_transient_properties true
 \origin unavailable
 \textclass paper
+\begin_preamble
+\usepackage{braket}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
@@ -450,7 +453,26 @@ En la computación cuántica se trata con el equivalente de bits llamados
  qubits , que notoriamente pueden manejar información en un estado no binario
  gracias a una propiedad de los sistemas cuánticos llamada superposición
  (a veces se dice que pueden representar 0s y 1s en al mismo tiempo).
- Un circuito cuántico es una serie de operaciones aplicadas a qubits que
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c1\Ket{0}+c_{2}\Ket{1}
+\end{equation}
+
+\end_inset
+
+Sobre estos qubits se pueden realizar operaciones.
+ La función que cambia las propiedades de cada qubit es el operador es una
+ función que va de un espacio de estados físicos a otro espacio de estados
+ físicos.
+ 
+\end_layout
+
+\begin_layout Standard
+Un circuito cuántico es una serie de operaciones aplicadas a qubits que
  cambian su estado, por ejemplo , cambiando su fase relativa.
  Los Qubits se pueden representar geométricamente con una llamada esfera
  de Bloch , por lo que una operación en un qubit corresponde a una rotación
@@ -460,6 +482,37 @@ En la computación cuántica se trata con el equivalente de bits llamados
 \begin_layout Standard
 \begin_inset Graphics
 	filename /root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
+	width 8cm
+	height 8cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esfera de Bloch.
+ Imagen obtenida de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{EsferadeBloch}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename QiskitCircuit.png
+	display false
 	width 8cm
 	height 8cm
 	keepAspectRatio

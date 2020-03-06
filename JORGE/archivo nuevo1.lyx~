@@ -4,14 +4,17 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass paper
+\begin_preamble
+\usepackage{braket}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
+\font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
@@ -29,7 +32,7 @@
 \bibtex_command bibtex
 \index_command default
 \paperfontsize default
-\spacing single
+\spacing onehalf
 \use_hyperref false
 \papersize a4paper
 \use_geometry false
@@ -84,7 +87,11 @@ Hybrid Quantum Generative Adversarial Network to protect communications.
 
 \begin_layout Author
 \noindent
-Jorge Calleja García
+Autor: Jorge Calleja García
+\end_layout
+
+\begin_layout Standard
+Tutor: Miguel Arevalillo Herráez
 \end_layout
 
 \begin_layout Section
@@ -338,8 +345,7 @@ Primero de todo, voy a hablar sobre el sistema de redes neuronales con el
  investigación nazca.
 \end_layout
 
-\begin_layout Standard
-En 2016 Google Brain presentó el artículo 
+\begin_layout Subsection
 \begin_inset Quotes fld
 \end_inset
 
@@ -347,22 +353,85 @@ Learning to protect communications with adversarial neural cryptography
 \begin_inset Quotes frd
 \end_inset
 
-, donde explicaban como desarrollaron un sistema GAN para cifrar las comunicacio
-nes.
+
+\end_layout
+
+\begin_layout Standard
+Google en 2016, explico a todo el mundo como desarrollar un sistema GAN
+ para cifrar las comunicaciones, esto hizo que la investigación sobre este
+ area creciera mucho desde ese año hasta ahora.
+ 
+\end_layout
+
+\begin_layout Standard
+La solución de Google es la siguiente, es necesario que explique bien este
+ sistema ya que todo este trabajo se basa en la modificación de sus sistema
+ para poder obtener mejores resultados que su red GAN clásica:
+\end_layout
+
+\begin_layout Standard
+Hay tres redes neuronales GAN:
+\end_layout
+
+\begin_layout Standard
+Alice
+\end_layout
+
+\begin_layout Standard
+La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
+ en un vector de entrada 2N, usando -1 y 1 para representar los valores
+ de los bits.
+ Este vector se procesa a través de una capa FC de 2N×2N, luego enviado
+ a través de una sucesión de cuatro capas convolucionales de 1-D.
+ Las capas convolucionales se describen en términos de su tamaño de ventana,
+ profundidad de entrada y profundidad de salida.
+ Cada una tiene un "paso", la cantidad por que la ventana se desplaza a
+ cada paso.
+ Las capas de hormigón son [4, 1, 2], [2, 2, 4], [1, 4, 4], y con zancadas
+ de 1, 2, 1, 1.
+ Intuitivamente, la primera capa desliza una ventana de tamaño 4 a través
+ de la 2N elementos de salida de la capa FC, emitiendo dos números (profundidad
+ de salida 2), con el paso 1.
+ Nosotros usar una unidad no lineal sigmoide después de cada capa, excepto
+ la última.
+ Después de la capa final, donde el la salida se reduce a los elementos
+ N, usamos una unidad no lineal de tanh.
+ (Recordemos que el tanh tiene una salida entre [-1, 1], llevando los valores
+ de vuelta a un rango que puede mapear a valores binarios).
+ El La red de Bob es idéntica a la red de Alice La red de Eve sólo toma
+ el texto cifrado como entrada, y por lo tanto tiene una primera capa de
+ N × 2N FC.
 \end_layout
 
 \begin_layout Standard
 \noindent
+Hay dos sistemas en nuestra implemantación.
+ Vamos a crear un sistema de Redes Generativas Antagónicas (GAN) híbrido,
+ con un generador cuántico en el interior de una de las redes.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Hay 3 redes neuronales Alice, Bob y Eve.
+ Las tres van a tener la misma configuración, por simplicidad y por
+\end_layout
+
+\begin_layout Subsection
+\noindent
 Deepfakes.
 \end_layout
 
-\begin_layout Standard
-Hay un grupo de investigadores que han hecho un sistema GAN añadiendole
- conceptos de la teoría del caos.
+\begin_layout Subsection
+Gan caótica.
+ 
 \end_layout
 
 \begin_layout Standard
-Ellos proponen que es una buena solución debido a que los sistemas caóticos
+\noindent
+Hay un grupo de investigadores que han hecho un sistema GAN añadiendole
+ conceptos de la teoría del caos.
+ Ellos proponen que es una buena solución debido a que los sistemas caóticos
  tienen dos propiedades muy interesantes que ayudan para proteger las comunicaci
 ones, que al fin y al cabo es nuestro objetivo a desarrollar en este trabajo.
  La primera de las motivaciones es que cuando tenemos un sistema dinámico
@@ -371,11 +440,7 @@ ones, que al fin y al cabo es nuestro objetivo a desarrollar en este trabajo.
  entre sí.
  La otra vertiente es la potencialidad del mapeo logístico que tiene utilidades
  para la generación de números pseudo-aleatorios.
-\end_layout
-
-\begin_layout Standard
-\noindent
-Quantum protocols for communication.
+ Su investigación fue básicamente:
 \end_layout
 
 \begin_layout Section
@@ -383,16 +448,104 @@ Quantum protocols for communication.
 Fundamentos.
 \end_layout
 
+\begin_layout Subsection
+Computación cuántica.
+\end_layout
+
 \begin_layout Standard
 En la computación cuántica se trata con el equivalente de bits llamados
  qubits , que notoriamente pueden manejar información en un estado no binario
  gracias a una propiedad de los sistemas cuánticos llamada superposición
  (a veces se dice que pueden representar 0s y 1s en al mismo tiempo).
- Un circuito cuántico es una serie de operaciones aplicadas a qubits que
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c1\Ket{0}+c_{2}\Ket{1}
+\end{equation}
+
+\end_inset
+
+Sobre estos qubits se pueden realizar operaciones.
+ La función que cambia las propiedades de cada qubit es el operador es una
+ función que va de un espacio de estados físicos a otro espacio de estados
+ físicos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un circuito cuántico es una serie de operaciones aplicadas a qubits que
  cambian su estado, por ejemplo , cambiando su fase relativa.
  Los Qubits se pueden representar geométricamente con una llamada esfera
  de Bloch , por lo que una operación en un qubit corresponde a una rotación
  del vector de estado cuántico en este espacio virtual.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
+	width 8cm
+	height 8cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esfera de Bloch.
+ Imagen obtenida de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{EsferadeBloch}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename QiskitCircuit.png
+	display false
+	width 8cm
+	height 8cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Criptografía
+\end_layout
+
+\begin_layout Subsubsection
+Teoría de números aleatorios
+\end_layout
+
+\begin_layout Subsection
+Redes neuronales
 \end_layout
 
 \begin_layout Standard
@@ -482,6 +635,10 @@ La planificación de GP.
 Análisis teórico.
 \end_layout
 
+\begin_layout Subsection
+Fundamento del algoritmo
+\end_layout
+
 \begin_layout Standard
 \begin_inset Graphics
 	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
@@ -541,6 +698,10 @@ cite{PennylaneImagen}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Propuesta de implementación
 \end_layout
 
 \begin_layout Section
@@ -647,44 +808,8 @@ Implementación.
 \end_layout
 
 \begin_layout Standard
-La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
- en un vector de entrada 2N, usando -1 y 1 para representar los valores
- de los bits.
- Este vector se procesa a través de una capa FC de 2N×2N, luego enviado
- a través de una sucesión de cuatro capas convolucionales de 1-D.
- Las capas convolucionales se describen en términos de su tamaño de ventana,
- profundidad de entrada y profundidad de salida.
- Cada una tiene un "paso", la cantidad por que la ventana se desplaza a
- cada paso.
- Las capas de hormigón son [4, 1, 2], [2, 2, 4], [1, 4, 4], y con zancadas
- de 1, 2, 1, 1.
- Intuitivamente, la primera capa desliza una ventana de tamaño 4 a través
- de la 2N elementos de salida de la capa FC, emitiendo dos números (profundidad
- de salida 2), con el paso 1.
- Nosotros usar una unidad no lineal sigmoide después de cada capa, excepto
- la última.
- Después de la capa final, donde el la salida se reduce a los elementos
- N, usamos una unidad no lineal de tanh.
- (Recordemos que el tanh tiene una salida entre [-1, 1], llevando los valores
- de vuelta a un rango que puede mapear a valores binarios).
- El La red de Bob es idéntica a la red de Alice La red de Eve sólo toma
- el texto cifrado como entrada, y por lo tanto tiene una primera capa de
- N × 2N FC.
-\end_layout
-
-\begin_layout Standard
 \noindent
-Hay dos sistemas en nuestra implemantación.
- Vamos a crear un sistema de Redes Generativas Antagónicas (GAN) híbrido,
- con un generador cuántico en el interior de una de las redes.
- 
-\end_layout
-
-\begin_layout Standard
-\noindent
-Hay 3 redes neuronales Alice, Bob y Eve.
- Las tres van a tener la misma configuración, por simplicidad y por [Documento
- de Google].
+[Documento de Google].
 \end_layout
 
 \begin_layout Standard
