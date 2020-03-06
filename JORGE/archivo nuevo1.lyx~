@@ -106,7 +106,7 @@ status open
 
 
 \backslash
-cite{bergholm2018pennylane}
+cite{kinnunen2015examining}
 \end_layout
 
 \end_inset
@@ -121,7 +121,20 @@ Para cumplir con la ley de Moore, el diseño del transistor debe reducir
  de tecnología.
  Esto reduce el área en un factor de 2, duplicando así el número de transistores
  por chip.
- [2]
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{lundstrom2003moore}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -141,8 +154,21 @@ Todo nos hace pensar que habrá un límite que es la relación entre la física
 
 \begin_layout Standard
 (1) Es la ecuación de De Broglie, que une el momento lineal con la longitud
- de onda[3].
- Como regla general, la mecánica clásica se convierte en una mala descriptora
+ de onda.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{rio2016fisica}
+\end_layout
+
+\end_inset
+
+Como regla general, la mecánica clásica se convierte en una mala descriptora
  de la naturaleza cuando la longitud de onda de ese objeto está en el mismo
  orden que su tamaño.
 \end_layout
@@ -166,7 +192,7 @@ Es una escala móvil, no un salto discontinuo.
 
 \begin_layout Standard
 Cuando más pequeños sean los transistores más cercanos estarán del comportamient
-o cuántico y más lejanos estarámn del comportamiento clásico.
+o cuántico y más lejanos estarán presentar un comportamiento clásico.
 \end_layout
 
 \begin_layout Quotation
@@ -331,6 +357,23 @@ Deepfakes.
 \end_layout
 
 \begin_layout Standard
+Hay un grupo de investigadores que han hecho un sistema GAN añadiendole
+ conceptos de la teoría del caos.
+\end_layout
+
+\begin_layout Standard
+Ellos proponen que es una buena solución debido a que los sistemas caóticos
+ tienen dos propiedades muy interesantes que ayudan para proteger las comunicaci
+ones, que al fin y al cabo es nuestro objetivo a desarrollar en este trabajo.
+ La primera de las motivaciones es que cuando tenemos un sistema dinámico
+ no lineal cualquier pequeña diferencia entre las condiciones iniciales,
+ aunque sea una diferencia infinitesimal produce resultados muy diferentes
+ entre sí.
+ La otra vertiente es la potencialidad del mapeo logístico que tiene utilidades
+ para la generación de números pseudo-aleatorios.
+\end_layout
+
+\begin_layout Standard
 \noindent
 Quantum protocols for communication.
 \end_layout
@@ -442,6 +485,9 @@ Análisis teórico.
 \begin_layout Standard
 \begin_inset Graphics
 	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
+	width 8cm
+	height 8cm
+	keepAspectRatio
 	groupId graficos
 
 \end_inset
@@ -451,6 +497,36 @@ Análisis teórico.
 
 \begin_layout Standard
 Esquema de un sistema GAN.
+ Imagen extraída de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{GanGoogle}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/qgan.png
+	width 8cm
+	height 8cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esquema de un sistema QGAN.
  Imagen extraída de 
 \begin_inset ERT
 status open

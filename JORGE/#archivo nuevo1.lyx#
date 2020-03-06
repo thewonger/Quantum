@@ -469,24 +469,6 @@ En la computación cuántica se trata con el equivalente de bits llamados
 
 \end_layout
 
-\begin_layout Standard
-Esfera de Bloch.
- Imagen obtenida de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cite{EsferadeBloch}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Criptografía
 \end_layout
