@@ -77,22 +77,6 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bibliography{datos}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Title
 \noindent
 Hybrid Quantum Generative Adversarial Network to protect communications.
@@ -455,6 +439,34 @@ La planificación de GP.
 Análisis teórico.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
+	groupId graficos
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esquema de un sistema GAN.
+ Imagen extraída de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{PennylaneImagen}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 \noindent
 Herramientas.
@@ -711,7 +723,7 @@ medskip
 \backslash
 bibliographystyle{unsrt} 
 \backslash
-bibliography{sample} 
+bibliography{datos} 
 \end_layout
 
 \end_inset

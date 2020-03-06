@@ -353,6 +353,10 @@ En la computación cuántica se trata con el equivalente de bits llamados
 \end_layout
 
 \begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 Partiendo de que una red neuronal cuántica es cualquier circuito cuántico
  con parámetros continuos entrenables.
 \end_layout
@@ -437,6 +441,49 @@ La planificación de GP.
 \begin_layout Section
 \noindent
 Análisis teórico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
+	width 8cm
+	height 8cm
+	keepAspectRatio
+	groupId graficos
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esquema de un sistema GAN.
+ Imagen extraída de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{PennylaneImagen}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/qgan.png
+	width 8cm
+	height 8cm
+	keepAspectRatio
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
