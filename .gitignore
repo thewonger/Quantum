@@ -1,9 +1,0 @@
-# Virtual Env
-env/
-
-# PyCharm files
-.idea/
-
-# Byte-compiled files
-*.pyc
-
