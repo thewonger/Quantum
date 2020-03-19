@@ -515,7 +515,7 @@ Un circuito cuántico es una serie de operaciones aplicadas a qubits que
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
+	filename C:/root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
 	width 8cm
 	height 8cm
 	keepAspectRatio
@@ -558,7 +558,7 @@ cite{EsferadeBloch}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/Puerta cuántica.png
+	filename C:/root/Escritorio/Quantum/assets/Puerta cuántica.png
 	width 8cm
 	height 8cm
 	keepAspectRatio
@@ -673,7 +673,7 @@ Fundamento del algoritmo
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
+	filename C:/root/Escritorio/Quantum/assets/gan_diagram.svg
 	width 8cm
 	height 8cm
 	keepAspectRatio
@@ -704,7 +704,7 @@ cite{GanGoogle}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/qgan.png
+	filename C:/root/Escritorio/Quantum/assets/qgan.png
 	width 8cm
 	height 8cm
 	keepAspectRatio
@@ -795,6 +795,12 @@ Pandas: Es una biblioteca de software escrita para el lenguaje de programación
  Python para la manipulación y análisis de datos.
  En particular, ofrece estructuras de datos y operaciones para manipular
  tablas numéricas y series temporales.
+\end_layout
+
+\begin_layout Itemize
+Cuda: CUDA (Compute Unified Device Architecture) es una plataforma de computació
+n paralela y un modelo de interfaz de programación de aplicaciones (API)
+ creado por Nvidia.
 \end_layout
 
 \begin_layout Itemize

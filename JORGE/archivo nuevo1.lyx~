@@ -490,13 +490,14 @@ Con cada observable físico, hay asociado un operador que se usa con la función
  de onda.
  Supóngase que la función de onda asociada con un valor cuantizado definido
  (valor propio) del observable se denota por Ψn, y el operador se representa
- por Q.
- La acción del operador está dado por
+ por O.
+ La acción del operador está dado por:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
+O\varPsi_{n}=o_{_{n}}\varPsi_{n}
 \end{equation}
 
 \end_inset
