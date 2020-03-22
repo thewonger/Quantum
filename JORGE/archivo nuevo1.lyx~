@@ -222,11 +222,29 @@ o cuántico y más lejanos estarán presentar un comportamiento clásico.
 \end_layout
 
 \begin_layout Standard
-\noindent
-Al igual que nuestras computadoras digitales estándar, las computadoras
- cuánticas se basan en esta misma idea básica.
+Entonces los paradigmas de computación que nos permiten escalar la potencia
+ de los computadores son los siguentes:
+\end_layout
+
+\begin_layout Itemize
+Computación cuántica: Al igual que nuestras computadoras digitales estándar,
+ las computadoras cuánticas se basan en esta misma idea básica.
  La principal diferencia es que usan qubits , una variante del bit que puede
  manipularse de manera cuántica.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\noindent
+Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
+ y los modernos o actuales se diferencian muy poco entre sí.
+ En el fondo, hacen las mismas operaciones, si bien los primeros estaban
+ orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
  
 \end_layout
 
@@ -236,8 +254,13 @@ Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
  y los modernos o actuales se diferencian muy poco entre sí.
  En el fondo, hacen las mismas operaciones, si bien los primeros estaban
  orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
- Pero los principios en los que se basan para conseguir su objetivo de enmascara
-r la información siguen siendo los mismos, la difusión y la confusión
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Pero los principios en los que se basan para conseguir su objetivo de enmascarar
+ la información siguen siendo los mismos, la difusión y la confusión
 \end_layout
 
 \begin_layout Standard
@@ -515,7 +538,7 @@ Un circuito cuántico es una serie de operaciones aplicadas a qubits que
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
+	filename C:/root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
 	width 8cm
 	height 8cm
 	keepAspectRatio
@@ -558,7 +581,7 @@ cite{EsferadeBloch}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/Puerta cuántica.png
+	filename C:/root/Escritorio/Quantum/assets/Puerta cuántica.png
 	width 8cm
 	height 8cm
 	keepAspectRatio
@@ -673,7 +696,7 @@ Fundamento del algoritmo
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
+	filename C:/root/Escritorio/Quantum/assets/gan_diagram.svg
 	width 8cm
 	height 8cm
 	keepAspectRatio
@@ -704,7 +727,7 @@ cite{GanGoogle}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/qgan.png
+	filename C:/root/Escritorio/Quantum/assets/qgan.png
 	width 8cm
 	height 8cm
 	keepAspectRatio
@@ -795,6 +818,12 @@ Pandas: Es una biblioteca de software escrita para el lenguaje de programación
  Python para la manipulación y análisis de datos.
  En particular, ofrece estructuras de datos y operaciones para manipular
  tablas numéricas y series temporales.
+\end_layout
+
+\begin_layout Itemize
+Cuda: CUDA (Compute Unified Device Architecture) es una plataforma de computació
+n paralela y un modelo de interfaz de programación de aplicaciones (API)
+ creado por Nvidia.
 \end_layout
 
 \begin_layout Itemize

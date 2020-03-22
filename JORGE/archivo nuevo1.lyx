@@ -222,11 +222,23 @@ o cuántico y más lejanos estarán presentar un comportamiento clásico.
 \end_layout
 
 \begin_layout Standard
-\noindent
-Al igual que nuestras computadoras digitales estándar, las computadoras
- cuánticas se basan en esta misma idea básica.
+Entonces los paradigmas de computación que nos permiten escalar la potencia
+ de los computadores son los siguentes:
+\end_layout
+
+\begin_layout Itemize
+Computación cuántica: Al igual que nuestras computadoras digitales estándar,
+ las computadoras cuánticas se basan en esta misma idea básica.
  La principal diferencia es que usan qubits , una variante del bit que puede
  manipularse de manera cuántica.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
+ y los modernos o actuales se diferencian muy poco entre sí.
+ En el fondo, hacen las mismas operaciones, si bien los primeros estaban
+ orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
  
 \end_layout
 
@@ -236,8 +248,13 @@ Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
  y los modernos o actuales se diferencian muy poco entre sí.
  En el fondo, hacen las mismas operaciones, si bien los primeros estaban
  orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
- Pero los principios en los que se basan para conseguir su objetivo de enmascara
-r la información siguen siendo los mismos, la difusión y la confusión
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Pero los principios en los que se basan para conseguir su objetivo de enmascarar
+ la información siguen siendo los mismos, la difusión y la confusión
 \end_layout
 
 \begin_layout Standard
@@ -667,6 +684,51 @@ La planificación de GP.
 Análisis teórico.
 \end_layout
 
+\begin_layout Standard
+\noindent
+[Comienzo a definir la red neuronal].
+\end_layout
+
+\begin_layout Standard
+\noindent
+El sistema generador cuántico funciona de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+Puerta de NOP:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+NOT=\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Puerta de Hadamard:
+\end_layout
+
+\begin_layout Standard
+Esta puerta consiste en aplicar al estado 
+\begin_inset Formula 
+\begin{equation}
+H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\
+1 & -1
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Fundamento del algoritmo
 \end_layout
@@ -851,48 +913,13 @@ Implementación.
 \end_layout
 
 \begin_layout Standard
-\noindent
-[Comienzo a definir la red neuronal].
-\end_layout
-
-\begin_layout Standard
-\noindent
-El sistema generador cuántico funciona de la siguiente manera:
-\end_layout
-
-\begin_layout Standard
-Puerta de NOP:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-NOT=\begin{pmatrix}0 & 1\\
-1 & 0
-\end{pmatrix}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Puerta de Hadamard:
-\end_layout
-
-\begin_layout Standard
-Esta puerta consiste en aplicar al estado 
-\begin_inset Formula 
-\begin{equation}
-H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\
-1 & -1
-\end{pmatrix}
-\end{equation}
-
-\end_inset
-
-
+Uno de los problemas que he tenido ha sido lidiar con las versiones de Tensorflo
+w.
+ En la primera versión el objetivo era crear un grafo, esto hacia que el
+ código fuera muy extenso y por lo tanto cambiaran la forma en la que hay
+ que usar Tensorflow.
+ En la segunda versión, que es la actual, incluye Keras, y se recomienda
+ que el todo el codigo se haga a partir de tf.Keras.
 \end_layout
 
 \begin_layout Section
