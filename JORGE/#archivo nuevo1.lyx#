@@ -794,6 +794,17 @@ cite{PennylaneImagen}
 
 \end_layout
 
+\begin_layout Standard
+Para ralizar todo esto es muy importante una función que nos permita unir
+ los circuitos cuánticos con las redes neuronales, para eso contamos con:
+\end_layout
+
+\begin_layout Standard
+La función tfq.convert_to_tensor en Tensorflow, es una función que convierte
+ un circuito cuántico en un tensor.
+ 
+\end_layout
+
 \begin_layout Subsection
 Propuesta de implementación
 \end_layout
