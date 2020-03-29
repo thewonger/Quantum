@@ -233,99 +233,12 @@ Computación cuántica: Al igual que nuestras computadoras digitales estándar,
  manipularse de manera cuántica.
 \end_layout
 
-\begin_layout Standard
-\noindent
-Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
- y los modernos o actuales se diferencian muy poco entre sí.
- En el fondo, hacen las mismas operaciones, si bien los primeros estaban
- orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
- 
+\begin_layout Itemize
+Computación paralela:
 \end_layout
 
-\begin_layout Standard
-\noindent
-Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
- y los modernos o actuales se diferencian muy poco entre sí.
- En el fondo, hacen las mismas operaciones, si bien los primeros estaban
- orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
- 
-\end_layout
-
-\begin_layout Standard
-\noindent
-Pero los principios en los que se basan para conseguir su objetivo de enmascarar
- la información siguen siendo los mismos, la difusión y la confusión
-\end_layout
-
-\begin_layout Standard
-\noindent
-La invención de la criptografía asimétrica, también conocida como criptografía
- de clave pública, ha sido el logro más importante de la criptografía moderna.
- En este sistema, cada usuario genera un par de claves, una clave pública,
- distribuida libremente a todos, y una clave privada, mantenida en el máximo
- secreto.
- Alice puede cifrar un mensaje usando la clave pública de Bob, pero solo
- Bob puede descifrarlo usando su clave privada.
- 
-\end_layout
-
-\begin_layout Standard
-\noindent
-Sin embargo, para implementar esta característica, tenemos que usar funciones
- matemáticas que generalmente son difíciles de resolver pero, una vez que
- se conoce una solución, no es tan difícil verificarla.
- Las implementaciones contemporáneas de algoritmos matemáticos hacen uso
- de factorización de enteros, logaritmo discreto y relaciones de curva elíptica.
- No es el alcance de este cuaderno entrar en los detalles de este proceso,
- que es ampliamente discutido en la literatura.
-\end_layout
-
-\begin_layout Standard
-\noindent
-Digamos que ofrece un buen compromiso entre seguridad y practicidad, superando
- el problema de la generación de claves de una sola vez y, lo más importante,
- el intercambio de claves.
- De hecho, en casos de uso real, casi todas las principales implementaciones
- de criptografía se realizan de forma asimétrica (aunque a veces en combinación
- con claves simétricas), como TLS, S / MIME, PGP, OMEMO, OTR, etc.
-\end_layout
-
-\begin_layout Standard
-\noindent
-El advenimiento de las computadoras cuánticas ha planteado un problema inesperad
-o para la criptografía de clave pública.
- Se ha demostrado que una computadora cuántica puede resolver todos los
- algoritmos matemáticos actualmente en uso de una manera mucho más eficiente.
- Gracias a las propiedades de la Transformada Cuántica de Fourier (QFT)
- y su implementación en el algoritmo de Shor, el tiempo necesario para encontrar
- una solución general para el problema se reduce de ser exponencial a ser
- solo polinomial, abriendo así una ventana para posibles ataques de fuerza
- bruta .
-\end_layout
-
-\begin_layout Standard
-\noindent
-En la actualidad, las computadoras cuánticas no son lo suficientemente potentes
- para realizar estas operaciones en grandes cantidades, pero en un futuro
- no muy lejano podrían serlo, lo que se suele llamar NISQ era, Noisy Intermediat
-e-Scale Quantum, tanto que los expertos en criptografía han comenzado a
- discutir estrategias para fortalecer los protocolos criptográficos en caso
- de computadoras cuánticas ampliamente disponibles.
- Este campo se llama criptografía post-cuántica.
-\end_layout
-
-\begin_layout Standard
-\noindent
-Las computadoras cuánticas también presentan otra ventaja extraordinaria,
- que puede conducir a un secreto perfecto.
- Almacenar información en forma de qubits es el primer paso en la implementación
- de la criptografía cuántica, la ciencia de intercambiar información de
- manera segura utilizando la física cuántica.
- Esto se logra mediante el establecimiento de un canal cuántico, un aparato
- especial capaz de entregar información cuántica en forma de qubits.
- La confidencialidad está garantizada por las leyes de la mecánica cuántica,
- una forma notable de llamar a la física en ayuda de las matemáticas.
- 
+\begin_layout Itemize
+Inteligencia artificial:
 \end_layout
 
 \begin_layout Standard
@@ -589,6 +502,92 @@ cite{EsferadeBloch}
 Criptografía
 \end_layout
 
+\begin_layout Standard
+\noindent
+Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
+ y los modernos o actuales se diferencian muy poco entre sí.
+ En el fondo, hacen las mismas operaciones, si bien los primeros estaban
+ orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Pero los principios en los que se basan para conseguir su objetivo de enmascarar
+ la información siguen siendo los mismos, la difusión y la confusión
+\end_layout
+
+\begin_layout Standard
+\noindent
+La invención de la criptografía asimétrica, también conocida como criptografía
+ de clave pública, ha sido el logro más importante de la criptografía moderna.
+ En este sistema, cada usuario genera un par de claves, una clave pública,
+ distribuida libremente a todos, y una clave privada, mantenida en el máximo
+ secreto.
+ Alice puede cifrar un mensaje usando la clave pública de Bob, pero solo
+ Bob puede descifrarlo usando su clave privada.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sin embargo, para implementar esta característica, tenemos que usar funciones
+ matemáticas que generalmente son difíciles de resolver pero, una vez que
+ se conoce una solución, no es tan difícil verificarla.
+ Las implementaciones contemporáneas de algoritmos matemáticos hacen uso
+ de factorización de enteros, logaritmo discreto y relaciones de curva elíptica.
+ No es el alcance de este cuaderno entrar en los detalles de este proceso,
+ que es ampliamente discutido en la literatura.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Digamos que ofrece un buen compromiso entre seguridad y practicidad, superando
+ el problema de la generación de claves de una sola vez y, lo más importante,
+ el intercambio de claves.
+ De hecho, en casos de uso real, casi todas las principales implementaciones
+ de criptografía se realizan de forma asimétrica (aunque a veces en combinación
+ con claves simétricas), como TLS, S / MIME, PGP, OMEMO, OTR, etc.
+\end_layout
+
+\begin_layout Standard
+\noindent
+El advenimiento de las computadoras cuánticas ha planteado un problema inesperad
+o para la criptografía de clave pública.
+ Se ha demostrado que una computadora cuántica puede resolver todos los
+ algoritmos matemáticos actualmente en uso de una manera mucho más eficiente.
+ Gracias a las propiedades de la Transformada Cuántica de Fourier (QFT)
+ y su implementación en el algoritmo de Shor, el tiempo necesario para encontrar
+ una solución general para el problema se reduce de ser exponencial a ser
+ solo polinomial, abriendo así una ventana para posibles ataques de fuerza
+ bruta .
+\end_layout
+
+\begin_layout Standard
+\noindent
+En la actualidad, las computadoras cuánticas no son lo suficientemente potentes
+ para realizar estas operaciones en grandes cantidades, pero en un futuro
+ no muy lejano podrían serlo, lo que se suele llamar NISQ era, Noisy Intermediat
+e-Scale Quantum, tanto que los expertos en criptografía han comenzado a
+ discutir estrategias para fortalecer los protocolos criptográficos en caso
+ de computadoras cuánticas ampliamente disponibles.
+ Este campo se llama criptografía post-cuántica.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Las computadoras cuánticas también presentan otra ventaja extraordinaria,
+ que puede conducir a un secreto perfecto.
+ Almacenar información en forma de qubits es el primer paso en la implementación
+ de la criptografía cuántica, la ciencia de intercambiar información de
+ manera segura utilizando la física cuántica.
+ Esto se logra mediante el establecimiento de un canal cuántico, un aparato
+ especial capaz de entregar información cuántica en forma de qubits.
+ La confidencialidad está garantizada por las leyes de la mecánica cuántica,
+ una forma notable de llamar a la física en ayuda de las matemáticas.
+ 
+\end_layout
+
 \begin_layout Subsubsection
 Teoría de números aleatorios
 \end_layout
@@ -794,6 +793,17 @@ cite{PennylaneImagen}
 
 \end_layout
 
+\begin_layout Standard
+Para ralizar todo esto es muy importante una función que nos permita unir
+ los circuitos cuánticos con las redes neuronales, para eso contamos con:
+\end_layout
+
+\begin_layout Standard
+La función tfq.convert_to_tensor en Tensorflow, es una función que convierte
+ un circuito cuántico en un tensor.
+ 
+\end_layout
+
 \begin_layout Subsection
 Propuesta de implementación
 \end_layout
@@ -920,6 +930,10 @@ w.
  que usar Tensorflow.
  En la segunda versión, que es la actual, incluye Keras, y se recomienda
  que el todo el codigo se haga a partir de tf.Keras.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Section
