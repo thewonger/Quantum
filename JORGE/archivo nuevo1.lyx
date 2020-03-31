@@ -100,6 +100,44 @@ Introducción.
 \end_layout
 
 \begin_layout Standard
+La motivación de este trabajo se basa en la creación de un sistema híbrido
+ de redes neuronales con alguna capa cuántica.
+ Google realizó un experimento donde utilizaba un sistema de redes neuronales
+ para proteger las comunicaciones con un sistema de cifrado basado en una
+ red GAN 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{abadi2016learning}
+\end_layout
+
+\end_inset
+
+.
+ La propuesta de este trabajo es llevar esa idea hacia una arquitectura
+ HQGAN, Hybrid Quantum Generative Adversarial Network.
+ Por lo tanto este trabajo esta profundamente relacionado con el artículo
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{abadi2016learning}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \noindent
 La computación clásica tiene límites.
  Tiene unos límites físicos que no puede sobrepasar.
@@ -228,24 +266,80 @@ Entonces los paradigmas de computación que nos permiten escalar la potencia
 
 \begin_layout Itemize
 Computación cuántica: Al igual que nuestras computadoras digitales estándar,
- las computadoras cuánticas se basan en esta misma idea básica.
+ las computadoras cuánticas están creadas para hacer cálculos, para contar..
  La principal diferencia es que usan qubits , una variante del bit que puede
  manipularse de manera cuántica.
+ Y claro, los qubits se comportan de forma diferente a los bits, se rigen
+ por otras ecuaciones físicas por lo que las puertas lógicas son diferentes
+ y por lo tanto la forma en la que se crean algoritmos es también diferente.
+ El problema que se tiene actualmente es que realizar computadores cuánticos
+ de un número decente de qubits es muy complejo.
+ Actualmente las mayores empresas de computación del mundo están luchando
+ entre ellas para llegar a la supremacía cuántica.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{arute2019quantum}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Computación paralela:
+Computación paralela: Los procesadores paralelos son sistemas que interconectan
+ varios procesadores para cooperar en la ejecución de un programa con el
+ fin de aumentar las prestaciones y sacar más partido del paralelismo existente.
+ Un sistema multiprocesador saca partido del denominado paralelismo de alto
+ nivel, por contraposición a las técnicas ya estudiadas en temas anteriores,
+ que utilizan el paralelismo a bajo nivel en sistemas de un solo procesador,
+ tales como cauces segmentados o superescalares.
+ Aunque tuvieramos un límite de la potencia de un procesador, si el código
+ puede ser paralelizable podríamos usar más de un procesador y así realizar
+ el mismo cómputo en un menor tiempo.
 \end_layout
 
 \begin_layout Itemize
-Inteligencia artificial:
+Inteligencia artificial: El campo de la inteligencia artificial (IA) ha
+ experimentado un crecimiento sobresaliente en las últimas dos décadas.
+ Ha demostrado ser eficaz en el manejo de áreas complejas como el reconocimiento
+ de voz, el reconocimiento de imágenes y muchas otras.
+ Una rama interesante y en evolución que se introdujo hace años, pero que
+ sólo ha experimentado un buen crecimiento en los últimos años, es la encriptaci
+ón de la IA.
 \end_layout
 
 \begin_layout Itemize
-Computación biológica: La idea detrás de la computación de ADN es sustituir
- los enlaces químicos por señales eléctricas y ácidos nucleicos por silicio
- para crear software biomolecular y la idea de los computadores de ARN se
- basa e
+Computación biológica: La idea detrás de la computación de ADN y de ARN
+ se basa en sustituir los enlaces químicos por señales eléctricas y ácidos
+ nucleicos por silicio para crear software biomolecular.
+ Este tipo de computadores pueden llegar a ser muy potentes en la realización
+ de simulaciones biológicas o para la creación de automátas biológicos que
+ pueden llegar a ser programados para localizar y destruir células u organismos
+ malignos.
+ Este tipo de cálculos en una computadora clásica podría suponer un tiempo
+ mayor de lo que le costaría a una computadora biológica.
+ Incluso podríamos llegar a plantear si pudiera existir un supremacia biológica
+ en algunos algoritmos.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{grozinger2019pathways}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -277,15 +371,8 @@ cite{qiu2013rna}
 \end_layout
 
 \begin_layout Standard
-El campo de la inteligencia artificial (IA) ha experimentado un crecimiento
- sobresaliente en las últimas dos décadas.
- Ha demostrado ser eficaz en el manejo de áreas complejas como el reconocimiento
- de voz, el reconocimiento de imágenes y muchas otras.
- Una rama interesante y en evolución que se introdujo hace años, pero que
- sólo ha experimentado un buen crecimiento en los últimos años, es la encriptaci
-ón de la IA.
- Después de que Google anunciara que había tenido éxito en la enseñanza
- de la encriptación de redes neuronales en presencia de espías, el interés
+Después de que Google anunciara que había tenido éxito en la enseñanza de
+ la encriptación de redes neuronales en presencia de espías, el interés
  de varios investigadores de todo el mundo por desarrollar nuevas redes
  neuronales capaces de realizar diversas tareas de criptografía se ha extendido
  rápidamente en este campo particular.
@@ -538,11 +625,9 @@ Un circuito cuántico es una serie de operaciones aplicadas a qubits que
 \noindent
 \align center
 \begin_inset Graphics
-	filename C:/root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
-	display false
+	filename /root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
 	width 8cm
 	height 8cm
-	keepAspectRatio
 	groupId graficos
 
 \end_inset
@@ -579,11 +664,9 @@ Para manipular una entrada necesitamos aplicar las operaciones básicas de
 \noindent
 \align center
 \begin_inset Graphics
-	filename ../../../../Desktop/Quantum/JORGE/QiskitCircuit.png
-	display false
+	filename /root/Escritorio/Quantum/JORGE/QiskitCircuit.png
 	width 8cm
 	height 8cm
-	keepAspectRatio
 	groupId graficos
 
 \end_inset
@@ -618,8 +701,8 @@ cite{Qiskit-Textbook}
 
 \end_layout
 
-\begin_layout Subsection
-CriptografíaPuertas cuánticas
+\begin_layout Subsubsection
+Puertas cuánticas
 \end_layout
 
 \begin_layout Standard
@@ -714,11 +797,9 @@ La puerta de Hadamard es la versión de un qubit de la transformada cuántica
 \noindent
 \align center
 \begin_inset Graphics
-	filename C:/root/Escritorio/Quantum/assets/Puerta cuántica.png
-	display false
+	filename /root/Escritorio/Quantum/assets/Puerta cuántica.png
 	width 8cm
 	height 8cm
-	keepAspectRatio
 	groupId graficos
 
 \end_inset
@@ -733,6 +814,10 @@ Esquema de encapsulación entre los diferentes conceptos de la computación
 
 \begin_layout Subsubsection
 Aprendizaje máquina cuántico
+\end_layout
+
+\begin_layout Subsection
+Criptografía
 \end_layout
 
 \begin_layout Standard
@@ -1332,10 +1417,9 @@ Fundamento del algoritmo
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename C:/root/Escritorio/Quantum/assets/gan_diagram.svg
+	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
 	width 8cm
 	height 8cm
-	keepAspectRatio
 	groupId graficos
 
 \end_inset
@@ -1363,10 +1447,9 @@ cite{GanGoogle}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename C:/root/Escritorio/Quantum/assets/qgan.png
+	filename /root/Escritorio/Quantum/assets/qgan.png
 	width 8cm
 	height 8cm
-	keepAspectRatio
 
 \end_inset
 

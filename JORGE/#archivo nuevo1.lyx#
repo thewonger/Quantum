@@ -100,6 +100,44 @@ Introducción.
 \end_layout
 
 \begin_layout Standard
+La motivación de este trabajo se basa en la creación de un sistema híbrido
+ de redes neuronales con alguna capa cuántica.
+ Google realizó un experimento donde utilizaba un sistema de redes neuronales
+ para proteger las comunicaciones con un sistema de cifrado basado en una
+ red GAN 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{abadi2016learning}
+\end_layout
+
+\end_inset
+
+.
+ La propuesta de este trabajo es llevar esa idea hacia una arquitectura
+ HQGAN, Hybrid Quantum Generative Adversarial Network.
+ Por lo tanto este trabajo esta profundamente relacionado con el artículo
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{abadi2016learning}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \noindent
 La computación clásica tiene límites.
  Tiene unos límites físicos que no puede sobrepasar.
@@ -228,24 +266,80 @@ Entonces los paradigmas de computación que nos permiten escalar la potencia
 
 \begin_layout Itemize
 Computación cuántica: Al igual que nuestras computadoras digitales estándar,
- las computadoras cuánticas se basan en esta misma idea básica.
+ las computadoras cuánticas están creadas para hacer cálculos, para contar..
  La principal diferencia es que usan qubits , una variante del bit que puede
  manipularse de manera cuántica.
+ Y claro, los qubits se comportan de forma diferente a los bits, se rigen
+ por otras ecuaciones físicas por lo que las puertas lógicas son diferentes
+ y por lo tanto la forma en la que se crean algoritmos es también diferente.
+ El problema que se tiene actualmente es que realizar computadores cuánticos
+ de un número decente de qubits es muy complejo.
+ Actualmente las mayores empresas de computación del mundo están luchando
+ entre ellas para llegar a la supremacía cuántica.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{arute2019quantum}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Computación paralela:
+Computación paralela: Los procesadores paralelos son sistemas que interconectan
+ varios procesadores para cooperar en la ejecución de un programa con el
+ fin de aumentar las prestaciones y sacar más partido del paralelismo existente.
+ Un sistema multiprocesador saca partido del denominado paralelismo de alto
+ nivel, por contraposición a las técnicas ya estudiadas en temas anteriores,
+ que utilizan el paralelismo a bajo nivel en sistemas de un solo procesador,
+ tales como cauces segmentados o superescalares.
+ Aunque tuvieramos un límite de la potencia de un procesador, si el código
+ puede ser paralelizable podríamos usar más de un procesador y así realizar
+ el mismo cómputo en un menor tiempo.
 \end_layout
 
 \begin_layout Itemize
-Inteligencia artificial:
+Inteligencia artificial: El campo de la inteligencia artificial (IA) ha
+ experimentado un crecimiento sobresaliente en las últimas dos décadas.
+ Ha demostrado ser eficaz en el manejo de áreas complejas como el reconocimiento
+ de voz, el reconocimiento de imágenes y muchas otras.
+ Una rama interesante y en evolución que se introdujo hace años, pero que
+ sólo ha experimentado un buen crecimiento en los últimos años, es la encriptaci
+ón de la IA.
 \end_layout
 
 \begin_layout Itemize
-Computación biológica: La idea detrás de la computación de ADN es sustituir
- los enlaces químicos por señales eléctricas y ácidos nucleicos por silicio
- para crear software biomolecular y la idea de los computadores de ARN se
- basa e
+Computación biológica: La idea detrás de la computación de ADN y de ARN
+ se basa en sustituir los enlaces químicos por señales eléctricas y ácidos
+ nucleicos por silicio para crear software biomolecular.
+ Este tipo de computadores pueden llegar a ser muy potentes en la realización
+ de simulaciones biológicas o para la creación de automátas biológicos que
+ pueden llegar a ser programados para localizar y destruir células u organismos
+ malignos.
+ Este tipo de cálculos en una computadora clásica podría suponer un tiempo
+ mayor de lo que le costaría a una computadora biológica.
+ Incluso podríamos llegar a plantear si pudiera existir un supremacia biológica
+ en algunos algoritmos.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{grozinger2019pathways}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -277,15 +371,8 @@ cite{qiu2013rna}
 \end_layout
 
 \begin_layout Standard
-El campo de la inteligencia artificial (IA) ha experimentado un crecimiento
- sobresaliente en las últimas dos décadas.
- Ha demostrado ser eficaz en el manejo de áreas complejas como el reconocimiento
- de voz, el reconocimiento de imágenes y muchas otras.
- Una rama interesante y en evolución que se introdujo hace años, pero que
- sólo ha experimentado un buen crecimiento en los últimos años, es la encriptaci
-ón de la IA.
- Después de que Google anunciara que había tenido éxito en la enseñanza
- de la encriptación de redes neuronales en presencia de espías, el interés
+Después de que Google anunciara que había tenido éxito en la enseñanza de
+ la encriptación de redes neuronales en presencia de espías, el interés
  de varios investigadores de todo el mundo por desarrollar nuevas redes
  neuronales capaces de realizar diversas tareas de criptografía se ha extendido
  rápidamente en este campo particular.
@@ -733,6 +820,10 @@ Aprendizaje máquina cuántico
 Criptografía
 \end_layout
 
+\begin_layout Subsubsection
+Introducción
+\end_layout
+
 \begin_layout Standard
 \noindent
 Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
@@ -827,6 +918,22 @@ Las computadoras cuánticas también presentan otra ventaja extraordinaria,
 
 \begin_layout Subsubsection
 Teoría de números aleatorios
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{johnston2018random}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
