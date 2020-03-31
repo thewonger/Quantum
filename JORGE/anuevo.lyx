@@ -578,7 +578,7 @@ Un circuito cuántico es una serie de operaciones aplicadas a qubits que
 \noindent
 \align center
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
+	filename C:/root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
 	display false
 	width 8cm
 	height 8cm
@@ -745,7 +745,7 @@ La puerta de Hadamard es la versión de un qubit de la transformada cuántica
 \noindent
 \align center
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/Puerta cuántica.png
+	filename C:/root/Escritorio/Quantum/assets/Puerta cuántica.png
 	display false
 	width 8cm
 	height 8cm
@@ -924,7 +924,7 @@ Fundamento del algoritmo
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
+	filename C:/root/Escritorio/Quantum/assets/gan_diagram.svg
 	display false
 	width 8cm
 	height 8cm
@@ -956,7 +956,7 @@ cite{GanGoogle}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/qgan.png
+	filename C:/root/Escritorio/Quantum/assets/qgan.png
 	width 8cm
 	height 8cm
 	keepAspectRatio

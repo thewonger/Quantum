@@ -437,6 +437,10 @@ Fundamentos.
 Computación cuántica.
 \end_layout
 
+\begin_layout Subsubsection
+Introducción 
+\end_layout
+
 \begin_layout Standard
 En la computación cuántica se trata con el equivalente de bits llamados
  qubits , que notoriamente pueden manejar información en un estado no binario
@@ -448,7 +452,13 @@ En la computación cuántica se trata con el equivalente de bits llamados
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-c1\Ket{0}+c_{2}\Ket{1}
+c1\Ket{0}+c_{2}\Ket{1}=c_{1}\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]+c_{2}\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]
 \end{equation}
 
 \end_inset
@@ -491,6 +501,32 @@ O\varPsi_{n}=o_{_{n}}\varPsi_{n}
 \end_layout
 
 \begin_layout Standard
+Tal que, o
+\begin_inset Formula $_{n}$
+\end_inset
+
+son los valores propios del observable en relación a la función de onda
+ 
+\begin_inset Formula $\varPsi_{n}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ .
+\end_layout
+
+\begin_layout Standard
 Un circuito cuántico es una serie de operaciones aplicadas a qubits que
  cambian su estado, por ejemplo , cambiando su fase relativa.
  Los Qubits se pueden representar geométricamente con una llamada esfera
@@ -499,11 +535,15 @@ Un circuito cuántico es una serie de operaciones aplicadas a qubits que
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
 \begin_inset Graphics
 	filename C:/root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
+	display false
 	width 8cm
 	height 8cm
 	keepAspectRatio
+	groupId graficos
 
 \end_inset
 
@@ -529,12 +569,22 @@ cite{EsferadeBloch}
 \end_layout
 
 \begin_layout Standard
+Para manipular una entrada necesitamos aplicar las operaciones básicas de
+ la computación cuántica.
+ Estas se conocen como puertas cuánticas, que realmente son operadores unitarios.
+ Una sucesión de puertas cuánticas es un circuito cuántico.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
 \begin_inset Graphics
-	filename QiskitCircuit.png
+	filename ../../../../Desktop/Quantum/JORGE/QiskitCircuit.png
 	display false
 	width 8cm
 	height 8cm
 	keepAspectRatio
+	groupId graficos
 
 \end_inset
 
@@ -542,11 +592,26 @@ cite{EsferadeBloch}
 \end_layout
 
 \begin_layout Standard
+Ejemplo de esquema de un circuito cuántico.
+ Imagen obtenida de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Qiskit-Textbook}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
-	filename C:/root/Escritorio/Quantum/assets/Puerta cuántica.png
-	width 8cm
-	height 8cm
-	keepAspectRatio
+	filename pegado4.png
 
 \end_inset
 
@@ -554,7 +619,120 @@ cite{EsferadeBloch}
 \end_layout
 
 \begin_layout Subsection
-Criptografía
+CriptografíaPuertas cuánticas
+\end_layout
+
+\begin_layout Standard
+Como en la computación clásica, en la computación cuántica tenemos diferentes
+ tipos de puertas 
+\begin_inset Quotes fld
+\end_inset
+
+lógicas
+\begin_inset Quotes frd
+\end_inset
+
+, con la unión de diferentes tipos de puertas llegamos a obtener algoritmos.
+\end_layout
+
+\begin_layout Standard
+En este apartado voy a hablar brevemente de los fundamentos físicos de las
+ puertas más comunmente usadas dentro de la computación cuántica.
+\end_layout
+
+\begin_layout Itemize
+Puerta NOP:
+\end_layout
+
+\begin_layout Standard
+La puerta X actúa en un solo qubit.
+ Es el análogo cuántico de la puerta NOT para ordenadores clásicas.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+X=\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Puerta Hadamard:
+\end_layout
+
+\begin_layout Standard
+La puerta Hadamard actúa en un solo qubit.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\
+1 & -1
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Convierte:
+\begin_inset Formula 
+\begin{equation}
+\Ket{0}\rightarrow\frac{\Ket{0}+\Ket{1}}{\sqrt{2}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\Ket{1}\rightarrow\frac{\Ket{0}-\Ket{1}}{\sqrt{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La puerta de Hadamard es la versión de un qubit de la transformada cuántica
+ de Fourier.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename C:/root/Escritorio/Quantum/assets/Puerta cuántica.png
+	display false
+	width 8cm
+	height 8cm
+	keepAspectRatio
+	groupId graficos
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esquema de encapsulación entre los diferentes conceptos de la computación
+ cuántica.
+\end_layout
+
+\begin_layout Subsubsection
+Aprendizaje máquina cuántico
 \end_layout
 
 \begin_layout Standard
@@ -603,6 +781,12 @@ Digamos que ofrece un buen compromiso entre seguridad y practicidad, superando
  De hecho, en casos de uso real, casi todas las principales implementaciones
  de criptografía se realizan de forma asimétrica (aunque a veces en combinación
  con claves simétricas), como TLS, S / MIME, PGP, OMEMO, OTR, etc.
+\end_layout
+
+\begin_layout Standard
+Muchas técnicas criptográcas se basan en la utilización de problemas NP
+ (de fácil vericación) que se cree que no son P (de fácil solución).
+ El ejemplo más característico sería la factorización de enteros.
 \end_layout
 
 \begin_layout Standard
@@ -1220,6 +1404,78 @@ La función tfq.convert_to_tensor en Tensorflow, es una función que convierte
 
 \begin_layout Subsection
 Propuesta de implementación
+\end_layout
+
+\begin_layout Standard
+Como deciamos anteriormente nos basamos en el experimento de Google Brain,
+ ellos realizan el algoritmo de la siguiente manera.
+\end_layout
+
+\begin_layout Standard
+Alice va a comunicar a Bob un texto aleatorio de N bits aleatorios y se
+ usa una clave privada aleatoria y de N bits , con N = 16, 32 y 64 para
+ los dos casos.
+ Los valores de la clave y el texto estan distribuidos uniformemente.
+\end_layout
+
+\begin_layout Standard
+Su red neuronal sigue el patrón de 
+\begin_inset Quotes fld
+\end_inset
+
+mix and transform
+\begin_inset Quotes frd
+\end_inset
+
+..
+\end_layout
+
+\begin_layout Standard
+Hay tres redes neuronales GAN:
+\end_layout
+
+\begin_layout Standard
+Alice
+\end_layout
+
+\begin_layout Standard
+La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
+ en un vector de entrada 2N, usando -1 y 1 para representar los valores
+ de los bits.
+ Este vector se procesa a través de una capa FC de 2N×2N, luego enviado
+ a través de una sucesión de cuatro capas convolucionales de 1-D.
+ Las capas convolucionales se describen en términos de su tamaño de ventana,
+ profundidad de entrada y profundidad de salida.
+ Cada una tiene un "paso", la cantidad por que la ventana se desplaza a
+ cada paso.
+ Las capas de hormigón son [4, 1, 2], [2, 2, 4], [1, 4, 4], y con zancadas
+ de 1, 2, 1, 1.
+ Intuitivamente, la primera capa desliza una ventana de tamaño 4 a través
+ de la 2N elementos de salida de la capa FC, emitiendo dos números (profundidad
+ de salida 2), con el paso 1.
+ Nosotros usar una unidad no lineal sigmoide después de cada capa, excepto
+ la última.
+ Después de la capa final, donde el la salida se reduce a los elementos
+ N, usamos una unidad no lineal de tanh.
+ (Recordemos que el tanh tiene una salida entre [-1, 1], llevando los valores
+ de vuelta a un rango que puede mapear a valores binarios).
+ El La red de Bob es idéntica a la red de Alice La red de Eve sólo toma
+ el texto cifrado como entrada, y por lo tanto tiene una primera capa de
+ N × 2N FC.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Hay dos sistemas en nuestra implemantación.
+ Vamos a crear un sistema de Redes Generativas Antagónicas (GAN) híbrido,
+ con un generador cuántico en el interior de una de las redes.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Hay 3 redes neuronales Alice, Bob y Eve.
+ Las tres van a tener la misma configuración, por simplicidad y por
 \end_layout
 
 \begin_layout Section
