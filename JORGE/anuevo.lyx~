@@ -100,6 +100,44 @@ Introducción.
 \end_layout
 
 \begin_layout Standard
+La motivación de este trabajo se basa en la creación de un sistema híbrido
+ de redes neuronales con alguna capa cuántica.
+ Google realizó un experimento donde utilizaba un sistema de redes neuronales
+ para proteger las comunicaciones con un sistema de cifrado basado en una
+ red GAN 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{abadi2016learning}
+\end_layout
+
+\end_inset
+
+.
+ La propuesta de este trabajo es llevar esa idea hacia una arquitectura
+ HQGAN, Hybrid Quantum Generative Adversarial Network.
+ Por lo tanto este trabajo esta profundamente relacionado con el artículo
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{abadi2016learning}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \noindent
 La computación clásica tiene límites.
  Tiene unos límites físicos que no puede sobrepasar.
@@ -222,40 +260,82 @@ o cuántico y más lejanos estarán presentar un comportamiento clásico.
 \end_layout
 
 \begin_layout Standard
-Una computadora es una máquina que acepta datos como entrada, los procesa
- usando programas, y produce los datos procesados como información.
- Una computadora cuenta, en el caso de los computadores que solemos usar
- son cuentas binarias.
- O el valor es 1 o 0, este es un axioma en la computación.
+Entonces los paradigmas de computación que nos permiten escalar la potencia
+ de los computadores son los siguentes:
 \end_layout
 
-\begin_layout Standard
-\noindent
-Al igual que nuestras computadoras digitales estándar, las computadoras
- cuánticas se basan en esta misma idea básica.
+\begin_layout Itemize
+Computación cuántica: Al igual que nuestras computadoras digitales estándar,
+ las computadoras cuánticas están creadas para hacer cálculos, para contar..
  La principal diferencia es que usan qubits , una variante del bit que puede
  manipularse de manera cuántica.
+ Y claro, los qubits se comportan de forma diferente a los bits, se rigen
+ por otras ecuaciones físicas por lo que las puertas lógicas son diferentes
+ y por lo tanto la forma en la que se crean algoritmos es también diferente.
+ El problema que se tiene actualmente es que realizar computadores cuánticos
+ de un número decente de qubits es muy complejo.
+ Actualmente las mayores empresas de computación del mundo están luchando
+ entre ellas para llegar a la supremacía cuántica.
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{arute2019quantum}
 \end_layout
 
-\begin_layout Standard
-Frente al bit clásico, que representa uno u otro estado de un sistema de
- dos estados, un qubit es una combinación lineal de dos estados.
- Es decir, un qubit individual llena un espacio de dimensión 2.
- Una base de dicho espacio está representada por los estados
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\Ket{0} & =\left[\begin{array}{c}
-1\\
-0
-\end{array}\right] & \Ket{1}=\left[\begin{array}{c}
-0\\
-1
-\end{array}\right]
-\end{eqnarray}
+\begin_layout Itemize
+Computación paralela: Los procesadores paralelos son sistemas que interconectan
+ varios procesadores para cooperar en la ejecución de un programa con el
+ fin de aumentar las prestaciones y sacar más partido del paralelismo existente.
+ Un sistema multiprocesador saca partido del denominado paralelismo de alto
+ nivel, por contraposición a las técnicas ya estudiadas en temas anteriores,
+ que utilizan el paralelismo a bajo nivel en sistemas de un solo procesador,
+ tales como cauces segmentados o superescalares.
+ Aunque tuvieramos un límite de la potencia de un procesador, si el código
+ puede ser paralelizable podríamos usar más de un procesador y así realizar
+ el mismo cómputo en un menor tiempo.
+\end_layout
+
+\begin_layout Itemize
+Inteligencia artificial: El campo de la inteligencia artificial (IA) ha
+ experimentado un crecimiento sobresaliente en las últimas dos décadas.
+ Ha demostrado ser eficaz en el manejo de áreas complejas como el reconocimiento
+ de voz, el reconocimiento de imágenes y muchas otras.
+ Una rama interesante y en evolución que se introdujo hace años, pero que
+ sólo ha experimentado un buen crecimiento en los últimos años, es la encriptaci
+ón de la IA.
+\end_layout
+
+\begin_layout Itemize
+Computación biológica: La idea detrás de la computación de ADN y de ARN
+ se basa en sustituir los enlaces químicos por señales eléctricas y ácidos
+ nucleicos por silicio para crear software biomolecular.
+ Este tipo de computadores pueden llegar a ser muy potentes en la realización
+ de simulaciones biológicas o para la creación de automátas biológicos que
+ pueden llegar a ser programados para localizar y destruir células u organismos
+ malignos.
+ Este tipo de cálculos en una computadora clásica podría suponer un tiempo
+ mayor de lo que le costaría a una computadora biológica.
+ Incluso podríamos llegar a plantear si pudiera existir un supremacia biológica
+ en algunos algoritmos.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{grozinger2019pathways}
+\end_layout
 
 \end_inset
 
@@ -263,53 +343,36 @@ Frente al bit clásico, que representa uno u otro estado de un sistema de
 \end_layout
 
 \begin_layout Standard
-\noindent
-El advenimiento de las computadoras cuánticas ha planteado un problema inesperad
-o para la criptografía de clave pública.
- Se ha demostrado que una computadora cuántica puede resolver todos los
- algoritmos matemáticos actualmente en uso de una manera mucho más eficiente.
- Gracias a las propiedades de la Transformada Cuántica de Fourier (QFT)
- y su implementación en el algoritmo de Shor, el tiempo necesario para encontrar
- una solución general para el problema se reduce de ser exponencial a ser
- solo polinomial, abriendo así una ventana para posibles ataques de fuerza
- bruta .
+\begin_inset Graphics
+	filename pegado2.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\noindent
-En la actualidad, las computadoras cuánticas no son lo suficientemente potentes
- para realizar estas operaciones en grandes cantidades, pero en un futuro
- no muy lejano podrían serlo, lo que se suele llamar NISQ era, Noisy Intermediat
-e-Scale Quantum, tanto que los expertos en criptografía han comenzado a
- discutir estrategias para fortalecer los protocolos criptográficos en caso
- de computadoras cuánticas ampliamente disponibles.
- Este campo se llama criptografía post-cuántica.
+Esquema mostrando las características de un computador de ADN y otro de
+ ARN.
+ Imagen extraída de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{qiu2013rna}
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\noindent
-Las computadoras cuánticas también presentan otra ventaja extraordinaria,
- que puede conducir a un secreto perfecto.
- Almacenar información en forma de qubits es el primer paso en la implementación
- de la criptografía cuántica, la ciencia de intercambiar información de
- manera segura utilizando la física cuántica.
- Esto se logra mediante el establecimiento de un canal cuántico, un aparato
- especial capaz de entregar información cuántica en forma de qubits.
- La confidencialidad está garantizada por las leyes de la mecánica cuántica,
- una forma notable de llamar a la física en ayuda de las matemáticas.
- 
-\end_layout
-
-\begin_layout Standard
-El campo de la inteligencia artificial (IA) ha experimentado un crecimiento
- sobresaliente en las últimas dos décadas.
- Ha demostrado ser eficaz en el manejo de áreas complejas como el reconocimiento
- de voz, el reconocimiento de imágenes y muchas otras.
- Una rama interesante y en evolución que se introdujo hace años, pero que
- sólo ha experimentado un buen crecimiento en los últimos años, es la encriptaci
-ón de la IA.
- Después de que Google anunciara que había tenido éxito en la enseñanza
- de la encriptación de redes neuronales en presencia de espías, el interés
+Después de que Google anunciara que había tenido éxito en la enseñanza de
+ la encriptación de redes neuronales en presencia de espías, el interés
  de varios investigadores de todo el mundo por desarrollar nuevas redes
  neuronales capaces de realizar diversas tareas de criptografía se ha extendido
  rápidamente en este campo particular.
@@ -322,39 +385,23 @@ El campo de la inteligencia artificial (IA) ha experimentado un crecimiento
 \end_layout
 
 \begin_layout Standard
-Además dentro del campo de la computación teórica la computación cuántica
- puede ayudar a entender mejor uno de los problemas del milenio 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cite{ProblemasMilenio}
-\end_layout
-
-\end_inset
-
-.
+Después de esta introducción sobre tipos de computación mi tfg se basa en
+ la creación de un sistema híbrido de redes neuronales y circuitos cuánticos
+ con el objetivo de mejorar las comunicaciones.
+ Realmente este tema pertenece a tres disciplinas diferentes.
+ 
 \end_layout
 
 \begin_layout Standard
-Todo problema P es NP, pero la relación inversa no está clara.
- Un ejemplo de problema NP es la factorización de un entero: aunque no se
- conoce ningún algoritmo de tiempo polinómico para resolverlo, es muy sencillo
- comprobar si un candidato a divisor del entero realmente lo es.
- Ahora bien: el que no se conozca ningún algoritmo de tiempo polinómico
- para computar un problema no signica necesariamente que no exista ninguno.
- En otras palabras, ¾cómo podemos estar seguros de que no existe ningún
- algoritmo en tiempo polinómico para resolver un cierto problema NP? Esta
- es la esencia de la conjetura P 6= NP, uno de los llamados problemas del
- milenio.2 Debemos insistir en el hecho de que este problema es únicamente
- de índole lógico-matemática.
- En otras palabras: resolver un problema en tiempo polinómico mediante un
- computador que vaya más allá de la máquina de Turing no convierte al problema
- en miembro de la clase P.
- Un ejemplo de dicho posible computador sería el computador cuántico.
+El sistema GAN, está relacionado con el conocimiento adquirido en asignaturas
+ como Sistemas Inteligentes y Minería de Datos.
+ La teoría de la seguridad de las comunicaciones está relacionada con la
+ asignatura de Seguridad Informática.
+\end_layout
+
+\begin_layout Standard
+Pienso que los computadores cuánticos pueden llegar a ser una herramienta
+ muy importante para el desarrollo de nuevas tecnologías en el futuro.
 \end_layout
 
 \begin_layout Section
@@ -381,70 +428,68 @@ Learning to protect communications with adversarial neural cryptography
 
 \end_layout
 
-\begin_layout Standard
-Google en 2016, explico a todo el mundo como desarrollar un sistema GAN
- para cifrar las comunicaciones, esto hizo que la investigación sobre este
- area creciera mucho desde ese año hasta ahora.
- 
-\end_layout
-
-\begin_layout Standard
-La solución de Google es la siguiente, es necesario que explique bien este
- sistema ya que todo este trabajo se basa en la modificación de sus sistema
- para poder obtener mejores resultados que su red GAN clásica:
-\end_layout
-
-\begin_layout Standard
-Hay tres redes neuronales GAN:
-\end_layout
-
-\begin_layout Standard
-Alice es el emisor del mensaje
-\end_layout
-
-\begin_layout Standard
-La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
- en un vector de entrada 2N, usando -1 y 1 para representar los valores
- de los bits.
- Este vector se procesa a través de una capa FC de 2N×2N, luego enviado
- a través de una sucesión de cuatro capas convolucionales de 1-D.
- Las capas convolucionales se describen en términos de su tamaño de ventana,
- profundidad de entrada y profundidad de salida.
- Cada una tiene un "paso", la cantidad por que la ventana se desplaza a
- cada paso.
- Las capas de hormigón son [4, 1, 2], [2, 2, 4], [1, 4, 4], y con zancadas
- de 1, 2, 1, 1.
- Intuitivamente, la primera capa desliza una ventana de tamaño 4 a través
- de la 2N elementos de salida de la capa FC, emitiendo dos números (profundidad
- de salida 2), con el paso 1.
- Nosotros usar una unidad no lineal sigmoide después de cada capa, excepto
- la última.
- Después de la capa final, donde el la salida se reduce a los elementos
- N, usamos una unidad no lineal de tanh.
- (Recordemos que el tanh tiene una salida entre [-1, 1], llevando los valores
- de vuelta a un rango que puede mapear a valores binarios).
- El La red de Bob es idéntica a la red de Alice La red de Eve sólo toma
- el texto cifrado como entrada, y por lo tanto tiene una primera capa de
- N × 2N FC.
-\end_layout
-
-\begin_layout Standard
-\noindent
-Hay dos sistemas en nuestra implemantación.
- Vamos a crear un sistema de Redes Generativas Antagónicas (GAN) híbrido,
- con un generador cuántico en el interior de una de las redes.
- 
-\end_layout
-
-\begin_layout Standard
-\noindent
-Hay 3 redes neuronales Alice, Bob y Eve.
- Las tres van a tener la misma configuración, por simplicidad y por
-\end_layout
-
 \begin_layout Subsection
 \noindent
 Deepfakes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
+	width 8cm
+	height 8cm
+	groupId graficos
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esquema de un sistema GAN.
+ Imagen extraída de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{GanGoogle}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/qgan.png
+	width 8cm
+	height 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esquema de un sistema QGAN.
+ Imagen extraída de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{PennylaneImagen}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -466,6 +511,14 @@ ones, que al fin y al cabo es nuestro objetivo a desarrollar en este trabajo.
  La otra vertiente es la potencialidad del mapeo logístico que tiene utilidades
  para la generación de números pseudo-aleatorios.
  Su investigación fue básicamente:
+\end_layout
+
+\begin_layout Subsection
+GAN cuántica.
+\end_layout
+
+\begin_layout Subsection
+Criptografía de curva elíptica.
 \end_layout
 
 \begin_layout Section
@@ -579,10 +632,8 @@ Un circuito cuántico es una serie de operaciones aplicadas a qubits que
 \align center
 \begin_inset Graphics
 	filename /root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
-	display false
 	width 8cm
 	height 8cm
-	keepAspectRatio
 	groupId graficos
 
 \end_inset
@@ -619,11 +670,9 @@ Para manipular una entrada necesitamos aplicar las operaciones básicas de
 \noindent
 \align center
 \begin_inset Graphics
-	filename QiskitCircuit.png
-	display false
+	filename /root/Escritorio/Quantum/JORGE/QiskitCircuit.png
 	width 8cm
 	height 8cm
-	keepAspectRatio
 	groupId graficos
 
 \end_inset
@@ -742,14 +791,119 @@ La puerta de Hadamard es la versión de un qubit de la transformada cuántica
 \end_layout
 
 \begin_layout Standard
+También hay puertas lógicas cuánticas que actuan sobre más de un qubit.
+\end_layout
+
+\begin_layout Standard
+Una puerta lógica muy utilizada es la puerta CNOT.
+ Si el primer qubit es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|1
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+, entonces en el segundo qubit se le aplica una puerta NOT.
+ 
+\end_layout
+
+\begin_layout Itemize
+Puerta CNOT (Respecto de las bases 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|00
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|01
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|10
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|11
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+) :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+CNOT=cX=\begin{pmatrix}1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 1 & 0
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Puerta Toffoli.
+\end_layout
+
+\begin_layout Standard
+Concepto de universalidad.
+ Máquina de Turing.
+\end_layout
+
+\begin_layout Standard
 \noindent
 \align center
 \begin_inset Graphics
 	filename /root/Escritorio/Quantum/assets/Puerta cuántica.png
-	display false
 	width 8cm
 	height 8cm
-	keepAspectRatio
 	groupId graficos
 
 \end_inset
@@ -766,6 +920,15 @@ Esquema de encapsulación entre los diferentes conceptos de la computación
 Aprendizaje máquina cuántico
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado4.png
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Criptografía
 \end_layout
@@ -780,8 +943,13 @@ Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
  y los modernos o actuales se diferencian muy poco entre sí.
  En el fondo, hacen las mismas operaciones, si bien los primeros estaban
  orientados a letras o caracteres, y los segundos lógicamente a bits y bytes.
- Pero los principios en los que se basan para conseguir su objetivo de enmascara
-r la información siguen siendo los mismos, la difusión y la confusión
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Pero los principios en los que se basan para conseguir su objetivo de enmascarar
+ la información siguen siendo los mismos, la difusión y la confusión.
 \end_layout
 
 \begin_layout Standard
@@ -793,7 +961,7 @@ La invención de la criptografía asimétrica, también conocida como criptograf
  secreto.
  Alice puede cifrar un mensaje usando la clave pública de Bob, pero solo
  Bob puede descifrarlo usando su clave privada.
- 
+ Aunque en nuestro estudio vamos a utilizar la criptografía simétrica.
 \end_layout
 
 \begin_layout Standard
@@ -813,18 +981,68 @@ Digamos que ofrece un buen compromiso entre seguridad y practicidad, superando
  el problema de la generación de claves de una sola vez y, lo más importante,
  el intercambio de claves.
  De hecho, en casos de uso real, casi todas las principales implementaciones
- de criptografía se realizan de forma asimétrica (aunque a veces en combinación
- con claves simétricas), como TLS, S / MIME, PGP, OMEMO, OTR, etc.
+ de criptografía se realizan de forma asimétrica.
 \end_layout
 
 \begin_layout Standard
-Muchas técnicas criptográcas se basan en la utilización de problemas NP
+Muchas técnicas criptográficas se basan en la utilización de problemas NP
  (de fácil vericación) que se cree que no son P (de fácil solución).
  El ejemplo más característico sería la factorización de enteros.
 \end_layout
 
+\begin_layout Standard
+\noindent
+El resurgimiento de las computadoras cuánticas ha planteado un problema
+ inesperado para la criptografía de clave pública.
+ Gracias a las propiedades de las computadoras cuánticas el tiempo necesario
+ para encontrar una solución general para algunos problemas se reduce de
+ ser exponencial a ser solo polinomial, abriendo así una ventana para posibles
+ ataques de fuerza bruta .
+\end_layout
+
+\begin_layout Standard
+\noindent
+En la actualidad, las computadoras cuánticas no son lo suficientemente potentes
+ para realizar estas operaciones en grandes cantidades, pero en un futuro
+ no muy lejano podrían serlo, lo que se suele llamar NISQ era, Noisy Intermediat
+e-Scale Quantum, tanto que los expertos en criptografía han comenzado a
+ discutir estrategias para fortalecer los protocolos criptográficos en caso
+ de computadoras cuánticas ampliamente disponibles.
+ Este campo se llama criptografía post-cuántica.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Las computadoras cuánticas también presentan otra ventaja extraordinaria,
+ que puede conducir a un secreto perfecto.
+ Almacenar información en forma de qubits es el primer paso en la implementación
+ de la criptografía cuántica, la ciencia de intercambiar información de
+ manera segura utilizando la física cuántica.
+ Esto se logra mediante el establecimiento de un canal cuántico, un aparato
+ especial capaz de entregar información cuántica en forma de qubits.
+ La confidencialidad está garantizada por las leyes de la mecánica cuántica,
+ una forma notable de llamar a la física en ayuda de las matemáticas.
+ 
+\end_layout
+
 \begin_layout Subsubsection
 Teoría de números aleatorios
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{johnston2018random}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -832,36 +1050,7 @@ Redes neuronales
 \end_layout
 
 \begin_layout Standard
-Partiendo de que una red neuronal cuántica es cualquier circuito cuántico
- con parámetros continuos entrenables.
-\end_layout
-
-\begin_layout Standard
-Pues aquí hablaré de seguridad informática, de criptografía.
-\end_layout
-
-\begin_layout Standard
-De computación cuántica.
-\end_layout
-
-\begin_layout Standard
-De teoría de número aleatorios.
-\end_layout
-
-\begin_layout Standard
-De redes neuronales.
-\end_layout
-
-\begin_layout Standard
-De GAN.
-\end_layout
-
-\begin_layout Standard
-Hay dos maneras de realizar un algoritmo de aprendizaje automático cuánticoEn
- lugar de simular una computadora cuántica dentro del software de aprendizaje
- automático convencional, tomaríamos todas las mejores características del
- software de aprendizaje profundo y las haríamos verdaderamente nativas
- de los dispositivos cuánticos.
+Hay que ver que pongo aquí.
 \end_layout
 
 \begin_layout Section
@@ -898,7 +1087,370 @@ Un jefe de proyectos.
 \end_layout
 
 \begin_layout Standard
-La planificación de GP.
+Los salarios son obtenidos de la página web www.glassdoor.com y de www.indeed.es
+ a día 30/03/2020.
+\end_layout
+
+\begin_layout Standard
+Algunos salarios son más elevados que otros debido a que analistas y desarrollad
+ores cuánticos es díficil encontrar en España, lo más lógico y sencillo
+ es encontrarlos en Estados Unidos, cosa que hace que el coste del proyecto
+ se eleve.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unidades
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Iniciales
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tasa Estándar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tasa Sobretiempo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Desarrollador Cuántico 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+63348,09 €/a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70000,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Analista Cuántico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+78687,23 €/a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80000,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Desarrollador Redes N.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DNN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35000,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40000,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Analista Redes N.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ANN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+51080,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60000,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Analista Seguridad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40061,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50000,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Jefe de Proyectos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+J
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+37033,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40000,00 €/a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vemos que el sueldo del Jefe de Proyectos y el desarollador de redes neuronales
+ es menor debido a que son posiciones más fáciles de encontrar y por lo
+ tanto hay más oferta de ese tipo de perfiles.
+\end_layout
+
+\begin_layout Standard
+Tengo más o menos desarrollado esta parte.
 \end_layout
 
 \begin_layout Standard
@@ -919,17 +1471,23 @@ Análisis teórico.
 \end_layout
 
 \begin_layout Subsection
-Fundamento del algoritmo
+Introducción al algoritmo
+\end_layout
+
+\begin_layout Standard
+El estudio consiste en comparar diferentes tipos de redes neuronales cuánticas
+ y redes neuronales no cuánticas para ver cual de ellas tiene un mejor desempeño
+ y unas mejores características.
+\end_layout
+
+\begin_layout Standard
+La arquitectura base es la arquitectura que Google diseñó en 2016.
+ Para ello construimos tres redes neuronales que son Alice, Eve y Bob.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
-	display false
-	width 8cm
-	height 8cm
-	keepAspectRatio
-	groupId graficos
+	filename pegado11.png
 
 \end_inset
 
@@ -937,29 +1495,42 @@ Fundamento del algoritmo
 \end_layout
 
 \begin_layout Standard
-Esquema de un sistema GAN.
- Imagen extraída de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cite{GanGoogle}
+Esquema del sistema de redes neuronales.
 \end_layout
 
-\end_inset
+\begin_layout Standard
+Alice quiere enviar un mensaje a Bob pero Eve capta el mensaje, entonces
+ queremos que Eve no sea capaz de descifrar el mensaje de Alice.
+ Para ello Alice y Bob comparten una clave.
+ 
+\end_layout
 
+\begin_layout Standard
+Siguiendo el trabajo de Google, utilizaremos mensajes de 16 bits y claves
+ secretas y textos cifrados de 16 bits.
+\end_layout
 
+\begin_layout Standard
+La red de Alice necesitará tener dos vectores de entrada: el mensaje a cifrar
+ y la clave secreta.
+\end_layout
+
+\begin_layout Standard
+La red de Bob tendrá también dos vectores de entrada: el mensaje cifrado
+ y la clave secreta.
+\end_layout
+
+\begin_layout Standard
+La rede Eve solo recibirá el mensaje cifrado.
+\end_layout
+
+\begin_layout Standard
+Diferentes tipos de aquitecturas a estudiar.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/qgan.png
-	width 8cm
-	height 8cm
-	keepAspectRatio
+	filename pegado10.png
 
 \end_inset
 
@@ -967,25 +1538,163 @@ cite{GanGoogle}
 \end_layout
 
 \begin_layout Standard
-Esquema de un sistema QGAN.
- Imagen extraída de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cite{PennylaneImagen}
+Arquitectura HQGAN con un único nodo cuántico.
 \end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado12.png
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+Arquitectura HQGAN con dos nodos cuánticos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado9.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Arquitectura HQGAN con cuatro nodos cuańticos con un canal cuántico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado13.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Arquitectura QGAN 
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
 \begin_layout Subsection
+Fundamento del algoritmo
+\end_layout
+
+\begin_layout Standard
+Para el explicar el fundamento del algoritmo pienso que lo más sencillo
+ es dividir el algoritmo en tres partes.
+\end_layout
+
+\begin_layout Subsubsection
+Parte cuántica.
+\end_layout
+
+\begin_layout Subsubsection
+Redes neuronales.
+\end_layout
+
+\begin_layout Subsubsection
+Integración de las partes.
+\end_layout
+
+\begin_layout Standard
+Para raelizar todo esto es muy importante una función que nos permita unir
+ los circuitos cuánticos con las redes neuronales, para eso contamos con:
+\end_layout
+
+\begin_layout Standard
+La función tfq.convert_to_tensor en Tensorflow, es una función que convierte
+ un circuito cuántico en un tensor.
+ 
+\end_layout
+
+\begin_layout Subsection
 Propuesta de implementación
+\end_layout
+
+\begin_layout Standard
+[Como deciamos anteriormente nos basamos en el experimento de Google Brain,
+ ellos realizan el algoritmo de la siguiente manera.
+\end_layout
+
+\begin_layout Standard
+Alice va a comunicar a Bob un texto aleatorio de N bits aleatorios y se
+ usa una clave privada aleatoria y de N bits , con N = 16, 32 y 64 para
+ los dos casos.
+ Los valores de la clave y el texto estan distribuidos uniformemente.
+\end_layout
+
+\begin_layout Standard
+Su red neuronal sigue el patrón de 
+\begin_inset Quotes fld
+\end_inset
+
+mix and transform
+\begin_inset Quotes frd
+\end_inset
+
+..
+\end_layout
+
+\begin_layout Standard
+Hay tres redes neuronales GAN:
+\end_layout
+
+\begin_layout Standard
+Alice
+\end_layout
+
+\begin_layout Standard
+La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
+ en un vector de entrada 2N, usando -1 y 1 para representar los valores
+ de los bits.
+ Este vector se procesa a través de una capa FC de 2N×2N, luego enviado
+ a través de una sucesión de cuatro capas convolucionales de 1-D.
+ Las capas convolucionales se describen en términos de su tamaño de ventana,
+ profundidad de entrada y profundidad de salida.
+ Cada una tiene un "paso", la cantidad por que la ventana se desplaza a
+ cada paso.
+ Las capas de hormigón son [4, 1, 2], [2, 2, 4], [1, 4, 4], y con zancadas
+ de 1, 2, 1, 1.
+ Intuitivamente, la primera capa desliza una ventana de tamaño 4 a través
+ de la 2N elementos de salida de la capa FC, emitiendo dos números (profundidad
+ de salida 2), con el paso 1.
+ Nosotros usar una unidad no lineal sigmoide después de cada capa, excepto
+ la última.
+ Después de la capa final, donde el la salida se reduce a los elementos
+ N, usamos una unidad no lineal de tanh.
+ (Recordemos que el tanh tiene una salida entre [-1, 1], llevando los valores
+ de vuelta a un rango que puede mapear a valores binarios).
+ El La red de Bob es idéntica a la red de Alice La red de Eve sólo toma
+ el texto cifrado como entrada, y por lo tanto tiene una primera capa de
+ N × 2N FC.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Hay dos sistemas en nuestra implemantación.
+ Vamos a crear un sistema de Redes Generativas Antagónicas (GAN) híbrido,
+ con un generador cuántico en el interior de una de las redes.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Hay 3 redes neuronales Alice, Bob y Eve.
+ Las tres van a tener la misma configuración, por simplicidad y por]
+\end_layout
+
+\begin_layout Standard
+Copiado del artículo.
+ Hay que mirar como hacerlo.
 \end_layout
 
 \begin_layout Section
@@ -1050,40 +1759,26 @@ Pandas: Es una biblioteca de software escrita para el lenguaje de programación
 \end_layout
 
 \begin_layout Itemize
+Cuda: CUDA (Compute Unified Device Architecture) es una plataforma de computació
+n paralela y un modelo de interfaz de programación de aplicaciones (API)
+ creado por Nvidia.
+\end_layout
+
+\begin_layout Itemize
 Qiskit: 
 \end_layout
 
 \begin_layout Itemize
-Simulador cuántico: 
+Simulador cuántico.
+ Explicación
 \end_layout
 
 \begin_layout Itemize
-PennyLane: En PennyLane, los cálculos cuánticos se representan como objetos
- de nodo cuántico .
- Se utiliza un nodo cuántico para declarar el circuito cuántico, y también
- vincula el cálculo a un dispositivo específico que lo ejecuta.
- Los nodos cuánticos se pueden crear fácilmente utilizando el decorador
- qnode.
- QNodes puede interactuar con cualquiera de las bibliotecas numéricas y
- de aprendizaje automático compatibles (NumPy , PyTorch y TensorFlow), lo
- que se indica al proporcionar un interface argumento opcional al crear
- un QNode.
- Cada interfaz permite que el circuito cuántico se integre perfectamente
- con estructuras de datos específicas de la biblioteca (por ejemplo, matrices
- NumPy o tensores Pytorch / TensorFlow) y optimizadores .
+Quantum Tensorflow.
 \end_layout
 
 \begin_layout Itemize
-Desde el primer día, PennyLane ha proporcionado dos características clave
- que creemos que serán cruciales para QML a corto plazo: i) diferenciación
- automática de circuitos cuánticos; y ii) una abstracción QNode para construir
- cálculos híbridos cuántico-clásicos y multidispositivos.
-\end_layout
-
-\begin_layout Itemize
-Por defecto, QNodes usa la interfaz NumPy.
- Las otras interfaces de PennyLane se presentan con más detalle en la sección
- de interfaces .
+Tensorflow.
 \end_layout
 
 \begin_layout Section
@@ -1093,29 +1788,25 @@ Implementación.
 
 \begin_layout Standard
 \noindent
-[Documento de Google].
+No sé si hay que poner los problemas que he tenido.
 \end_layout
 
 \begin_layout Standard
-\noindent
-[Comienzo a definir la red neuronal].
+Pondré los trozos de código más importantes que he tenido.
 \end_layout
 
 \begin_layout Standard
-\noindent
-El sistema generador cuántico funciona de la siguiente manera:
+Uno de los problemas que he tenido ha sido lidiar con las versiones de Tensorflo
+w.
+ En la primera versión el objetivo era crear un grafo, esto hacia que el
+ código fuera muy extenso y por lo tanto cambiaran la forma en la que hay
+ que usar Tensorflow.
+ En la segunda versión, que es la actual, incluye Keras, y se recomienda
+ que el todo el codigo se haga a partir de tf.Keras.
 \end_layout
 
 \begin_layout Standard
-Puerta de NOP:
-\end_layout
 
-\begin_layout Standard
-Puerta de Hadamard:
-\end_layout
-
-\begin_layout Standard
-Esta puerta consiste en aplicar al estado 
 \end_layout
 
 \begin_layout Section
@@ -1143,7 +1834,7 @@ Segundo.
 \begin_layout Standard
 \noindent
 Tercero.
- Prueba con números cuánticos y GAN.
+ Prueba con generador de números cuánticos y GAN.
  
 \end_layout
 

@@ -428,70 +428,66 @@ Learning to protect communications with adversarial neural cryptography
 
 \end_layout
 
-\begin_layout Standard
-Google en 2016, explico a todo el mundo como desarrollar un sistema GAN
- para cifrar las comunicaciones, esto hizo que la investigación sobre este
- area creciera mucho desde ese año hasta ahora.
- 
-\end_layout
-
-\begin_layout Standard
-La solución de Google es la siguiente, es necesario que explique bien este
- sistema ya que todo este trabajo se basa en la modificación de sus sistema
- para poder obtener mejores resultados que su red GAN clásica:
-\end_layout
-
-\begin_layout Standard
-Hay tres redes neuronales GAN:
-\end_layout
-
-\begin_layout Standard
-Alice
-\end_layout
-
-\begin_layout Standard
-La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
- en un vector de entrada 2N, usando -1 y 1 para representar los valores
- de los bits.
- Este vector se procesa a través de una capa FC de 2N×2N, luego enviado
- a través de una sucesión de cuatro capas convolucionales de 1-D.
- Las capas convolucionales se describen en términos de su tamaño de ventana,
- profundidad de entrada y profundidad de salida.
- Cada una tiene un "paso", la cantidad por que la ventana se desplaza a
- cada paso.
- Las capas de hormigón son [4, 1, 2], [2, 2, 4], [1, 4, 4], y con zancadas
- de 1, 2, 1, 1.
- Intuitivamente, la primera capa desliza una ventana de tamaño 4 a través
- de la 2N elementos de salida de la capa FC, emitiendo dos números (profundidad
- de salida 2), con el paso 1.
- Nosotros usar una unidad no lineal sigmoide después de cada capa, excepto
- la última.
- Después de la capa final, donde el la salida se reduce a los elementos
- N, usamos una unidad no lineal de tanh.
- (Recordemos que el tanh tiene una salida entre [-1, 1], llevando los valores
- de vuelta a un rango que puede mapear a valores binarios).
- El La red de Bob es idéntica a la red de Alice La red de Eve sólo toma
- el texto cifrado como entrada, y por lo tanto tiene una primera capa de
- N × 2N FC.
-\end_layout
-
-\begin_layout Standard
-\noindent
-Hay dos sistemas en nuestra implemantación.
- Vamos a crear un sistema de Redes Generativas Antagónicas (GAN) híbrido,
- con un generador cuántico en el interior de una de las redes.
- 
-\end_layout
-
-\begin_layout Standard
-\noindent
-Hay 3 redes neuronales Alice, Bob y Eve.
- Las tres van a tener la misma configuración, por simplicidad y por
-\end_layout
-
 \begin_layout Subsection
 \noindent
 Deepfakes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
+	scale 40
+	groupId graficos
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esquema de un sistema GAN.
+ Imagen extraída de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{GanGoogle}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /root/Escritorio/Quantum/assets/qgan.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esquema de un sistema QGAN.
+ Imagen extraída de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{PennylaneImagen}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -513,6 +509,14 @@ ones, que al fin y al cabo es nuestro objetivo a desarrollar en este trabajo.
  La otra vertiente es la potencialidad del mapeo logístico que tiene utilidades
  para la generación de números pseudo-aleatorios.
  Su investigación fue básicamente:
+\end_layout
+
+\begin_layout Subsection
+GAN cuántica.
+\end_layout
+
+\begin_layout Subsection
+Criptografía de curva elíptica.
 \end_layout
 
 \begin_layout Section
@@ -626,8 +630,7 @@ Un circuito cuántico es una serie de operaciones aplicadas a qubits que
 \align center
 \begin_inset Graphics
 	filename /root/Escritorio/Quantum/assets/800px-Bloch_sphere.svg.png
-	width 8cm
-	height 8cm
+	scale 40
 	groupId graficos
 
 \end_inset
@@ -665,8 +668,7 @@ Para manipular una entrada necesitamos aplicar las operaciones básicas de
 \align center
 \begin_inset Graphics
 	filename /root/Escritorio/Quantum/JORGE/QiskitCircuit.png
-	width 8cm
-	height 8cm
+	scale 40
 	groupId graficos
 
 \end_inset
@@ -690,15 +692,6 @@ cite{Qiskit-Textbook}
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename pegado4.png
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -794,12 +787,118 @@ La puerta de Hadamard es la versión de un qubit de la transformada cuántica
 \end_layout
 
 \begin_layout Standard
+También hay puertas lógicas cuánticas que actuan sobre más de un qubit.
+\end_layout
+
+\begin_layout Standard
+Una puerta lógica muy utilizada es la puerta CNOT.
+ Si el primer qubit es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|1
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+, entonces en el segundo qubit se le aplica una puerta NOT.
+ 
+\end_layout
+
+\begin_layout Itemize
+Puerta CNOT (Respecto de las bases 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|00
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|01
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|10
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|11
+\backslash
+rangle
+\end_layout
+
+\end_inset
+
+) :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+CNOT=cX=\begin{pmatrix}1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 1 & 0
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Puerta Toffoli.
+\end_layout
+
+\begin_layout Standard
+Concepto de universalidad.
+ Máquina de Turing.
+\end_layout
+
+\begin_layout Standard
 \noindent
 \align center
 \begin_inset Graphics
 	filename /root/Escritorio/Quantum/assets/Puerta cuántica.png
-	width 8cm
-	height 8cm
+	scale 40
 	groupId graficos
 
 \end_inset
@@ -814,6 +913,15 @@ Esquema de encapsulación entre los diferentes conceptos de la computación
 
 \begin_layout Subsubsection
 Aprendizaje máquina cuántico
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado4.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -836,7 +944,7 @@ Hay que destacar que, a pesar de los siglos, los sistemas de cifrado clásicos
 \begin_layout Standard
 \noindent
 Pero los principios en los que se basan para conseguir su objetivo de enmascarar
- la información siguen siendo los mismos, la difusión y la confusión
+ la información siguen siendo los mismos, la difusión y la confusión.
 \end_layout
 
 \begin_layout Standard
@@ -848,7 +956,7 @@ La invención de la criptografía asimétrica, también conocida como criptograf
  secreto.
  Alice puede cifrar un mensaje usando la clave pública de Bob, pero solo
  Bob puede descifrarlo usando su clave privada.
- 
+ Aunque en nuestro estudio vamos a utilizar la criptografía simétrica.
 \end_layout
 
 \begin_layout Standard
@@ -868,27 +976,23 @@ Digamos que ofrece un buen compromiso entre seguridad y practicidad, superando
  el problema de la generación de claves de una sola vez y, lo más importante,
  el intercambio de claves.
  De hecho, en casos de uso real, casi todas las principales implementaciones
- de criptografía se realizan de forma asimétrica (aunque a veces en combinación
- con claves simétricas), como TLS, S / MIME, PGP, OMEMO, OTR, etc.
+ de criptografía se realizan de forma asimétrica.
 \end_layout
 
 \begin_layout Standard
-Muchas técnicas criptográcas se basan en la utilización de problemas NP
+Muchas técnicas criptográficas se basan en la utilización de problemas NP
  (de fácil vericación) que se cree que no son P (de fácil solución).
  El ejemplo más característico sería la factorización de enteros.
 \end_layout
 
 \begin_layout Standard
 \noindent
-El advenimiento de las computadoras cuánticas ha planteado un problema inesperad
-o para la criptografía de clave pública.
- Se ha demostrado que una computadora cuántica puede resolver todos los
- algoritmos matemáticos actualmente en uso de una manera mucho más eficiente.
- Gracias a las propiedades de la Transformada Cuántica de Fourier (QFT)
- y su implementación en el algoritmo de Shor, el tiempo necesario para encontrar
- una solución general para el problema se reduce de ser exponencial a ser
- solo polinomial, abriendo así una ventana para posibles ataques de fuerza
- bruta .
+El resurgimiento de las computadoras cuánticas ha planteado un problema
+ inesperado para la criptografía de clave pública.
+ Gracias a las propiedades de las computadoras cuánticas el tiempo necesario
+ para encontrar una solución general para algunos problemas se reduce de
+ ser exponencial a ser solo polinomial, abriendo así una ventana para posibles
+ ataques de fuerza bruta .
 \end_layout
 
 \begin_layout Standard
@@ -941,36 +1045,7 @@ Redes neuronales
 \end_layout
 
 \begin_layout Standard
-Partiendo de que una red neuronal cuántica es cualquier circuito cuántico
- con parámetros continuos entrenables.
-\end_layout
-
-\begin_layout Standard
-Pues aquí hablaré de seguridad informática, de criptografía.
-\end_layout
-
-\begin_layout Standard
-De computación cuántica.
-\end_layout
-
-\begin_layout Standard
-De teoría de número aleatorios.
-\end_layout
-
-\begin_layout Standard
-De redes neuronales.
-\end_layout
-
-\begin_layout Standard
-De GAN.
-\end_layout
-
-\begin_layout Standard
-Hay dos maneras de realizar un algoritmo de aprendizaje automático cuánticoEn
- lugar de simular una computadora cuántica dentro del software de aprendizaje
- automático convencional, tomaríamos todas las mejores características del
- software de aprendizaje profundo y las haríamos verdaderamente nativas
- de los dispositivos cuánticos.
+Hay que ver que pongo aquí.
 \end_layout
 
 \begin_layout Section
@@ -1370,6 +1445,10 @@ Vemos que el sueldo del Jefe de Proyectos y el desarollador de redes neuronales
 \end_layout
 
 \begin_layout Standard
+Tengo más o menos desarrollado esta parte.
+\end_layout
+
+\begin_layout Standard
 —————————>
 \end_layout
 
@@ -1386,27 +1465,24 @@ Vemos que el sueldo del Jefe de Proyectos y el desarollador de redes neuronales
 Análisis teórico.
 \end_layout
 
-\begin_layout Standard
-\noindent
-[Comienzo a definir la red neuronal].
+\begin_layout Subsection
+Introducción al algoritmo
 \end_layout
 
 \begin_layout Standard
-\noindent
-El sistema generador cuántico funciona de la siguiente manera:
+El estudio consiste en comparar diferentes tipos de redes neuronales cuánticas
+ y redes neuronales no cuánticas para ver cual de ellas tiene un mejor desempeño
+ y unas mejores características.
 \end_layout
 
 \begin_layout Standard
-Puerta de NOP:
+La arquitectura base es la arquitectura que Google diseñó en 2016.
+ Para ello construimos tres redes neuronales que son Alice, Eve y Bob.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-NOT=\begin{pmatrix}0 & 1\\
-1 & 0
-\end{pmatrix}
-\end{equation}
+\begin_inset Graphics
+	filename pegado11.png
 
 \end_inset
 
@@ -1414,20 +1490,92 @@ NOT=\begin{pmatrix}0 & 1\\
 \end_layout
 
 \begin_layout Standard
-Puerta de Hadamard:
+Esquema del sistema de redes neuronales.
 \end_layout
 
 \begin_layout Standard
-Esta puerta consiste en aplicar al estado 
-\begin_inset Formula 
-\begin{equation}
-H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\
-1 & -1
-\end{pmatrix}
-\end{equation}
+Alice quiere enviar un mensaje a Bob pero Eve capta el mensaje, entonces
+ queremos que Eve no sea capaz de descifrar el mensaje de Alice.
+ Para ello Alice y Bob comparten una clave.
+ 
+\end_layout
+
+\begin_layout Standard
+Siguiendo el trabajo de Google, utilizaremos mensajes de 16 bits y claves
+ secretas y textos cifrados de 16 bits.
+\end_layout
+
+\begin_layout Standard
+La red de Alice necesitará tener dos vectores de entrada: el mensaje a cifrar
+ y la clave secreta.
+\end_layout
+
+\begin_layout Standard
+La red de Bob tendrá también dos vectores de entrada: el mensaje cifrado
+ y la clave secreta.
+\end_layout
+
+\begin_layout Standard
+La rede Eve solo recibirá el mensaje cifrado.
+\end_layout
+
+\begin_layout Standard
+Diferentes tipos de aquitecturas a estudiar.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado10.png
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+Arquitectura HQGAN con un único nodo cuántico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado12.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Arquitectura HQGAN con dos nodos cuánticos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado9.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Arquitectura HQGAN con cuatro nodos cuańticos con un canal cuántico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado13.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Arquitectura QGAN 
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
@@ -1436,66 +1584,117 @@ Fundamento del algoritmo
 \end_layout
 
 \begin_layout Standard
+Para el explicar el fundamento del algoritmo pienso que lo más sencillo
+ es dividir el algoritmo en tres partes.
+\end_layout
+
+\begin_layout Subsubsection
+Parte cuántica.
+\end_layout
+
+\begin_layout Itemize
+Generador de números aleatorios.
+\end_layout
+
+\begin_layout Standard
+Si tenemos un computador de n qubits podemos generar 2
+\begin_inset Formula $^{n}$
+\end_inset
+
+números aleatorios.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H_{n}H_{n-1}...H_{2}H_{1}\Ket{00....00}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que esto nos queda como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H_{n}H_{n-1}...H_{2}\frac{1}{\sqrt{2}}(\Ket{00....00}+\Ket{00....01})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y operando,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H_{n}H_{n-1}...H_{3}\frac{1}{\sqrt{2^{2}}}(\Ket{00....00}+\Ket{00....01}+\Ket{00....10}+\Ket{00....11})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{\sqrt{2^{n}}}\sum_{x=0}^{2^{n}-1}\Ket\{x\}=\Ket{s}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hemos creado un circuito donde todos los qubits estarían en superposición.
+\end_layout
+
+\begin_layout Standard
+Por último, nos quedaría medir, que la función de onda colapse y por lo
+ tanto obtener el estado en el cual está cada uno de los qubits.
+ Debemos de encontrar la probabilidad de que el qubit se encuentre en cada
+ estado.
+\end_layout
+
+\begin_layout Itemize
+Protocolo de intercambio de mensajes cuántico.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/gan_diagram.svg
-	width 8cm
-	height 8cm
-	groupId graficos
+	filename pegado14.png
+	scale 40
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-Esquema de un sistema GAN.
- Imagen extraída de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cite{GanGoogle}
+\begin_layout Subsubsection
+Redes neuronales.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Subsubsection
+Integración de las partes.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename /root/Escritorio/Quantum/assets/qgan.png
-	width 8cm
-	height 8cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Esquema de un sistema QGAN.
- Imagen extraída de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cite{PennylaneImagen}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Para ralizar todo esto es muy importante una función que nos permita unir
+Para raelizar todo esto es muy importante una función que nos permita unir
  los circuitos cuánticos con las redes neuronales, para eso contamos con:
 \end_layout
 
@@ -1510,7 +1709,7 @@ Propuesta de implementación
 \end_layout
 
 \begin_layout Standard
-Como deciamos anteriormente nos basamos en el experimento de Google Brain,
+[Como deciamos anteriormente nos basamos en el experimento de Google Brain,
  ellos realizan el algoritmo de la siguiente manera.
 \end_layout
 
@@ -1578,7 +1777,12 @@ Hay dos sistemas en nuestra implemantación.
 \begin_layout Standard
 \noindent
 Hay 3 redes neuronales Alice, Bob y Eve.
- Las tres van a tener la misma configuración, por simplicidad y por
+ Las tres van a tener la misma configuración, por simplicidad y por]
+\end_layout
+
+\begin_layout Standard
+Copiado del artículo.
+ Hay que mirar como hacerlo.
 \end_layout
 
 \begin_layout Section
@@ -1653,36 +1857,16 @@ Qiskit:
 \end_layout
 
 \begin_layout Itemize
-Simulador cuántico: 
+Simulador cuántico.
+ Explicación y problemática con un número alto de qubits.
 \end_layout
 
 \begin_layout Itemize
-PennyLane: En PennyLane, los cálculos cuánticos se representan como objetos
- de nodo cuántico .
- Se utiliza un nodo cuántico para declarar el circuito cuántico, y también
- vincula el cálculo a un dispositivo específico que lo ejecuta.
- Los nodos cuánticos se pueden crear fácilmente utilizando el decorador
- qnode.
- QNodes puede interactuar con cualquiera de las bibliotecas numéricas y
- de aprendizaje automático compatibles (NumPy , PyTorch y TensorFlow), lo
- que se indica al proporcionar un interface argumento opcional al crear
- un QNode.
- Cada interfaz permite que el circuito cuántico se integre perfectamente
- con estructuras de datos específicas de la biblioteca (por ejemplo, matrices
- NumPy o tensores Pytorch / TensorFlow) y optimizadores .
+Quantum Tensorflow.
 \end_layout
 
 \begin_layout Itemize
-Desde el primer día, PennyLane ha proporcionado dos características clave
- que creemos que serán cruciales para QML a corto plazo: i) diferenciación
- automática de circuitos cuánticos; y ii) una abstracción QNode para construir
- cálculos híbridos cuántico-clásicos y multidispositivos.
-\end_layout
-
-\begin_layout Itemize
-Por defecto, QNodes usa la interfaz NumPy.
- Las otras interfaces de PennyLane se presentan con más detalle en la sección
- de interfaces .
+Tensorflow.
 \end_layout
 
 \begin_layout Section
@@ -1692,7 +1876,11 @@ Implementación.
 
 \begin_layout Standard
 \noindent
-[Documento de Google].
+No sé si hay que poner los problemas que he tenido.
+\end_layout
+
+\begin_layout Standard
+Pondré los trozos de código más importantes que he tenido.
 \end_layout
 
 \begin_layout Standard
@@ -1734,7 +1922,7 @@ Segundo.
 \begin_layout Standard
 \noindent
 Tercero.
- Prueba con números cuánticos y GAN.
+ Prueba con generador de números cuánticos y GAN.
  
 \end_layout
 
