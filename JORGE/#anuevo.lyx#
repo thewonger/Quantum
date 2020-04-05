@@ -82,7 +82,7 @@
 
 \begin_layout Title
 \noindent
-Hybrid Quantum Generative Adversarial Network to protect communications.
+Hybrid Quantum Adversarial Network Cryptography to protect communications.
 \end_layout
 
 \begin_layout Author
@@ -104,7 +104,7 @@ La motivación de este trabajo se basa en la creación de un sistema híbrido
  de redes neuronales con alguna capa cuántica.
  Google realizó un experimento donde utilizaba un sistema de redes neuronales
  para proteger las comunicaciones con un sistema de cifrado basado en una
- red GAN 
+ red AN 
 \begin_inset ERT
 status open
 
@@ -119,7 +119,7 @@ cite{abadi2016learning}
 
 .
  La propuesta de este trabajo es llevar esa idea hacia una arquitectura
- HQGAN, Hybrid Quantum Generative Adversarial Network.
+ HQAN, Hybrid Quantum Adversarial Network.
  Por lo tanto este trabajo esta profundamente relacionado con el artículo
  
 \begin_inset ERT
@@ -418,14 +418,7 @@ Primero de todo, voy a hablar sobre el sistema de redes neuronales con el
 \end_layout
 
 \begin_layout Subsection
-\begin_inset Quotes fld
-\end_inset
-
-Learning to protect communications with adversarial neural cryptography
-\begin_inset Quotes frd
-\end_inset
-
-
+Redes adversarias criptográficas.
 \end_layout
 
 \begin_layout Subsection
@@ -1752,7 +1745,7 @@ mix and transform
 \end_layout
 
 \begin_layout Standard
-Hay tres redes neuronales GAN:
+Hay tres redes neuronales :
 \end_layout
 
 \begin_layout Standard
@@ -1787,9 +1780,9 @@ La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
 
 \begin_layout Standard
 \noindent
-Hay dos sistemas en nuestra implemantación.
- Vamos a crear un sistema de Redes Generativas Antagónicas (GAN) híbrido,
- con un generador cuántico en el interior de una de las redes.
+Hay dos sistemas en nuestra implementación.
+ Vamos a crear un sistema de Redes Antagónicas (AN) híbrido, con un generador
+ cuántico en el interior de una de las redes.
  
 \end_layout
 
@@ -1924,10 +1917,10 @@ Evaluación.
 \begin_layout Standard
 \noindent
 Primero.
- GAN de Google.
- He implementado la GAN de Google con el objetivo de usar la misma GAN para
- todas las pruebas, ya que si su red está mejor implementado igual los resultado
-s no son consistentes con mis observaciones.
+ AN de Google.
+ He implementado las redes adversarias de Google con el objetivo de usar
+ la misma AN para todas las pruebas, ya que si su red está mejor implementado
+ igual los resultados no son consistentes con mis observaciones.
  
 \end_layout
 
@@ -1941,14 +1934,14 @@ Segundo.
 \begin_layout Standard
 \noindent
 Tercero.
- Prueba con generador de números cuánticos y GAN.
+ Prueba con generador de números cuánticos y AN.
  
 \end_layout
 
 \begin_layout Standard
 \noindent
 Cuarto.
- Prueba con protocolo cuantico y GAN.
+ Prueba con protocolo cuantico y AN.
  
 \end_layout
 
