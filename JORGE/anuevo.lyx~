@@ -873,7 +873,7 @@ H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\
 Convierte:
 \begin_inset Formula 
 \begin{equation}
-\Ket{0}\rightarrow\frac{\Ket{0}+\Ket{1}}{\sqrt{2}}
+\Ket{0}\rightarrow\frac{\Ket{0}+\Ket{1}}{\sqrt{2}}=\Ket{+}
 \end{equation}
 
 \end_inset
@@ -881,7 +881,7 @@ Convierte:
 
 \begin_inset Formula 
 \begin{equation}
-\Ket{1}\rightarrow\frac{\Ket{0}-\Ket{1}}{\sqrt{2}}
+\Ket{1}\rightarrow\frac{\Ket{0}-\Ket{1}}{\sqrt{2}}=\Ket{-}
 \end{equation}
 
 \end_inset
@@ -1153,8 +1153,12 @@ cite{johnston2018random}
 Redes neuronales
 \end_layout
 
-\begin_layout Standard
-Hay que ver que pongo aquí.
+\begin_layout Subsubsection
+Aspectos básicos
+\end_layout
+
+\begin_layout Subsubsection
+Redes convolucionales
 \end_layout
 
 \begin_layout Section
@@ -1983,6 +1987,14 @@ Ket{-}
 \noun default
 \color inherit
 ], identificada con la polarización 45º y -45º.
+\end_layout
+
+\begin_layout Standard
+Podemos recordar las ecuaciones (6) y (7).
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard

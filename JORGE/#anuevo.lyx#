@@ -113,7 +113,7 @@ La motivación de este trabajo se basa en la creación de un sistema híbrido
  de redes neuronales con alguna capa cuántica.
  Google realizó un experimento donde utilizaba un sistema de redes neuronales
  para proteger las comunicaciones con un sistema de cifrado basado en una
- red AN 
+ red GAN 
 \begin_inset ERT
 status open
 
@@ -128,7 +128,7 @@ cite{abadi2016learning}
 
 .
  La propuesta de este trabajo es llevar esa idea hacia una arquitectura
- HQAN, Hybrid Quantum Adversarial Network.
+ HQGAN, Hybrid Quantum Adversarial Network.
  Por lo tanto este trabajo esta profundamente relacionado con el artículo
  
 \begin_inset ERT
@@ -411,8 +411,8 @@ Estudio y análisis de varios sistemas híbridos de redes neuronales cuánticos,
 \end_layout
 
 \begin_layout Itemize
-Estudio de las ventajas y desventajas que hay entre un circuito AN y uno
- HQAN para proteger las comunicaciones.
+Estudio de las ventajas y desventajas que hay entre un circuito GAN y uno
+ HQGAN para proteger las comunicaciones.
 \end_layout
 
 \begin_layout Itemize
@@ -555,7 +555,7 @@ cite{PennylaneImagen}
 \end_layout
 
 \begin_layout Subsection
-Gan caótica.
+GAN caótica.
  
 \end_layout
 
@@ -873,7 +873,7 @@ H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\
 Convierte:
 \begin_inset Formula 
 \begin{equation}
-\Ket{0}\rightarrow\frac{\Ket{0}+\Ket{1}}{\sqrt{2}}=\Ket\{+\}
+\Ket{0}\rightarrow\frac{\Ket{0}+\Ket{1}}{\sqrt{2}}=\Ket{+}
 \end{equation}
 
 \end_inset
@@ -881,7 +881,7 @@ Convierte:
 
 \begin_inset Formula 
 \begin{equation}
-\Ket{1}\rightarrow\frac{\Ket{0}-\Ket{1}}{\sqrt{2}}
+\Ket{1}\rightarrow\frac{\Ket{0}-\Ket{1}}{\sqrt{2}}=\Ket{-}
 \end{equation}
 
 \end_inset
@@ -1654,7 +1654,7 @@ Diferentes tipos de aquitecturas a estudiar.
 \end_layout
 
 \begin_layout Standard
-Arquitectura HQAN con un único nodo cuántico.
+Arquitectura HQGAN con un único nodo cuántico.
 \end_layout
 
 \begin_layout Standard
@@ -1680,7 +1680,7 @@ Arquitectura HQAN con dos nodos cuánticos.
 \end_layout
 
 \begin_layout Standard
-Arquitectura HQAN con cuatro nodos cuańticos con un canal cuántico.
+Arquitectura HQGAN con cuatro nodos cuańticos con un canal cuántico.
 \end_layout
 
 \begin_layout Standard
@@ -1693,7 +1693,7 @@ Arquitectura HQAN con cuatro nodos cuańticos con un canal cuántico.
 \end_layout
 
 \begin_layout Standard
-Arquitectura QAN 
+Arquitectura QGAN 
 \end_layout
 
 \begin_layout Standard
@@ -1990,6 +1990,245 @@ Ket{-}
 \end_layout
 
 \begin_layout Standard
+Podemos recordar las ecuaciones (6) y (7).
+\end_layout
+
+\begin_layout Itemize
+Paso 1: Alice genera una cadena aleatoria de ceros y unos.
+ Mirar ecuaciones (9), (10), (11) y (12).
+\end_layout
+
+\begin_layout Itemize
+Paso 2: Para cada bit de la cadena, Alice elige de forma aleatoria una de
+ las dos bases B
+\begin_inset Formula $_{1}$
+\end_inset
+
+ o B
+\begin_inset Formula $_{2}$
+\end_inset
+
+ y envía a Bob, por un canal cuántico, el qubit correspondiente:
+\end_layout
+
+\begin_layout Standard
+Si se elige B
+\begin_inset Formula $_{1}$
+\end_inset
+
+: el 0 se codifica como 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Ket{0}
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ (polarización horizontal) y el 1 como 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Ket{1}
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ (polarización vertical).
+ Si se elige B
+\begin_inset Formula $_{2}$
+\end_inset
+
+: el 0 lo codifica como 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Ket{+}
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ (polarización 45º) y el 1 como 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Ket{-}
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ (polarización -45º).
+\end_layout
+
+\begin_layout Standard
+Cuando Bob recibe cada qubit, no tiene ninguna manera de saber con que alfabeto
+ ha sido computado, así que él lo mide eligiendo, también aleatoriamente,
+ para cada uno de ellos la base B
+\begin_inset Formula $_{1}$
+\end_inset
+
+ o B
+\begin_inset Formula $_{2}$
+\end_inset
+
+.
+ Aproximadamente la mitad de las veces Bob elegirá la misma base que Alice
+ y la otra mitad elegirá la base contraria a la utilizada por ella.
+\end_layout
+
+\begin_layout Itemize
+Paso 3: Para localizar y eliminar los bits en que las mediciones se han
+ realizado con distintas bases, se realiza el proceso de contraste de informació
+n.
+\end_layout
+
+\begin_layout Standard
+Bob comunica a Alice, por el canal clásico, qué base ha usado en cada medición.
+ Como respuesta, Alice le comunica las posiciones en las que ella ha usado
+ la misma base.
+ En estas posiciones, Alice y Bob deben tener bits coincidentes.
+\end_layout
+
+\begin_layout Itemize
+Paso 4: Alice y Bob borran de sus cadenas los bits en los que se han usado
+ bases diferentes y se quedan con el resto.
+ De este modo, si no ha habido ruidos ni interferencia de espías, tienen
+ una clave común, que denominamos clave bruta, cuya longitud será aproximadament
+e la mitad de la de la cadena inicial.
+\end_layout
+
+\begin_layout Standard
+Cualquier espionaje va a producir en la clave de Bob.
+ Por ello, para detectar la presencia de espías, Alice y Bob pueden comparar
+ las posiciones de sus cadenas elegidas aleatoriamente.
+\end_layout
+
+\begin_layout Standard
+En nuestro experimento veremos como se comporta la arquitectura red neuronal
+ en un canal cuántico.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename pegado14.png
 	scale 40
@@ -1999,8 +2238,29 @@ Ket{-}
 
 \end_layout
 
+\begin_layout Standard
+Imagen obtenida de Qiskit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{EsferadeBloch}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsubsection
 Redes neuronales.
+\end_layout
+
+\begin_layout Standard
+Tengo que explicar todo esto.
 \end_layout
 
 \begin_layout Standard
@@ -2015,6 +2275,19 @@ Redes neuronales.
 
 \begin_layout Standard
 Arquitectura de la red de Alice.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado17.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hay que convertir esto a tf.Keras(será parecido)
 \end_layout
 
 \begin_layout Subsubsection
@@ -2034,6 +2307,15 @@ La función tfq.convert_to_tensor en Tensorflow, es una función que convierte
 
 \begin_layout Subsection
 Propuesta de implementación
+\end_layout
+
+\begin_layout Standard
+Es importante hablar de los objetivos y la forma de medir las perdidas de
+ cada una de las redes neuronales.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
@@ -2097,7 +2379,7 @@ La red Alice concatena dos entradas de N-bits (el texto plano y la clave)
 \begin_layout Standard
 \noindent
 Hay dos sistemas en nuestra implementación.
- Vamos a crear un sistema de Redes Antagónicas (AN) híbrido, con un generador
+ Vamos a crear un sistema de Redes Antagónicas (GAN) híbrido, con un generador
  cuántico en el interior de una de las redes.
  
 \end_layout
@@ -2233,9 +2515,9 @@ Evaluación.
 \begin_layout Standard
 \noindent
 Primero.
- AN de Google.
+ GAN de Google.
  He implementado las redes adversarias de Google con el objetivo de usar
- la misma AN para todas las pruebas, ya que si su red está mejor implementado
+ la misma GAN para todas las pruebas, ya que si su red está mejor implementado
  igual los resultados no son consistentes con mis observaciones.
  
 \end_layout
@@ -2250,14 +2532,14 @@ Segundo.
 \begin_layout Standard
 \noindent
 Tercero.
- Prueba con generador de números cuánticos y AN.
+ Prueba con generador de números cuánticos y GAN.
  
 \end_layout
 
 \begin_layout Standard
 \noindent
 Cuarto.
- Prueba con protocolo cuantico y AN.
+ Prueba con protocolo cuantico y GAN.
  
 \end_layout
 
