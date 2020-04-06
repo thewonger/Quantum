@@ -82,7 +82,7 @@
 
 \begin_layout Title
 \noindent
-Hybrid Quantum Adversarial Network to protect communications.
+Hybrid Quantum Adversarial Network Cryptography to protect communications.
 \end_layout
 
 \begin_layout Author
@@ -97,6 +97,15 @@ Tutor: Miguel Arevalillo Herráez
 \begin_layout Section
 \noindent
 Introducción.
+\end_layout
+
+\begin_layout Standard
+Este apartado introduce la motivación por la cuál surge este trabajo, los
+ objetivos y las dependencias con las asignaturas del grado.
+\end_layout
+
+\begin_layout Subsection
+Motivación
 \end_layout
 
 \begin_layout Standard
@@ -135,6 +144,10 @@ cite{abadi2016learning}
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+¿Qué ganamos realizando este tipo de estructuras?
 \end_layout
 
 \begin_layout Standard
@@ -367,7 +380,11 @@ cite{qiu2013rna}
 
 \end_inset
 
-.
+
+\end_layout
+
+\begin_layout Subsection
+Objetivos
 \end_layout
 
 \begin_layout Standard
@@ -376,32 +393,45 @@ Después de que Google anunciara que había tenido éxito en la enseñanza de
  de varios investigadores de todo el mundo por desarrollar nuevas redes
  neuronales capaces de realizar diversas tareas de criptografía se ha extendido
  rápidamente en este campo particular.
- En este documento se dan los primeros pasos para lograr una comunicación
- segura entre más de dos partes utilizando la encriptación en las redes
- neuronales.
- Relacionamos la idea del esquema de cifrado simétrico de dos partes de
- Google con un esquema de cifrado de varias partes.
  
 \end_layout
 
-\begin_layout Standard
-Después de esta introducción sobre tipos de computación mi tfg se basa en
- la creación de un sistema híbrido de redes neuronales y circuitos cuánticos
- con el objetivo de mejorar las comunicaciones.
- Realmente este tema pertenece a tres disciplinas diferentes.
- 
+\begin_layout Itemize
+Estudio y análisis de un sistema de redes neuronales adversarias.
+\end_layout
+
+\begin_layout Itemize
+Estudio y análisis de varios circuitos y protocolos cuánticos relacionados
+ con el criptado de datos y la aleatoriedad de los números.
+\end_layout
+
+\begin_layout Itemize
+Estudio y análisis de varios sistemas híbridos de redes neuronales cuánticos,
+ de menor a mayor complejidad.
+\end_layout
+
+\begin_layout Itemize
+Estudio de las ventajas y desventajas que hay entre un circuito AN y uno
+ HQAN para proteger las comunicaciones.
+\end_layout
+
+\begin_layout Itemize
+Extracción de conclusiones de todos los estudios realizados.
+\end_layout
+
+\begin_layout Itemize
+Estudio de las posibles mejoras del sistema y posibles estudios posteriores.
+\end_layout
+
+\begin_layout Subsection
+Dependencias con asignaturas del grado
 \end_layout
 
 \begin_layout Standard
-El sistema GAN, está relacionado con el conocimiento adquirido en asignaturas
- como Sistemas Inteligentes y Minería de Datos.
+El sistema de redes neuronales, está relacionado con el conocimiento adquirido
+ en asignaturas como Sistemas Inteligentes y Minería de Datos.
  La teoría de la seguridad de las comunicaciones está relacionada con la
  asignatura de Seguridad Informática.
-\end_layout
-
-\begin_layout Standard
-Pienso que los computadores cuánticos pueden llegar a ser una herramienta
- muy importante para el desarrollo de nuevas tecnologías en el futuro.
 \end_layout
 
 \begin_layout Section
@@ -418,14 +448,48 @@ Primero de todo, voy a hablar sobre el sistema de redes neuronales con el
 \end_layout
 
 \begin_layout Subsection
-\begin_inset Quotes fld
+Redes adversarias criptográficas.
+\end_layout
+
+\begin_layout Standard
+En este campo hay dos estudios imporantes sobre esto 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{abadi2016learning}
+\end_layout
+
 \end_inset
 
-Learning to protect communications with adversarial neural cryptography
-\begin_inset Quotes frd
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{coutinho2018learning}
+\end_layout
+
 \end_inset
 
+.
+\end_layout
 
+\begin_layout Standard
+En la primera investigación el equipo de Google Brain encontró formas en
+ las que las redes neuronales pueden aprender a implementar la criptografía
+ sin ningún conocimiento previo de algoritmos criptográficos.
+\end_layout
+
+\begin_layout Standard
+Este hecho fue algo sobresaliente ya que las redes neuronales nunca se habían
+ usado anteriormente para cifrar datos.
 \end_layout
 
 \begin_layout Subsection
@@ -473,7 +537,7 @@ cite{GanGoogle}
 \end_layout
 
 \begin_layout Standard
-Esquema de un sistema QGAN.
+Esquema de un sistema HQGAN.
  Imagen extraída de 
 \begin_inset ERT
 status open
@@ -508,7 +572,51 @@ ones, que al fin y al cabo es nuestro objetivo a desarrollar en este trabajo.
  entre sí.
  La otra vertiente es la potencialidad del mapeo logístico que tiene utilidades
  para la generación de números pseudo-aleatorios.
- Su investigación fue básicamente:
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{purswani2020chaos}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces realizaron un sistema que producía número pseudaleatorios y conseguiero
+n el siguiente resultado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pegado15.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Imagen extraida de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{purswani2020chaos}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1467,6 +1575,14 @@ Análisis teórico.
 \end_layout
 
 \begin_layout Subsection
+Análisis de requisitos
+\end_layout
+
+\begin_layout Standard
+Tampoco tiene mucho.
+\end_layout
+
+\begin_layout Subsection
 Introducción al algoritmo
 \end_layout
 
@@ -1534,7 +1650,7 @@ Diferentes tipos de aquitecturas a estudiar.
 \end_layout
 
 \begin_layout Standard
-Arquitectura HQGAN con un único nodo cuántico.
+Arquitectura HQAN con un único nodo cuántico.
 \end_layout
 
 \begin_layout Standard
@@ -1547,7 +1663,7 @@ Arquitectura HQGAN con un único nodo cuántico.
 \end_layout
 
 \begin_layout Standard
-Arquitectura HQGAN con dos nodos cuánticos.
+Arquitectura HQAN con dos nodos cuánticos.
 \end_layout
 
 \begin_layout Standard
@@ -1560,7 +1676,7 @@ Arquitectura HQGAN con dos nodos cuánticos.
 \end_layout
 
 \begin_layout Standard
-Arquitectura HQGAN con cuatro nodos cuańticos con un canal cuántico.
+Arquitectura HQAN con cuatro nodos cuańticos con un canal cuántico.
 \end_layout
 
 \begin_layout Standard
@@ -1573,7 +1689,7 @@ Arquitectura HQGAN con cuatro nodos cuańticos con un canal cuántico.
 \end_layout
 
 \begin_layout Standard
-Arquitectura QGAN 
+Arquitectura QAN 
 \end_layout
 
 \begin_layout Standard
@@ -1590,7 +1706,7 @@ Para el explicar el fundamento del algoritmo pienso que lo más sencillo
 \end_layout
 
 \begin_layout Subsubsection
-Parte cuántica.
+Circuitos cuánticos.
 \end_layout
 
 \begin_layout Itemize
@@ -1673,15 +1789,200 @@ Por último, nos quedaría medir, que la función de onda colapse y por lo
 \end_layout
 
 \begin_layout Itemize
-Protocolo de intercambio de mensajes cuántico.
+Distribución de clave cuántica.
 \end_layout
 
 \begin_layout Standard
-Tenemos que transfAlice transforma sus bits clave en los correspondientes
- estados qubits.
- Si un bit es un 0, preparará un qubit en el eje negativo z.
- Si el bit es un 1, preparará un qubit en el eje z positivo.
- 
+Vamos a implementar el protocolo BB84 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{bennett1984quantum}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Este protocolo consiste en:
+\end_layout
+
+\begin_layout Standard
+Alice desea enviar una llave privada a Bob.
+ Comienza con dos cadenas de bits, una a y otra b, cada una de ellas de
+ un largo de n bits.
+ Luego codifica estos dos strings como un producto tensorial de los bits.
+\end_layout
+
+\begin_layout Standard
+Vamos a considerar en el espacio de Hilbert H
+\begin_inset Formula $_{1}$
+\end_inset
+
+ las dos bases ortogonales más usuales: la base B1=[
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Ket{0}
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,|
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Ket{1}
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+], que se identifica con la polarización horizontal y vertical, y la base
+ B2=[
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Ket{+}
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,|
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Ket{-}
+\end_layout
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+], identificada con la polarización 45º y -45º.
 \end_layout
 
 \begin_layout Standard
@@ -1706,6 +2007,10 @@ Redes neuronales.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Arquitectura de la red de Alice.
 \end_layout
 
 \begin_layout Subsubsection
