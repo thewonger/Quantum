@@ -1,0 +1,838 @@
+%% LyX 2.3.4.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[a4paper,spanish]{paper}
+\usepackage{mathptmx}
+\usepackage[LGR,T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setlength{\parskip}{0bp}
+\setlength{\parindent}{0pt}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\DeclareRobustCommand{\greektext}{%
+  \fontencoding{LGR}\selectfont\def\encodingdefault{LGR}}
+\DeclareRobustCommand{\textgreek}[1]{\leavevmode{\greektext #1}}
+\ProvideTextCommand{\~}{LGR}[1]{\char126#1}
+
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{braket}
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+\title{Hybrid Quantum Adversarial Network Cryptography to protect communications.}
+\author{Autor: Jorge Calleja García}
+
+\maketitle
+Tutor: Miguel Arevalillo Herráez
+
+\section{Introducción.}
+
+Este apartado introduce la motivación por la cuál surge este trabajo,
+los objetivos y las dependencias con las asignaturas del grado.
+
+\subsection{Motivación}
+
+La motivación de este trabajo se basa en la creación de un sistema
+híbrido de redes neuronales con alguna capa cuántica. Google realizó
+un experimento donde utilizaba un sistema de redes neuronales para
+proteger las comunicaciones con un sistema de cifrado basado en una
+red GAN \cite{abadi2016learning}. La propuesta de este trabajo es
+llevar esa idea hacia una arquitectura HQGAN, Hybrid Quantum Adversarial
+Network. Por lo tanto este trabajo esta profundamente relacionado
+con el artículo \cite{abadi2016learning}.
+
+¿Qué ganamos realizando este tipo de estructuras?
+
+La computación clásica tiene límites. Tiene unos límites físicos que
+no puede sobrepasar. La ley de Moore nos dice que cada 2 años se aumenta
+por dos la potencia de los procesadores. \cite{kinnunen2015examining}
+
+Para cumplir con la ley de Moore, el diseño del transistor debe reducir
+la distancia entre la fuente y el drenaje por un factor de 2 en cada
+generación de tecnología. Esto reduce el área en un factor de 2, duplicando
+así el número de transistores por chip. \cite{lundstrom2003moore}
+
+Todo nos hace pensar que habrá un límite que es la relación entre
+la física clásica y la física cuántica. 
+\begin{align}
+\lambda= & h/p
+\end{align}
+
+(1) Es la ecuación de De Broglie, que une el momento lineal con la
+longitud de onda. \cite{rio2016fisica}Como regla general, la mecánica
+clásica se convierte en una mala descriptora de la naturaleza cuando
+la longitud de onda de ese objeto está en el mismo orden que su tamaño.
+
+Para una pelota de tenis, esto es algo así como 10$^{-34}$ metros,
+que es mucho menor que la pelota de tenis. Incluso para moléculas
+de tamaño mediano, usar la física newtoniana para describir cómo rebotan
+es razonable. 
+
+Es una escala móvil, no un salto discontinuo. Cuanto mayor es la masa
+/ momento, más clásicamente se comporta la materia \textquotedbl similar
+a una partícula\textquotedbl{} y menos \textquotedblleft cuántica\textquotedblright .
+
+Cuando más pequeños sean los transistores más cercanos estarán del
+comportamiento cuántico y más lejanos estarán presentar un comportamiento
+clásico.
+\begin{quotation}
+\textquotedblleft The idea behind digital computers may be explained
+by saying that these machines are intended to carry out any operations
+which could be done by a human computer. The human computer is supposed
+to be following fixed rules; he has no authority todeviate from them
+in any detail. We may suppose that these rules are supplied in abook,
+which is altered whenever he is put on to a new job. He has also an
+unlimited supply of paper on which he does his calculations.\textquotedblright{}
+Alan Turing
+\end{quotation}
+%
+Entonces los paradigmas de computación que nos permiten escalar la
+potencia de los computadores son los siguentes:
+\begin{itemize}
+\item Computación cuántica: Al igual que nuestras computadoras digitales
+estándar, las computadoras cuánticas están creadas para hacer cálculos,
+para contar.. La principal diferencia es que usan qubits , una variante
+del bit que puede manipularse de manera cuántica. Y claro, los qubits
+se comportan de forma diferente a los bits, se rigen por otras ecuaciones
+físicas por lo que las puertas lógicas son diferentes y por lo tanto
+la forma en la que se crean algoritmos es también diferente. El problema
+que se tiene actualmente es que realizar computadores cuánticos de
+un número decente de qubits es muy complejo. Actualmente las mayores
+empresas de computación del mundo están luchando entre ellas para
+llegar a la supremacía cuántica. \cite{arute2019quantum}
+\item Computación paralela: Los procesadores paralelos son sistemas que
+interconectan varios procesadores para cooperar en la ejecución de
+un programa con el fin de aumentar las prestaciones y sacar más partido
+del paralelismo existente. Un sistema multiprocesador saca partido
+del denominado paralelismo de alto nivel, por contraposición a las
+técnicas ya estudiadas en temas anteriores, que utilizan el paralelismo
+a bajo nivel en sistemas de un solo procesador, tales como cauces
+segmentados o superescalares. Aunque tuvieramos un límite de la potencia
+de un procesador, si el código puede ser paralelizable podríamos usar
+más de un procesador y así realizar el mismo cómputo en un menor tiempo.
+\item Inteligencia artificial: El campo de la inteligencia artificial (IA)
+ha experimentado un crecimiento sobresaliente en las últimas dos décadas.
+Ha demostrado ser eficaz en el manejo de áreas complejas como el reconocimiento
+de voz, el reconocimiento de imágenes y muchas otras. Una rama interesante
+y en evolución que se introdujo hace años, pero que sólo ha experimentado
+un buen crecimiento en los últimos años, es la encriptación de la
+IA.
+\item Computación biológica: La idea detrás de la computación de ADN y de
+ARN se basa en sustituir los enlaces químicos por señales eléctricas
+y ácidos nucleicos por silicio para crear software biomolecular. Este
+tipo de computadores pueden llegar a ser muy potentes en la realización
+de simulaciones biológicas o para la creación de automátas biológicos
+que pueden llegar a ser programados para localizar y destruir células
+u organismos malignos. Este tipo de cálculos en una computadora clásica
+podría suponer un tiempo mayor de lo que le costaría a una computadora
+biológica. Incluso podríamos llegar a plantear si pudiera existir
+un supremacia biológica en algunos algoritmos.\cite{grozinger2019pathways}
+\end{itemize}
+\includegraphics{imagenarnADN}
+
+Esquema mostrando las características de un computador de ADN y otro
+de ARN. Imagen extraída de \cite{qiu2013rna}
+
+\subsection{Objetivos}
+
+Después de que Google anunciara que había tenido éxito en la enseñanza
+de la encriptación de redes neuronales en presencia de espías, el
+interés de varios investigadores de todo el mundo por desarrollar
+nuevas redes neuronales capaces de realizar diversas tareas de criptografía
+se ha extendido rápidamente en este campo particular. 
+\begin{itemize}
+\item Estudio y análisis de un sistema de redes neuronales adversarias.
+\item Estudio y análisis de varios circuitos y protocolos cuánticos relacionados
+con el criptado de datos y la aleatoriedad de los números.
+\item Estudio y análisis de varios sistemas híbridos de redes neuronales
+cuánticos, de menor a mayor complejidad.
+\item Estudio de las ventajas y desventajas que hay entre un circuito GAN
+y uno HQGAN para proteger las comunicaciones.
+\item Extracción de conclusiones de todos los estudios realizados.
+\item Estudio de las posibles mejoras del sistema y posibles estudios posteriores.
+\end{itemize}
+
+\subsection{Dependencias con asignaturas del grado}
+
+El sistema de redes neuronales, está relacionado con el conocimiento
+adquirido en asignaturas como Sistemas Inteligentes y Minería de Datos.
+La teoría de la seguridad de las comunicaciones está relacionada con
+la asignatura de Seguridad Informática.
+
+\section{Estado del arte.}
+
+Primero de todo, voy a hablar sobre el sistema de redes neuronales
+con el objetivo de mejorar el cifrado de la información que comparten
+entre ellas las computadoras, ya que es el sistema que ha hecho que
+este trabajo de investigación nazca.
+
+\subsection{Redes adversarias criptográficas.}
+
+En este campo hay dos estudios imporantes sobre esto \cite{abadi2016learning}
+y \cite{coutinho2018learning}.
+
+En la primera investigación el equipo de Google Brain encontró formas
+en las que las redes neuronales pueden aprender a implementar la criptografía
+sin ningún conocimiento previo de algoritmos criptográficos.
+
+Este hecho fue algo sobresaliente ya que las redes neuronales nunca
+se habían usado anteriormente para cifrar datos.
+
+\subsection{Deepfakes.}
+
+\includegraphics[scale=0.05]{C:/Users/Jorge/Desktop/Quantum/assets/gan_diagram}
+
+Esquema de un sistema GAN. Imagen extraída de \cite{GanGoogle}
+
+\includegraphics[scale=0.4]{C:/Users/Jorge/Desktop/Quantum/assets/qgan}
+
+Esquema de un sistema HQGAN. Imagen extraída de \cite{PennylaneImagen}
+
+\subsection{GAN caótica. }
+
+Hay un grupo de investigadores que han hecho un sistema GAN añadiendole
+conceptos de la teoría del caos. Ellos proponen que es una buena solución
+debido a que los sistemas caóticos tienen dos propiedades muy interesantes
+que ayudan para proteger las comunicaciones, que al fin y al cabo
+es nuestro objetivo a desarrollar en este trabajo. La primera de las
+motivaciones es que cuando tenemos un sistema dinámico no lineal cualquier
+pequeña diferencia entre las condiciones iniciales, aunque sea una
+diferencia infinitesimal produce resultados muy diferentes entre sí.
+La otra vertiente es la potencialidad del mapeo logístico que tiene
+utilidades para la generación de números pseudo-aleatorios. \cite{purswani2020chaos}
+
+Entonces realizaron un sistema que producía número pseudaleatorios
+y conseguieron el siguiente resultado:
+
+\includegraphics{pegado15}
+
+Imagen extraida de \cite{purswani2020chaos}
+
+\subsection{GAN cuántica.}
+
+\subsection{Criptografía de curva elíptica.}
+
+\section{Fundamentos.}
+
+\subsection{Computación cuántica.}
+
+\subsubsection{Introducción }
+
+En la computación cuántica se trata con el equivalente de bits llamados
+qubits , que notoriamente pueden manejar información en un estado
+no binario gracias a una propiedad de los sistemas cuánticos llamada
+superposición (a veces se dice que pueden representar 0s y 1s en al
+mismo tiempo). 
+
+\subsubsection*{Hola}
+
+\begin{equation}
+c1\Ket{0}+c_{2}\Ket{1}=c_{1}\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]+c_{2}\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]
+\end{equation}
+Sobre estos qubits se pueden realizar operaciones. La función que
+cambia las propiedades de cada qubit es el operador es una función
+que va de un espacio de estados físicos a otro espacio de estados
+físicos. 
+
+Una función de onda \textgreek{y} ( x ; t ) es una forma de representar
+el estado físico de un sistema de partículas. Usualmente es una función
+compleja, de cuadrado integrable y univaluada de las coordenadas espaciales
+de cada una de las partículas. Las propiedades mencionadas de la función
+de onda permiten interpretarla como una función de cuadrado integrable. 
+
+Con cada observable físico, hay asociado un operador que se usa con
+la función de onda. Supóngase que la función de onda asociada con
+un valor cuantizado definido (valor propio) del observable se denota
+por \textgreek{Y}n, y el operador se representa por O. La acción del
+operador está dado por:
+
+\begin{equation}
+O\varPsi_{n}=o_{_{n}}\varPsi_{n}
+\end{equation}
+
+Tal que, o$_{n}$son los valores propios del observable en relación
+a la función de onda $\varPsi_{n}$ .
+
+Un circuito cuántico es una serie de operaciones aplicadas a qubits
+que cambian su estado, por ejemplo , c
+\begin{equation}
+\end{equation}
+ambiando su fase relativa. Los Qubits se pueden representar geométricamente
+con una llamada esfera de Bloch , por lo que una operación en un qubit
+corresponde a una rotación del vector de estado cuántico en este espacio
+virtual.
+\begin{center}
+\includegraphics[scale=0.05]{C:/Users/Jorge/Desktop/Quantum/assets/800px-Bloch_sphere\lyxdot svg}
+\par\end{center}
+
+Esfera de Bloch. Imagen obtenida de \cite{EsferadeBloch}.
+
+Para manipular una entrada necesitamos aplicar las operaciones básicas
+de la computación cuántica. Estas se conocen como puertas cuánticas,
+que realmente son operadores unitarios. Una sucesión de puertas cuánticas
+es un circuito cuántico.
+\begin{center}
+\includegraphics[scale=0.05]{QiskitCircuit}
+\par\end{center}
+
+Ejemplo de esquema de un circuito cuántico. Imagen obtenida de \cite{Qiskit-Textbook}.
+
+\subsubsection{Puertas cuánticas}
+
+Como en la computación clásica, en la computación cuántica tenemos
+diferentes tipos de puertas <<lógicas>>, con la unión de diferentes
+tipos de puertas llegamos a obtener algoritmos.
+
+En este apartado voy a hablar brevemente de los fundamentos físicos
+de las puertas más comunmente usadas dentro de la computación cuántica.
+\begin{itemize}
+\item Puerta NOP:
+\end{itemize}
+La puerta X actúa en un solo qubit. Es el análogo cuántico de la puerta
+NOT para ordenadores clásicas. 
+
+\begin{equation}
+X=\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix}
+\end{equation}
+
+\begin{itemize}
+\item Puerta Hadamard:
+\end{itemize}
+La puerta Hadamard actúa en un solo qubit. 
+
+\begin{equation}
+H=\frac{1}{\sqrt{2}}\begin{pmatrix}1 & 1\\
+1 & -1
+\end{pmatrix}
+\end{equation}
+
+Convierte:
+\begin{equation}
+\Ket{0}\rightarrow\frac{\Ket{0}+\Ket{1}}{\sqrt{2}}=\Ket{+}
+\end{equation}
+\begin{equation}
+\Ket{1}\rightarrow\frac{\Ket{0}-\Ket{1}}{\sqrt{2}}=\Ket{-}
+\end{equation}
+
+La puerta de Hadamard es la versión de un qubit de la transformada
+cuántica de Fourier.
+
+También hay puertas lógicas cuánticas que actuan sobre más de un qubit.
+
+Una puerta lógica muy utilizada es la puerta CNOT. Si el primer qubit
+es |1\rangle
+
+, entonces en el segundo qubit se le aplica una puerta NOT. 
+\begin{itemize}
+\item Puerta CNOT (Respecto de las bases |00\rangle, |01\rangle, |10\rangle,
+|11\rangle) :
+\end{itemize}
+\begin{equation}
+CNOT=cX=\begin{pmatrix}1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 1 & 0
+\end{pmatrix}
+\end{equation}
+ Tof
+\begin{equation}
+CCNOT=\begin{pmatrix}1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0
+\end{pmatrix}
+\end{equation}
+
+\begin{itemize}
+\item Puerta Toffoli.
+\end{itemize}
+Concepto de universalidad. Máquina de Turing.
+\begin{center}
+\includegraphics[scale=0.05]{\string"C:/Users/Jorge/Desktop/Quantum/assets/Puerta cuántica\string".png}
+\par\end{center}
+
+Esquema de encapsulación entre los diferentes conceptos de la computación
+cuántica.
+
+\subsubsection{Aprendizaje máquina cuántico}
+
+\includegraphics[scale=0.4]{pegado4}
+
+\subsection{Criptografía}
+
+\subsubsection{Introducción}
+
+Hay que destacar que, a pesar de los siglos, los sistemas de cifrado
+clásicos y los modernos o actuales se diferencian muy poco entre sí.
+En el fondo, hacen las mismas operaciones, si bien los primeros estaban
+orientados a letras o caracteres, y los segundos lógicamente a bits
+y bytes. 
+
+Pero los principios en los que se basan para conseguir su objetivo
+de enmascarar la información siguen siendo los mismos, la difusión
+y la confusión.
+
+La invención de la criptografía asimétrica, también conocida como
+criptografía de clave pública, ha sido el logro más importante de
+la criptografía moderna. En este sistema, cada usuario genera un par
+de claves, una clave pública, distribuida libremente a todos, y una
+clave privada, mantenida en el máximo secreto. Alice puede cifrar
+un mensaje usando la clave pública de Bob, pero solo Bob puede descifrarlo
+usando su clave privada. Aunque en nuestro estudio vamos a utilizar
+la criptografía simétrica.
+
+Sin embargo, para implementar esta característica, tenemos que usar
+funciones matemáticas que generalmente son difíciles de resolver pero,
+una vez que se conoce una solución, no es tan difícil verificarla.
+Las implementaciones contemporáneas de algoritmos matemáticos hacen
+uso de factorización de enteros, logaritmo discreto y relaciones de
+curva elíptica. No es el alcance de este cuaderno entrar en los detalles
+de este proceso, que es ampliamente discutido en la literatura.
+
+Digamos que ofrece un buen compromiso entre seguridad y practicidad,
+superando el problema de la generación de claves de una sola vez y,
+lo más importante, el intercambio de claves. De hecho, en casos de
+uso real, casi todas las principales implementaciones de criptografía
+se realizan de forma asimétrica.
+
+Muchas técnicas criptográficas se basan en la utilización de problemas
+NP (de fácil vericación) que se cree que no son P (de fácil solución).
+El ejemplo más característico sería la factorización de enteros.
+
+El resurgimiento de las computadoras cuánticas ha planteado un problema
+inesperado para la criptografía de clave pública. Gracias a las propiedades
+de las computadoras cuánticas el tiempo necesario para encontrar una
+solución general para algunos problemas se reduce de ser exponencial
+a ser solo polinomial, abriendo así una ventana para posibles ataques
+de fuerza bruta .
+
+En la actualidad, las computadoras cuánticas no son lo suficientemente
+potentes para realizar estas operaciones en grandes cantidades, pero
+en un futuro no muy lejano podrían serlo, lo que se suele llamar NISQ
+era, Noisy Intermediate-Scale Quantum, tanto que los expertos en criptografía
+han comenzado a discutir estrategias para fortalecer los protocolos
+criptográficos en caso de computadoras cuánticas ampliamente disponibles.
+Este campo se llama criptografía post-cuántica.
+
+Las computadoras cuánticas también presentan otra ventaja extraordinaria,
+que puede conducir a un secreto perfecto. Almacenar información en
+forma de qubits es el primer paso en la implementación de la criptografía
+cuántica, la ciencia de intercambiar información de manera segura
+utilizando la física cuántica. Esto se logra mediante el establecimiento
+de un canal cuántico, un aparato especial capaz de entregar información
+cuántica en forma de qubits. La confidencialidad está garantizada
+por las leyes de la mecánica cuántica, una forma notable de llamar
+a la física en ayuda de las matemáticas. 
+
+\subsubsection{Teoría de números aleatorios}
+
+\cite{johnston2018random}
+
+\subsection{Redes neuronales}
+
+\subsubsection{Redes neuronales clásicas}
+
+\subsubsection{Redes neuronales profundas.}
+
+\section{Planificación.}
+
+En nuestro proyecto vamos a contar con los siguientes perfiles:
+\begin{itemize}
+\item Un desarrollador cuántico.
+\item Un analista de computación cuántica.
+\item Un analista de redes neuronales.
+\item Un desarrollador de redes neuronales.
+\item Un analista de seguridad informática.
+\item Un jefe de proyectos.
+\end{itemize}
+Los salarios son obtenidos de la página web www.glassdoor.com y de
+www.indeed.es a día 30/03/2020.
+
+Algunos salarios son más elevados que otros debido a que analistas
+y desarrolladores cuánticos es díficil encontrar en España, lo más
+lógico y sencillo es encontrarlos en Estados Unidos, cosa que hace
+que el coste del proyecto se eleve.
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Nombre & Unidades & Iniciales & Tasa Estándar & Tasa Sobretiempo\tabularnewline
+\hline 
+\hline 
+Desarrollador Cuántico  & 1 & DC & 63348,09 ¤/a & 70000,00 ¤/a\tabularnewline
+\hline 
+Analista Cuántico & 1 & AC & 78687,23 ¤/a & 80000,00 ¤/a\tabularnewline
+\hline 
+Desarrollador Redes N. & 1 & DNN & 35000,00 ¤/a & 40000,00 ¤/a\tabularnewline
+\hline 
+Analista Redes N. & 1 & ANN & 51080,00 ¤/a & 60000,00 ¤/a\tabularnewline
+\hline 
+Analista Seguridad & 1 & AS & 40061,00 ¤/a & 50000,00 ¤/a\tabularnewline
+\hline 
+Jefe de Proyectos & 1 & J & 37033,00 ¤/a & 40000,00 ¤/a\tabularnewline
+\hline 
+\end{tabular}
+
+Vemos que el sueldo del Jefe de Proyectos y el desarollador de redes
+neuronales es menor debido a que son posiciones más fáciles de encontrar
+y por lo tanto hay más oferta de ese tipo de perfiles.
+
+Tengo más o menos desarrollado esta parte.
+
+--------------------------->
+
+-------------------------------------------------->
+
+---------------------------------------------------------------->
+
+Gestión de riesgos.
+
+\section{Desarrollo teórico.}
+
+\subsection{Análisis de requisitos}
+
+Tampoco tiene mucho.
+
+\subsection{Introducción al algoritmo}
+
+El estudio consiste en comparar diferentes tipos de redes neuronales
+cuánticas y redes neuronales no cuánticas para ver cual de ellas tiene
+un mejor desempeño y unas mejores características.
+
+La arquitectura base es la arquitectura que Google diseñó en 2016.
+Para ello construimos tres redes neuronales que son Alice, Eve y Bob.
+
+\includegraphics{pegado11}
+
+Esquema del sistema de redes neuronales.
+
+Alice quiere enviar un mensaje a Bob pero Eve capta el mensaje, entonces
+queremos que Eve no sea capaz de descifrar el mensaje de Alice. Para
+ello Alice y Bob comparten una clave. 
+
+Siguiendo el trabajo de Google, utilizaremos mensajes de 16 bits y
+claves secretas y textos cifrados de 16 bits.
+
+La red de Alice necesitará tener dos vectores de entrada: el mensaje
+a cifrar y la clave secreta.
+
+La red de Bob tendrá también dos vectores de entrada: el mensaje cifrado
+y la clave secreta.
+
+La rede Eve solo recibirá el mensaje cifrado.
+
+Diferentes tipos de aquitecturas a estudiar.
+
+\includegraphics{pegado10}
+
+Arquitectura HQGAN con un único nodo cuántico.
+
+\includegraphics{pegado12}
+
+Arquitectura HQAN con dos nodos cuánticos.
+
+\includegraphics{pegado9}
+
+Arquitectura HQGAN con cuatro nodos cua\'{n}ticos con un canal cuántico.
+
+\includegraphics{pegado13}
+
+Arquitectura QGAN 
+
+\subsection{Fundamento del algoritmo}
+
+Para el explicar el fundamento del algoritmo pienso que lo más sencillo
+es dividir el algoritmo en tres partes.
+
+\subsubsection{Circuitos cuánticos.}
+\begin{itemize}
+\item Generador de números aleatorios.
+\end{itemize}
+Si tenemos un computador de n qubits podemos generar 2$^{n}$números
+aleatorios.
+
+\begin{equation}
+H_{n}H_{n-1}...H_{2}H_{1}\Ket{00....00}
+\end{equation}
+
+Que esto nos queda como:
+
+\begin{equation}
+H_{n}H_{n-1}...H_{2}\frac{1}{\sqrt{2}}(\Ket{00....00}+\Ket{00....01})
+\end{equation}
+
+Y operando,
+
+\begin{equation}
+H_{n}H_{n-1}...H_{3}\frac{1}{\sqrt{2^{2}}}(\Ket{00....00}+\Ket{00....01}+\Ket{00....10}+\Ket{00....11})
+\end{equation}
+
+Finalmente,
+
+\begin{equation}
+\frac{1}{\sqrt{2^{n}}}\sum_{x=0}^{2^{n}-1}\Ket\{x\}=\Ket{s}
+\end{equation}
+
+Hemos creado un circuito donde todos los qubits estarían en superposición.
+
+Por último, nos quedaría medir, que la función de onda colapse y por
+lo tanto obtener el estado en el cual está cada uno de los qubits.
+Debemos de encontrar la probabilidad de que el qubit se encuentre
+en cada estado.
+\begin{itemize}
+\item Distribución de clave cuántica.
+\end{itemize}
+Vamos a implementar el protocolo BB84 \cite{bennett1984quantum}.
+
+Este protocolo consiste en:
+
+Alice desea enviar una llave privada a Bob. Comienza con dos cadenas
+de bits, una a y otra b, cada una de ellas de un largo de n bits.
+Luego codifica estos dos strings como un producto tensorial de los
+bits.
+
+Vamos a considerar en el espacio de Hilbert H$_{1}$ las dos bases
+ortogonales más usuales: la base B1={[}\Ket{0},|\Ket{1}{]}, que
+se identifica con la polarización horizontal y vertical, y la base
+B2={[}\Ket{+},|\Ket{-}{]}, identificada con la polarización 45º
+y -45º.
+
+Podemos recordar las ecuaciones (6) y (7).
+\begin{itemize}
+\item Paso 1: Alice genera una cadena aleatoria de ceros y unos. Mirar ecuaciones
+(9), (10), (11) y (12).
+\item Paso 2: Para cada bit de la cadena, Alice elige de forma aleatoria
+una de las dos bases B$_{1}$ o B$_{2}$ y envía a Bob, por un canal
+cuántico, el qubit correspondiente:
+\end{itemize}
+Si se elige B$_{1}$: el 0 se codifica como \Ket{0} (polarización
+horizontal) y el 1 como \Ket{1} (polarización vertical). Si se elige
+B$_{2}$: el 0 lo codifica como \Ket{+} (polarización 45º) y el 1
+como \Ket{-} (polarización -45º).
+
+Cuando Bob recibe cada qubit, no tiene ninguna manera de saber con
+que alfabeto ha sido computado, así que él lo mide eligiendo, también
+aleatoriamente, para cada uno de ellos la base B$_{1}$ o B$_{2}$.
+Aproximadamente la mitad de las veces Bob elegirá la misma base que
+Alice y la otra mitad elegirá la base contraria a la utilizada por
+ella.
+\begin{itemize}
+\item Paso 3: Para localizar y eliminar los bits en que las mediciones se
+han realizado con distintas bases, se realiza el proceso de contraste
+de información.
+\end{itemize}
+Bob comunica a Alice, por el canal clásico, qué base ha usado en cada
+medición. Como respuesta, Alice le comunica las posiciones en las
+que ella ha usado la misma base. En estas posiciones, Alice y Bob
+deben tener bits coincidentes.
+\begin{itemize}
+\item Paso 4: Alice y Bob borran de sus cadenas los bits en los que se han
+usado bases diferentes y se quedan con el resto. De este modo, si
+no ha habido ruidos ni interferencia de espías, tienen una clave común,
+que denominamos clave bruta, cuya longitud será aproximadamente la
+mitad de la de la cadena inicial.
+\end{itemize}
+Cualquier espionaje va a producir en la clave de Bob. Por ello, para
+detectar la presencia de espías, Alice y Bob pueden comparar las posiciones
+de sus cadenas elegidas aleatoriamente.
+
+En nuestro experimento veremos como se comporta la arquitectura red
+neuronal en un canal cuántico.
+
+\includegraphics[scale=0.4]{pegado14}
+
+Imagen obtenida de Qiskit \cite{EsferadeBloch}.
+
+\subsubsection{Redes neuronales.}
+
+Tengo que explicar todo esto.
+
+\includegraphics[scale=0.4]{alice}
+
+Arquitectura de la red de Alice.
+
+\includegraphics{pegado17}
+
+Hay que convertir esto a tf.Keras(será parecido)
+
+\subsubsection{Integración de las partes.}
+
+Para raelizar todo esto es muy importante una función que nos permita
+unir los circuitos cuánticos con las redes neuronales, para eso contamos
+con:
+
+La función tfq.convert\_to\_tensor en Tensorflow, es una función que
+convierte un circuito cuántico en un tensor. 
+
+\subsection{Propuesta de implementación}
+
+Es importante hablar de los objetivos y la forma de medir las perdidas
+de cada una de las redes neuronales.
+
+{[}Como deciamos anteriormente nos basamos en el experimento de Google
+Brain, ellos realizan el algoritmo de la siguiente manera.
+
+Alice va a comunicar a Bob un texto aleatorio de N bits aleatorios
+y se usa una clave privada aleatoria y de N bits , con N = 16, 32
+y 64 para los dos casos. Los valores de la clave y el texto estan
+distribuidos uniformemente.
+
+Su red neuronal sigue el patrón de <<mix and transform>>..
+
+Hay tres redes neuronales :
+
+Alice
+
+La red Alice concatena dos entradas de N-bits (el texto plano y la
+clave) en un vector de entrada 2N, usando -1 y 1 para representar
+los valores de los bits. Este vector se procesa a través de una capa
+FC de 2N\texttimes 2N, luego enviado a través de una sucesión de cuatro
+capas convolucionales de 1-D. Las capas convolucionales se describen
+en términos de su tamaño de ventana, profundidad de entrada y profundidad
+de salida. Cada una tiene un \textquotedbl paso\textquotedbl , la
+cantidad por que la ventana se desplaza a cada paso. Las capas de
+hormigón son {[}4, 1, 2{]}, {[}2, 2, 4{]}, {[}1, 4, 4{]}, y con zancadas
+de 1, 2, 1, 1. Intuitivamente, la primera capa desliza una ventana
+de tamaño 4 a través de la 2N elementos de salida de la capa FC, emitiendo
+dos números (profundidad de salida 2), con el paso 1. Nosotros usar
+una unidad no lineal sigmoide después de cada capa, excepto la última.
+Después de la capa final, donde el la salida se reduce a los elementos
+N, usamos una unidad no lineal de tanh. (Recordemos que el tanh tiene
+una salida entre {[}-1, 1{]}, llevando los valores de vuelta a un
+rango que puede mapear a valores binarios). El La red de Bob es idéntica
+a la red de Alice La red de Eve sólo toma el texto cifrado como entrada,
+y por lo tanto tiene una primera capa de N \texttimes{} 2N FC.
+
+Hay dos sistemas en nuestra implementación. Vamos a crear un sistema
+de Redes Antagónicas (GAN) híbrido, con un generador cuántico en el
+interior de una de las redes. 
+
+Hay 3 redes neuronales Alice, Bob y Eve. Las tres van a tener la misma
+configuración, por simplicidad y por{]}
+
+Copiado del artículo. Hay que mirar como hacerlo.
+
+\section{Herramientas.}
+
+Para realizar nuestros experimentos vamos a hacer uso de las siguientes
+herramientas:
+
+Lenguaje: Python
+
+Ide: Anaconda
+
+Entorno Hardware: Colab
+
+Gestión de la configuración: Github
+
+Simulador cuántico: Cirq.
+\begin{itemize}
+\item Anaconda: Anaconda es una distribución gratuita y de código abierto
+de los lenguajes de programación Python y R para la informática científica
+(ciencia de los datos, aplicaciones de aprendizaje automático, procesamiento
+de datos a gran escala, análisis predictivo, etc.), que tiene como
+objetivo simplificar la gestión y el despliegue de los paquetes. Las
+versiones de los paquetes son administradas por el sistema de gestión
+de paquetes conda.
+\item Jupyter Notebook: El Cuaderno Jupyter es un entorno informático interactivo
+basado en la web para crear documentos ipynb. Un documento Jupyter
+Notebook es un documento JSON, siguiendo un esquema versionado, y
+que contiene una lista ordenada de celdas de entrada/salida que pueden
+contener código, texto (usando Markdown), matemáticas, gráficos y
+medios enriquecidos. Un Cuaderno Jupyter puede convertirse a una serie
+de formatos de salida de estándar abierto (HTML, diapositivas de presentación,
+LaTeX, PDF, ReStructuredText, Markdown, Python) .
+\item Keras: Es una API de redes neuronales de alto nivel, escrita en Python
+y capaz de funcionar sobre TensorFlow, CNTK o Theano. Fue desarrollado
+con el objetivo de permitir una rápida experimentación. El objetivo
+es conseguir desarrollar redes neuronales con rápidez.
+\item Numpy: Es una biblioteca para el lenguaje de programación Python,
+que añade soporte para matrices y conjuntos multidimensionales, junto
+con una gran colección de funciones matemáticas de alto nivel para
+operar en estos conjuntos. 
+\item Matplotlib: Es una biblioteca de representación en 2D de Python que
+produce figuras de calidad de publicación en una variedad de formatos
+de copia impresa y entornos interactivos a través de plataformas. 
+\item Pandas: Es una biblioteca de software escrita para el lenguaje de
+programación Python para la manipulación y análisis de datos. En particular,
+ofrece estructuras de datos y operaciones para manipular tablas numéricas
+y series temporales.
+\item Cuda: CUDA (Compute Unified Device Architecture) es una plataforma
+de computación paralela y un modelo de interfaz de programación de
+aplicaciones (API) creado por Nvidia.
+\item Qiskit: 
+\item Simulador cuántico. Explicación y problemática con un número alto
+de qubits.
+\item Quantum Tensorflow.
+\item Tensorflow.
+\end{itemize}
+
+\section{Implementación.}
+
+Circuitos cuánticos gráficos.
+
+\subsection{Dificultades}
+
+No sé si hay que poner los problemas que he tenido.
+
+Pondré los trozos de código más importantes que he tenido.
+
+Uno de los problemas que he tenido ha sido lidiar con las versiones
+de Tensorflow. En la primera versión el objetivo era crear un grafo,
+esto hacia que el código fuera muy extenso y por lo tanto cambiaran
+la forma en la que hay que usar Tensorflow. En la segunda versión,
+que es la actual, incluye Keras, y se recomienda que el todo el codigo
+se haga a partir de tf.Keras.
+
+
+\section{Evaluación.}
+
+Primero. GAN de Google. He implementado las redes adversarias de Google
+con el objetivo de usar la misma GAN para todas las pruebas, ya que
+si su red está mejor implementado igual los resultados no son consistentes
+con mis observaciones. 
+
+Segundo. Intentar mejorar la red. 
+
+Tercero. Prueba con generador de números cuánticos y GAN. 
+
+Cuarto. Prueba con protocolo cuantico y GAN. 
+
+\section{Conclusiones.}
+
+Realizar una red neuronal no híbrida, hacer una red neuronal puramente
+cuántica.
+
+\medskip
+\bibliographystyle{unsrt} \bibliography{datos} 
+\end{document}

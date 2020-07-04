@@ -1,27 +1,56 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr  7 17:48:06 2020
+import cirq
 
-@author: Jorge
-"""
+#numero de qubits
+import cirq
+from cirq.ops import CZ, H
+global c
+import pandas as pd
+import re
 
-
-from tensorflow import keras
-import numpy as np
-
-
-model = keras.Sequential([keras.layers.Dense(units=1, input_shape=[1])])
-model.compile(optimizer='sgd', loss='mean_squared_error')
+regex = r"m"
 
 
-#y=2x -1
+def qrandom(n): #n es el número de bits de la clave
+    
+    qubits = [cirq.GridQubit(i, 0) for i in range(n)]
+    
+    circuit = cirq.Circuit(
 
-xs= np.array([-1.0,0.0,1.0,2.0,3.0,4.0], dtype =float)
-ys = np.array([-3.0,-1.0,1.0,3.0,5.0,7.0],dtype=float)
+    #cirq.H(*qubits),
+    cirq.H.on_each(*qubits),
 
-model.fit(xs,ys,epochs=1000)
-print(model.predict([10]))
+    cirq.measure(*qubits, key='m')
+    )
+    print("Circuit:")
+    print(circuit)
+
+    # Simulamos el circuito las veces que queramos, en este caso como
+    # es un generador de numeros aleatorios nos da igual.
+    simulator = cirq.Simulator()
+    result = simulator.run(circuit, repetitions=1)
+    print("Results:")
+    print(result)
+    print(result.data)
+    a= result
+
+    #con 10 bits tenemos 1024 números 
+
+    #Lo normalizamos para que nos aparezcan valores de 0 a 1.
+    #Cuantos más qubits tengamos mejor precisión obtendremos.
+    #print( a +" Asi es a")
+         
+    global numero
+    numero=(a.data)
+    
+    
+    return(numero)
+    
+
+b= qrandom(10)
+c= str(b)
+c=re.sub(regex, '', c)
+c=re.sub(r' ','',c)
+c = int(c)
 
 
-#le damos x=10 y nos devuelve 19
-
+print(type(b))
