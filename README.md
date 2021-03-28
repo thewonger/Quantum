@@ -18,60 +18,58 @@ Two Neural Networks, Alice and Bob learn to communicate secretly with each other
 
 ### First Level
 
-- Axiomatic quantum theory
+- 1.1.Axiomatic quantum theory
 
-- Quantum states 
+- 1.2.Quantum states 
 
-- observables, measurement and evolution; 
+- 1.3.observables, measurement and evolution; 
  
-- Qubits versus classical bits; 
- 
-- Spin-half systems and photon polarizations; 
+- 1.4.Spin-half systems and photon polarizations; 
 
-- Pure and mixed states; 
+- 1.5.Pure and mixed states; 
  
-- Density matrices; 
+- 1.6.Density matrices; 
  
-- Quantum correlations;
+- 1.7.Quantum correlations;
 
-- Entanglement and Bell’s theorems; 
+- 1.8.Entanglement and Bell’s theorems; 
  
-- Turing machines and computational complexity;
+- 1.9.Turing machines and computational complexity;
  
-- Reversible computation; 
+- 1.10.Reversible computation; 
  
-- Universal quantum logic gates and circuits; 
+- 1.11.Universal quantum logic gates and circuits; 
  
-- Quantum algorithms; 
+- 1.12.Quantum algorithms; 
  
-- Database search; 
+- 1.13.Database search; 
  
-- Fast Fourier Transform and prime factorisation.
+- 1.14.Fast Fourier Transform and prime factorisation.
 
 ### Second Level
 
-- Digital communication; 
+- 2.1.Digital communication; 
  
-- Communication channels; 
+- 2.2.Communication channels; 
  
-- Information and entropy;
+- 2.3.Information and entropy;
 
-- Shannon’s theorems; 
+- 2.4.Shannon’s theorems; 
  
-- Quantum communication, dense coding and teleportation;
+- 2.5.Quantum communication, dense coding and teleportation;
 
-- von Neumann entropy and quantum channel capacity; 
+- 2.6.von Neumann entropy and quantum channel capacity; 
  
-- General quantum evolution and superoperators; 
+- 2.7.General quantum evolution and superoperators; 
  
-- Errors and error correction codes; 
+- 2.8.Errors and error correction codes; 
  
-- Stabilizer formalism;
+- 2.9.Stabilizer formalism;
 
-- Cryptography and one-time pad; 
+- 2.10.Cryptography and one-time pad; 
  
-- Public and private key cryptography;
+- 2.11.Public and private key cryptography;
 
-- Quantum key distribution; 
+- 2.12.Quantum key distribution; 
 
-- Quantum cryptography.
+- 2.13.Quantum cryptography.
